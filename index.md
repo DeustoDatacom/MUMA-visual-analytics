@@ -18,5 +18,4 @@ First one
 
 ### Definition(s)
 
-Second one
-With content
+Second one with content
