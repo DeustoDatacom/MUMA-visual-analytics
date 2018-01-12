@@ -94,7 +94,7 @@ A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.
 <figure class="fragment">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X79o46W5plI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-<figcaption style="margin-top:0;">Cole Nussbaumer, Declutter Your Data Visualizations</figcaption>
+<figcaption style="margin-top:0;">Nussbaumer, [Declutter Your Data Visualizations](https://www.youtube.com/embed/X79o46W5plI)</figcaption>
 </figure>
 
 ## Highlight observations
@@ -103,7 +103,7 @@ A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.
 
 ## Highlight observations {data-transition="none"}
 
-Nussbaumer?
+![Nussbaumber, [Do you see it? The importance of contrast when communicating with data [video]](https://www.youtube.com/watch?v=60KiAXbkrl0)](img/nussbaumer-contrast.png){width="700px"}
 
 ## Add variables (as context)
 
