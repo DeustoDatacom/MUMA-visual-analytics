@@ -99,7 +99,7 @@ A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.
 
 ## Highlight observations
 
-![Nussbaumber xxxx, p.105](img/nussbaumer-4.4.png){width=700}
+![Nussbaumber 2015, p.105](img/nussbaumer-4.4.png){width=700}
 
 ## Highlight observations {data-transition="none"}
 
