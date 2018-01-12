@@ -130,6 +130,33 @@ A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.
 - statistical summaries
 - models
 
+# References
+
+---
+
+<div style="text-align:center;">
+
+<h1>Thank you!</h1>
+
+Miren Berasategi<br />
+miren.berasategi@deusto.es
+</div>
+
+---
+
+<h1>License</h1>
+
+<div style="text-align:center;margin-top:2em;">
+
+![](img/cc/cc.logo.png){height="50px" style="display:inline-block;margin-right:2em;"}
+![](img/cc/by.png){height="50px" style="display:inline-block;"}
+![](img/cc/sa.png){height="50px" style="display:inline-block;"}
+
+</div>
+
+<p style="font-family:'Frutiger LT Std', Montserrat, Helvetica, Arial, sans-serif; font-size:.4em;font-weight:200;">Copyright &copy; 2018 University of Deusto<br />
+This work (except for the quoted images, whose rights are reserved to their owners) is licensed under the Creative Commons “Attribution-ShareAlike” License. To view a copy of this license, visit [http://creativecommons.org/licenses/by-sa/3.0/](http://creativecommons.org/licenses/by-sa/3.0/)</p>
+
 # Test slides
 
 ---
