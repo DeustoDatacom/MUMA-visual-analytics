@@ -44,11 +44,139 @@
   <p class="email">miren.berasategi@deusto.es</p>
 </section>
 
-<section><section id="introduction" class="titleslide slide level2"><h2>Introduction</h2></section><section id="definitions" class="slide level3">
-<h3>Definition(s)</h3>
+<section><section id="introduction" class="titleslide slide level1"><h1>Introduction</h1></section><section id="definitions" class="slide level2">
+<h2>Definition(s)</h2>
+</section><section id="why-use-visualizations" class="slide level2">
+<h2>Why use visualizations</h2>
+<figure class="fragment" data-fragment-index="3" style="width:55%; float:right;">
+<img src="img/anscombe3.png" alt="Visualizations" />
+</figure>
+<figure class="fragment" data-fragment-index="1" style="width:30%; float:left;">
+<img src="img/anscombe1.png" alt="Data" style="margin:0 50px;" />
+</figure>
+<figure class="fragment" data-fragment-index="2" style="width:40%; float:left;">
+<img src="img/anscombe2.png" alt="Summary statistics"  style="margin:0;" />
+</figure>
+<p style="float:right;width:55%;text-align:center;">
+<a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe's Quartet</a>
+</p>
+</section><section id="what-to-use-visualizations-for" class="slide level2">
+<h2>What to use visualizations for</h2>
+<figure>
+<img src="img/munzner-3.1.png" alt="Munzner 2015, p.42" width="600" /><figcaption>Munzner 2015, p.42</figcaption>
+</figure>
+</section></section>
+<section><section id="graphics" class="titleslide slide level1"><h1>Graphics</h1></section><section id="reminder-variable-types" class="slide level2">
+<h2>Reminder: variable types</h2>
+<ul>
+<li>Quantitative
+<ul>
+<li>Discrete</li>
+<li>Continuous</li>
+</ul></li>
+<li>Qualitative
+<ul>
+<li>Ordinal</li>
+<li>Nominal</li>
+</ul></li>
+</ul>
+</section><section id="reminder-variable-types-a-question-of-time" class="slide level2" data-transition="none">
+<h2>Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
+<p>Spatial and time/hour variables are special variable types. <strong>Time variables</strong> are specially complex:</p>
+<ul>
+<li>are there 365 days in every year? 30 days in every month? 24 hours in every day?</li>
+<li><em>timezones</em> make it even more complex to use hours or time of day</li>
+</ul>
+</section><section id="reminder-variable-types-a-question-of-time-1" class="slide level2" data-transition="none">
+<h2>Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
+<p>Time may be used as a continuous or as a qualitative variable.</p>
+<ul>
+<li>as a qualitative variable, it has a hierarchy: year &gt; month &gt; (week &gt;) day &gt; hour &gt; minute</li>
+<li>but different hierarchies may be necessary: bimonthly publications, multiple work shifts in a day...</li>
+</ul>
+</section><section id="mapping-variables-to-graphics" class="slide level2">
+<h2>Mapping variables to graphics</h2>
+<p>(Kirk 153-153)</p>
+</section></section>
+<section><section id="provide-easier-analysis" class="titleslide slide level1"><h1>Provide easier analysis</h1></section><section id="change-default-settings" class="slide level2" data-transition="none">
+<h2>Change default settings</h2>
+<figure>
+<img src="img/easieranalysis1.png" />
+</figure>
+</section><section id="change-default-settings-1" class="slide level2" data-transition="none">
+<h2>Change default settings</h2>
+<figure>
+<img src="img/easieranalysis2.png" />
+</figure>
+</section><section id="change-default-settings-2" class="slide level2" data-transition="none">
+<h2>Change default settings</h2>
+<figure>
+<img src="img/easieranalysis3.png" />
+</figure>
+</section><section id="change-default-settings-3" class="slide level2" data-transition="none">
+<h2>Change default settings</h2>
+<figure>
+<img src="img/easieranalysis4.png" />
+</figure>
+</section><section id="make-simpler-graphs" class="slide level2">
+<h2>Make simpler graphs</h2>
+<div style="height:100px;">
+ 
+</div>
+<blockquote>
+<p>Data-ink is the non-erasable core of the graphic, the non-redundant ink arranged in response to variation in the numbers represented. (Tufte 1983)</p>
+</blockquote>
+</section><section id="make-simpler-graphs-1" class="slide level2" data-transition="none">
+<h2>Make simpler graphs</h2>
+<p>A step-by-step example: <a href="http://www.darkhorseanalytics.com/blog/data-looks-better-naked">Data looks better naked</a></p>
+<figure class="fragment">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X79o46W5plI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+<figcaption style="margin-top:0;">
+Cole Nussbaumer, Declutter Your Data Visualizations
+</figcaption>
+</figure>
+</section><section id="highlight-observations" class="slide level2">
+<h2>Highlight observations</h2>
+<figure>
+<img src="img/nussbaumer-4.4.png" alt="Nussbaumber xxxx, p.105" width="700" /><figcaption>Nussbaumber xxxx, p.105</figcaption>
+</figure>
+</section><section id="highlight-observations-1" class="slide level2" data-transition="none">
+<h2>Highlight observations</h2>
+<p>Nussbaumer?</p>
+</section><section id="add-variables-as-context" class="slide level2">
+<h2>Add variables (as context)</h2>
+<ul>
+<li>Adding preexisting variables (con <strong>mesura</strong>)</li>
+<li>Creating conditional variables from preexisting variables
+<ul>
+<li>binaries or with few levels are best</li>
+<li><span style="font-size:.9em;">example of calculated field or variable: weekend date</span></li>
+</ul></li>
+</ul>
+<figure>
+<img src="img/addvariables.png" class="fragment" />
+</figure>
+</section><section id="add-statistical-information" class="slide level2">
+<h2>Add statistical information</h2>
+<figure style="float:right;width:50%;" class="fragment">
+<p><img src="img/addstatinfo1.png" /></p>
+<figcaption>
+<p><a href="https://stackoverflow.com/questions/13254441/add-a-horizontal-line-to-plot-and-legend-in-ggplot2">source</a></p>
+</figcaption>
+</figure>
+<ul>
+<li>statistical summaries</li>
+<li>models</li>
+</ul>
+</section></section>
+<section><section id="test-slides" class="titleslide slide level1"><h1>Test slides</h1></section><section class="slide level2">
+
 <p>First one</p>
-</section><section id="definitions-1" class="slide level3">
-<h3>Definition(s)</h3>
+</section><section id="nd-level-heading" class="slide level2" data-background="https://static.pexels.com/photos/371633/pexels-photo-371633.jpeg">
+<h2>2nd level heading</h2>
+<p>Testing background images</p>
+<h3 id="rd-level-heading">3rd level heading</h3>
 <p>Second one with content</p>
 </section></section>
     </div>
@@ -62,6 +190,8 @@
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: print,
         // Push each slide change to the browser history
         history: true,
 
