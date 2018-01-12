@@ -2,7 +2,7 @@
 title: Visual Analytics
 subtitle: Communicating data-driven insights through data visualization techniques and useful dashboards
 author: Miren Berasategi ~ miren.berasategi@deusto.es
-revealjs-url: http://mberasategi.github.io/reveal.js
+revealjs-url: https://rawgit.com/mberasategi/reveal.js/master/
 theme: deusto
 ...
 
