@@ -3,7 +3,6 @@ title: Visual Analytics
 subtitle: Communicating data-driven insights through data visualization techniques and useful dashboards
 author: Miren Berasategi
 email: miren.berasategi@deusto.es
-revealjs-url: https://rawgit.com/mberasategi/reveal.js/master/
 theme: deusto
 slideNumber: print
 ...
@@ -44,6 +43,12 @@ slideNumber: print
 - Qualitative
     - Ordinal
     - Nominal
+
+<aside class="notes">
+
+testing notes
+
+</aside>
 
 ## Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span>  {data-transition="none"}
 

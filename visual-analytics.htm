@@ -21,11 +21,11 @@
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'https://rawgit.com/mberasategi/reveal.js/master//css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="https://rawgit.com/mberasategi/reveal.js/master//lib/js/html5shiv.js"></script>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -33,7 +33,7 @@
   <div class="reveal">
     <div class="slides">
       <div class="static">
-        <div class="bottomL"><img src="https://rawgit.com/mberasategi/reveal.js/master//logo-deusto.png" alt="Universidad de Deusto" /></div>
+        <div class="bottomL"><img src="reveal.js/logo-deusto.png" alt="Universidad de Deusto" /></div>
                   <div class="bottomR">Miren Berasategi</div>
               </div>
       
@@ -81,6 +81,9 @@
 <li>Nominal</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>testing notes</p>
+</aside>
 </section><section id="reminder-variable-types-a-question-of-time" class="slide level2" data-transition="none">
 <h2>Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
 <p>Spatial and time/hour variables are special variable types. <strong>Time variables</strong> are specially complex:</p>
