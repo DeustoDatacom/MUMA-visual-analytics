@@ -5,6 +5,7 @@ author: Miren Berasategi
 email: miren.berasategi@deusto.es
 theme: deusto
 slideNumber: print
+showNotes: true
 ...
 
 # Introduction 
