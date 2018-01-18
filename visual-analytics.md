@@ -5,7 +5,7 @@ author: Miren Berasategi & Mikel Madina
 email: miren.berasategi@deusto.es
 theme: deusto
 slideNumber: print
-showNotes: true
+
 ...
 
 # Introduction 
@@ -85,11 +85,9 @@ Fake data for online marketing tools and Goals
     - Ordinal
     - Nominal
 
-<aside class="notes">
-
+::: notes
 testing notes
-
-</aside>
+:::
 
 ## Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span>  {data-transition="none"}
 
