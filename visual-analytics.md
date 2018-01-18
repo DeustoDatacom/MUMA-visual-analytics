@@ -1,7 +1,7 @@
 ---
 title: Visual Analytics
-subtitle: Communicating data-driven insights through data visualization techniques and useful dashboards
-author: Miren Berasategi
+subtitle: Communicating data-driven insights<br />through data visualization techniques<br />and useful dashboards
+author: Miren Berasategi & Mikel Madina
 email: miren.berasategi@deusto.es
 theme: deusto
 slideNumber: print
@@ -10,7 +10,15 @@ showNotes: true
 
 # Introduction 
 
-## Definition(s)
+## Key points
+
+- **Data driven**: as seen in Onieva's and Lorenzo's lectures
+- **Insights**: que usen las características gráficas
+- **Data visualization techniques**: para obtener las los insights
+- **Dashboards**: as *situattion awareness* tools
+
+Tableau Desktop para prácticar
+
 
 ## Why use visualizations
 
@@ -30,9 +38,41 @@ showNotes: true
 <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe's Quartet</a>
 </p>
 
+<aside class="notes">
+
+Baina honek ez du esan nahi teknika estatistikoak alde batera utzi behar direnik; batak besteari lagundu behar diote (estatistika tradizionalak bisualizazioari eta alderantziz)
+
+</aside>
+
 ## What to use visualizations for
 
 ![Munzner 2015, p.42](img/munzner-3.1.png){width="600px"}
+
+<aside class="notes">
+Honek erantzungo lioke "insights" parteari: 
+
+- *Targets* lehenbizi (benetako insighten oinarriak)
+- Ondoren *actions*
+   - Search (ze target eta non)
+   - Query (identifikatu target, baldin eta badago)
+   - Azkenik analyze, komunikatu eta datu/modelo berriak sortu
+
+</aside>
+
+## Tableau: load data
+
+`data.xls`
+
+Fake data for online marketing tools and Goals
+
+<aside class="notes">
+
+- datuak tableaura kargatu
+- "data" bistan bariableak pixkat aztertu
+	- sinbolotxoa eta kolorea, tableauk datua nola interpretatu duen jakiteko
+	- ze bariable dauden, gero hortik datu kalkulatuak ateratzeko, adibidez irabazitakoa / gastatutakoa oinarrizko KPI modura
+
+</aside>
 
 # Graphics
 
@@ -67,13 +107,42 @@ Time may be used as a continuous or as a qualitative variable.
 
 ## Mapping variables to graphics
 
-(Kirk 153-153)
+![Kirk, 2016 Encodings table [\(source\)](http://book.visualisingdata.com/chapter/chapter-6)](img/6.57.EncodingsTable_preview.png){width="650px"}
+
+<aside class="notes">
+
+Grafikoagoa egitea komeniko litzateke
+
+</aside>
+
+## Graphs typology
+
+Variable types and insights (Munzner's "targets") as *ingredients*
+
+[The Data Visualisation Catalogue](https://datavizcatalogue.com/search.html)
+
+<aside class="notes">
+
+Si eso Kirken taula sartu, baina taula sortzeko kodea nahiko liosoa da
+
+</aside>
 
 # Provide easier analysis
 
 ## Change default settings {data-transition="none"}
 
+<figure>
+
 ![](img/easieranalysis1.png)
+
+<figcaption style="margin-top:0;">[Data source: Berlin marathon times](https://github.com/hmelberg/berlin-marathon)</figcaption>
+</figure>
+
+<aside class="notes">
+
+Data: Berlin Marathon
+
+</aside>
 
 ## Change default settings {data-transition="none"}
 
@@ -97,7 +166,19 @@ Time may be used as a continuous or as a qualitative variable.
 
 A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.com/blog/data-looks-better-naked)
 
-<figure class="fragment">
+<div style="margin:auto; width: 70%; height: 0; position: relative; padding-bottom: 90%;"><iframe src="https://speakerdeck.com/player/87bb9f00ec1e01308020727faa1f9e72" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no"></iframe></div>
+
+<aside class="notes">
+
+Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arraroren bat egitea
+
+</aside>
+
+## Make simpler graphs {data-transition="none"}
+
+(denborakin ikusteko)
+
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X79o46W5plI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <figcaption style="margin-top:0;">Nussbaumer, [Declutter Your Data Visualizations](https://www.youtube.com/embed/X79o46W5plI)</figcaption>
@@ -105,7 +186,9 @@ A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.
 
 ## Highlight observations
 
-![Nussbaumber 2015, p.105](img/nussbaumer-4.4.png){width=700}
+[Preattentive attributes](https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization)
+
+![Nussbaumber 2015, p.105](img/nussbaumer-4.4.png){width=650}
 
 ## Highlight observations {data-transition="none"}
 
@@ -135,6 +218,58 @@ A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.
 
 - statistical summaries
 - models
+
+## Tableau: (not so) basic graphs
+
+- [Sparklines (Tufte 2006)](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR)<br />![](img/sparkline_d3_angular.png){width=300}
+- [Bulletgraphs (Few 2007)](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf)<br />![](img/bulletgraph.png){width=300}
+- [Heatmaps (Few 2006)](https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf)<br />![](img/heatmap.png){width=300}
+
+<aside class="notes">
+
+Nahi badezu bat azaldu eta ondoren tableaun egin, ala hiruak azaldu ta gero hiruak tableaun egin
+
+</aside>
+
+# Dashboards
+
+## Dashboards for *situation awareness*
+
+Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepapers/Dashboard_Design.pdf))
+
+> The term “dashboard” refers to a single screen information display that is used to monitor what’s going on in some aspect of the business. 
+
+- Perception of own's environment
+- Comprehension of it's meaning
+- Projection of that understanding into the future
+
+## Do's : Principles you should follow
+
+- Use flicker and sound to grab attention
+- Encourage active thinking about the data, not just passive reaction to alarms
+- Don’t over-automate actions to the point where people become disengaged
+- Provide smooth and simple means to respond
+- Provide a common picture for the whole team
+- Support projections for proactive responses
+- Match the mental model
+
+## ... and dont's: Design problems you should avoid
+
+- Too much complexity
+- Too many alert conditions
+- Alerts that cannot be diff erentiated
+- Overwhelming visuals
+- Distracting visuals
+- Inappropriate visual salience
+- Mismatch between information and its visual representation
+- Indirect expression of measures
+- Not enough context
+
+## Few's few examples
+
+![](img/few-basic-dashboard.png)
+
+## Dashboards in Tableau
 
 # References
 
