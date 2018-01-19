@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Miren Berasategi &amp; Mikel Madina">
+  <meta name="author" content="Mikel Madina &amp; Miren Berasategi">
   <title>Visual Analytics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -14,6 +14,9 @@
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+.static .author span { display:none !important; }
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/deusto.css" id="theme">
   <!-- Printing and PDF exports -->
@@ -36,7 +39,7 @@
       <div class="static">
         <div class="bottomR"><img src="reveal.js/logo-deusto.png" alt="Universidad de Deusto" /></div>
         <div class="bottomL">
-                      <div class="author">Miren Berasategi &amp; Mikel Madina</div>
+                      <div class="author"><span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &amp;</span> Miren Berasategi</div>
                                 <div class="title">Visual Analytics</div>
                   </div>
       </div>
@@ -44,7 +47,7 @@
 <section id="title-slide">
   <h1 class="title">Visual Analytics</h1>
   <p class="subtitle">Communicating data-driven insights<br />through data visualization techniques<br />and useful dashboards</p>
-  <p class="author">Miren Berasategi &amp; Mikel Madina</p>
+  <p class="author"><span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &amp;</span> Miren Berasategi</p>
   <p class="email">miren.berasategi@deusto.es</p>
 </section>
 
@@ -384,15 +387,6 @@ License
 Copyright © 2018 University of Deusto<br /> This work (except for the quoted images, whose rights are reserved to their owners) is licensed under the Creative Commons “Attribution-ShareAlike” License. To view a copy of this license, visit <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="uri">http://creativecommons.org/licenses/by-sa/3.0/</a>
 </p>
 </section></section>
-<section><section id="test-slides" class="title-slide slide level1"><h1>Test slides</h1></section><section class="slide level2">
-
-<p>First one</p>
-</section><section id="nd-level-heading" class="slide level2" data-background="https://static.pexels.com/photos/371633/pexels-photo-371633.jpeg">
-<h2>2nd level heading</h2>
-<p>Testing background images</p>
-<h3 id="rd-level-heading">3rd level heading</h3>
-<p>Second one with content</p>
-</section></section>
     </div>
   </div>
 
@@ -404,10 +398,10 @@ Copyright © 2018 University of Deusto<br /> This work (except for the quoted im
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        // Display the page number of the current slide
-        slideNumber: print,
         // Push each slide change to the browser history
         history: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: true,
 
         // Optional reveal.js plugins
         dependencies: [

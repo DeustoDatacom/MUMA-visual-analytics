@@ -1,10 +1,11 @@
 ---
 title: Visual Analytics
 subtitle: Communicating data-driven insights<br />through data visualization techniques<br />and useful dashboards
-author: Miren Berasategi & Mikel Madina
+author: <span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &</span> Miren Berasategi
 email: miren.berasategi@deusto.es
 theme: deusto
-slideNumber: print
+highlighting-css: .static .author span { display:none !important; }
+showNotes: true
 ...
 
 # 0. Introduction 
