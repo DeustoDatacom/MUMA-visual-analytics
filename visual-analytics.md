@@ -59,11 +59,20 @@ Honek erantzungo lioke "insights" parteari:
 
 </aside>
 
-## Tableau: load data
+## Tableau
 
+(oinarrizko ezaugarriak)
 `data.xls`
 
 Fake data for online marketing tools and Goals
+
+## Tableau 0.1
+
+![Load data](img/tableau_load_data_1080x768.gif){width=700}
+
+## Tableau 0.2
+
+![Metadata view](img/tableau_metadata.gif){width=700}
 
 <aside class="notes">
 
@@ -124,6 +133,10 @@ Variable types and insights (Munzner's "targets") as *ingredients*
 Si eso Kirken taula sartu, baina taula sortzeko kodea nahiko liosoa da
 
 </aside>
+
+## Tableau: Show me
+
+![Show me](img/tableau_mostrarme.gif){width=700}
 
 # Provide easier analysis
 
@@ -229,6 +242,38 @@ Nahi badezu bat azaldu eta ondoren tableaun egin, ala hiruak azaldu ta gero hiru
 
 </aside>
 
+## Tableau 1.1: Timelines
+
+![Timelines](img/tableau_timeline_1080x768.gif){width=700}
+
+## Tableau 1.2: Bulletgraphs
+
+![Bulletgraphs](img/tablea_bulletgraph_1080x768.gif){width=700}
+
+## Tableau 1.2: Heatmaps
+
+![Heatmaps](img/tablea_heatmap_1080x768.gif){width=700}
+
+## Tableau 2.1: automatic aggregation
+
+![Automatic aggregation](img/tablea_campos_calculados_1_agregaciones_de_tableau1080x768.gif){width=700}
+
+## Tableau 2.2: calculated fields
+
+![Calculated fields](img/tablea_campos_calculados_2_campo_calculado_nivel_linea1080x768.gif){width=700}
+
+## Tableau 2.3: aggregation on calculated fields
+
+![Aggregation on calculated fields](img/tablea_campos_calculados_3_agregaciones_sobre_campos_calculados1080x768.gif){width=700}
+
+## Tableau 2.4: adding KPIs to timelines 1
+
+![Adding KPIs to timelines 1](img/tablea_sparkline_kpi_1_anadir_kpi_basico1080x768.gif){width=700}
+
+## Tableau 2.5: adding KPIs to timelines 2
+
+![Adding KPIs to timelines 2](img/tablea_sparkline_kpi_2_anadir_mas_kpi1080x768.gif){width=700}
+
 # Dashboards
 
 ## Dashboards for *situation awareness*
@@ -268,6 +313,26 @@ Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepape
 ![](img/few-basic-dashboard.png)
 
 ## Dashboards in Tableau
+
+## Tableau 2.1: basic dashboard
+
+![Basic dashboard](img/tablea_dashboard_1_montar_dashboard1080x768.gif){width=700}
+
+## Tableau 2.2: basic formating
+
+![Basic formating](img/tablea_dashboard_2_formateo_basico1080x768.gif){width=700}
+
+## Tableau 2.3: show filters
+
+![Show filters](img/tablea_dashboard_3_mostrar_filtro1080x768.gif){width=700}
+
+## Tableau 2.4: highlight action
+
+![Highlight action](img/tablea_dashboard_4_accion_highlight1080x768.gif){width=700}
+
+## Tableau 2.5: filter action
+
+![Filter action](img/tablea_dashboard_5_accion_filtro1080x768.gif){width=700}
 
 # References
 
