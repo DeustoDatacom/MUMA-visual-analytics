@@ -5,12 +5,11 @@ author: Miren Berasategi & Mikel Madina
 email: miren.berasategi@deusto.es
 theme: deusto
 slideNumber: print
-
 ...
 
-# Introduction 
+# 0. Introduction 
 
-## Key points
+## 0.1 Key points
 
 - **Data driven**: as seen in Onieva's and Lorenzo's lectures
 - **Insights**: que usen las características gráficas
@@ -20,7 +19,7 @@ slideNumber: print
 Tableau Desktop para prácticar
 
 
-## Why use visualizations
+## 0.2 Why use visualizations
 
 <figure class="fragment"  data-fragment-index="3" style="width:55%; float:right;">
 <img src="img/anscombe3.png" alt="Visualizations" />
@@ -38,17 +37,18 @@ Tableau Desktop para prácticar
 <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe's Quartet</a>
 </p>
 
-<aside class="notes">
+::: notes
 
 Baina honek ez du esan nahi teknika estatistikoak alde batera utzi behar direnik; batak besteari lagundu behar diote (estatistika tradizionalak bisualizazioari eta alderantziz)
 
-</aside>
+:::
 
-## What to use visualizations for
+## 0.2 Why use visualizations
 
 ![Munzner 2015, p.42](img/munzner-3.1.png){width="600px"}
 
-<aside class="notes">
+::: notes
+
 Honek erantzungo lioke "insights" parteari: 
 
 - *Targets* lehenbizi (benetako insighten oinarriak)
@@ -57,7 +57,7 @@ Honek erantzungo lioke "insights" parteari:
    - Query (identifikatu target, baldin eta badago)
    - Azkenik analyze, komunikatu eta datu/modelo berriak sortu
 
-</aside>
+:::
 
 ## Tableau
 
@@ -74,18 +74,18 @@ Fake data for online marketing tools and Goals
 
 ![Metadata view](img/tableau_metadata.gif){width=700}
 
-<aside class="notes">
+::: notes
 
 - datuak tableaura kargatu
 - "data" bistan bariableak pixkat aztertu
 	- sinbolotxoa eta kolorea, tableauk datua nola interpretatu duen jakiteko
 	- ze bariable dauden, gero hortik datu kalkulatuak ateratzeko, adibidez irabazitakoa / gastatutakoa oinarrizko KPI modura
 
-</aside>
+:::
 
-# Graphics
+# 1. Graphics
 
-## Reminder: variable types
+## 1.1 Reminder: variable types
 
 - Quantitative
     - Discrete
@@ -94,53 +94,49 @@ Fake data for online marketing tools and Goals
     - Ordinal
     - Nominal
 
-::: notes
-testing notes
-:::
-
-## Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span>  {data-transition="none"}
+## 1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span>  {data-transition="none"}
 
 Spatial and time/hour variables are special variable types. **Time variables** are specially complex:
 
 - are there 365 days in every year? 30 days in every month? 24 hours in every day?
 - _timezones_ make it even more complex to use hours or time of day
 
-## Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span>  {data-transition="none"}
+## 1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span>  {data-transition="none"}
 
 Time may be used as a continuous or as a qualitative variable.
 
 - as a qualitative variable, it has a hierarchy: year > month > (week >) day > hour > minute
 - but different hierarchies may be necessary: bimonthly publications, multiple work shifts in a day...
 
-## Mapping variables to graphics
+## 1.2 Mapping variables to graphics
 
 ![Kirk, 2016 Encodings table [\(source\)](http://book.visualisingdata.com/chapter/chapter-6)](img/6.57.EncodingsTable_preview.png){width="650px"}
 
-<aside class="notes">
+::: notes
 
 Grafikoagoa egitea komeniko litzateke
 
-</aside>
+:::
 
-## Graphs typology
+## 1.3 Graphs typology
 
 Variable types and insights (Munzner's "targets") as *ingredients*
 
 [The Data Visualisation Catalogue](https://datavizcatalogue.com/search.html)
 
-<aside class="notes">
+::: notes
 
 Si eso Kirken taula sartu, baina taula sortzeko kodea nahiko liosoa da
 
-</aside>
+:::
 
 ## Tableau: Show me
 
 ![Show me](img/tableau_mostrarme.gif){width=700}
 
-# Provide easier analysis
+# 2. Provide easier analysis
 
-## Change default settings {data-transition="none"}
+## 2.1 Change default settings {data-transition="none"}
 
 <figure>
 
@@ -149,43 +145,43 @@ Si eso Kirken taula sartu, baina taula sortzeko kodea nahiko liosoa da
 <figcaption style="margin-top:0;">[Data source: Berlin marathon times](https://github.com/hmelberg/berlin-marathon)</figcaption>
 </figure>
 
-<aside class="notes">
+::: notes
 
 Data: Berlin Marathon
 
-</aside>
+:::
 
-## Change default settings {data-transition="none"}
+## 2.1 Change default settings {data-transition="none"}
 
 ![](img/easieranalysis2.png)
 
-## Change default settings {data-transition="none"}
+## 2.1 Change default settings {data-transition="none"}
 
 ![](img/easieranalysis3.png)
 
-## Change default settings {data-transition="none"}
+## 2.1 Change default settings {data-transition="none"}
 
 ![](img/easieranalysis4.png)
 
-## Make simpler graphs
+## 2.2 Make simpler graphs
 
 <div style="height:100px;">&nbsp;</div>
 
 >Data-ink is the non-erasable core of the graphic, the non-redundant ink arranged in response to variation in the numbers represented. (Tufte 1983)
 
-## Make simpler graphs {data-transition="none"}
+## 2.2 Make simpler graphs {data-transition="none"}
 
 A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.com/blog/data-looks-better-naked)
 
 <div style="margin:auto; width: 70%; height: 0; position: relative; padding-bottom: 90%;"><iframe src="https://speakerdeck.com/player/87bb9f00ec1e01308020727faa1f9e72" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no"></iframe></div>
 
-<aside class="notes">
+::: notes
 
 Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arraroren bat egitea
 
-</aside>
+:::
 
-## Make simpler graphs {data-transition="none"}
+## 2.2 Make simpler graphs {data-transition="none"}
 
 (denborakin ikusteko)
 
@@ -195,17 +191,17 @@ Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arrarore
 <figcaption style="margin-top:0;">Nussbaumer, [Declutter Your Data Visualizations](https://www.youtube.com/embed/X79o46W5plI)</figcaption>
 </figure>
 
-## Highlight observations
+## 2.3 Highlight observations
 
 [Preattentive attributes](https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization)
 
 ![Nussbaumber 2015, p.105](img/nussbaumer-4.4.png){width=650}
 
-## Highlight observations {data-transition="none"}
+## 2.3 Highlight observations {data-transition="none"}
 
 ![Nussbaumber, [Do you see it? The importance of contrast when communicating with data [video]](https://www.youtube.com/watch?v=60KiAXbkrl0)](img/nussbaumer-contrast.png){width="700px"}
 
-## Add variables (as context)
+## 2.4 Add variables (as context)
 
 - Adding preexisting variables (con **mesura**)
 - Creating conditional variables from preexisting variables
@@ -214,7 +210,7 @@ Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arrarore
 
 ![](img/addvariables.png){.fragment}
 
-## Add statistical information
+## 2.5 Add statistical information
 
 <figure style="float:right;width:50%;" class="fragment">
 <img src="img/addstatinfo1.png" />
@@ -226,7 +222,6 @@ Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arrarore
 </figcaption>
 </figure>
 
-
 - statistical summaries
 - models
 
@@ -236,11 +231,11 @@ Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arrarore
 - [Bulletgraphs (Few 2007)](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf)<br />![](img/bulletgraph.png){width=300}
 - [Heatmaps (Few 2006)](https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf)<br />![](img/heatmap.png){width=300}
 
-<aside class="notes">
+::: notes
 
 Nahi badezu bat azaldu eta ondoren tableaun egin, ala hiruak azaldu ta gero hiruak tableaun egin
 
-</aside>
+:::
 
 ## Tableau 1.1: Timelines
 
@@ -274,9 +269,9 @@ Nahi badezu bat azaldu eta ondoren tableaun egin, ala hiruak azaldu ta gero hiru
 
 ![Adding KPIs to timelines 2](img/tablea_sparkline_kpi_2_anadir_mas_kpi1080x768.gif){width=700}
 
-# Dashboards
+# 3. Dashboards
 
-## Dashboards for *situation awareness*
+## 3.1 Dashboards for *situation awareness*
 
 Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepapers/Dashboard_Design.pdf))
 
@@ -286,7 +281,7 @@ Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepape
 - Comprehension of it's meaning
 - Projection of that understanding into the future
 
-## Do's : Principles you should follow
+## 3.2 Do's : Principles you should follow
 
 - Use flicker and sound to grab attention
 - Encourage active thinking about the data, not just passive reaction to alarms
@@ -296,7 +291,7 @@ Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepape
 - Support projections for proactive responses
 - Match the mental model
 
-## ... and dont's: Design problems you should avoid
+## 3.3 ... and dont's: Design problems you should avoid
 
 - Too much complexity
 - Too many alert conditions
@@ -308,7 +303,7 @@ Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepape
 - Indirect expression of measures
 - Not enough context
 
-## Few's few examples
+## 3.4 Few's few examples
 
 ![](img/few-basic-dashboard.png)
 
@@ -360,17 +355,3 @@ miren.berasategi@deusto.es
 
 <p style="font-family:'Frutiger LT Std', Montserrat, Helvetica, Arial, sans-serif; font-size:.4em;font-weight:200;">Copyright &copy; 2018 University of Deusto<br />
 This work (except for the quoted images, whose rights are reserved to their owners) is licensed under the Creative Commons “Attribution-ShareAlike” License. To view a copy of this license, visit [http://creativecommons.org/licenses/by-sa/3.0/](http://creativecommons.org/licenses/by-sa/3.0/)</p>
-
-# Test slides
-
----
-
-First one
-
-## 2nd level heading {data-background="https://static.pexels.com/photos/371633/pexels-photo-371633.jpeg"}
-
-Testing background images 
-
-### 3rd level heading
-
-Second one with content

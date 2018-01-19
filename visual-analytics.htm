@@ -29,18 +29,27 @@
   <![endif]-->
 </head>
 <body>
+
   <div class="reveal">
     <div class="slides">
-
+      
+      <div class="static">
+        <div class="bottomR"><img src="reveal.js/logo-deusto.png" alt="Universidad de Deusto" /></div>
+        <div class="bottomL">
+                      <div class="author">Miren Berasategi &amp; Mikel Madina</div>
+                                <div class="title">Visual Analytics</div>
+                  </div>
+      </div>
+      
 <section id="title-slide">
   <h1 class="title">Visual Analytics</h1>
   <p class="subtitle">Communicating data-driven insights<br />through data visualization techniques<br />and useful dashboards</p>
   <p class="author">Miren Berasategi &amp; Mikel Madina</p>
+  <p class="email">miren.berasategi@deusto.es</p>
 </section>
 
-<<<<<<< Updated upstream
-<section><section id="introduction" class="title-slide slide level1"><h1>Introduction</h1></section><section id="key-points" class="slide level2">
-<h2>Key points</h2>
+<section><section id="introduction" class="title-slide slide level1"><h1>0. Introduction</h1></section><section id="key-points" class="slide level2">
+<h2>0.1 Key points</h2>
 <ul>
 <li><strong>Data driven</strong>: as seen in Onieva’s and Lorenzo’s lectures</li>
 <li><strong>Insights</strong>: que usen las características gráficas</li>
@@ -48,12 +57,8 @@
 <li><strong>Dashboards</strong>: as <em>situattion awareness</em> tools</li>
 </ul>
 <p>Tableau Desktop para prácticar</p>
-=======
-<section><section id="introduction" class="title-slide slide level1"><h1>Introduction</h1></section><section id="definitions" class="slide level2">
-<h2>Definition(s)</h2>
->>>>>>> Stashed changes
 </section><section id="why-use-visualizations" class="slide level2">
-<h2>Why use visualizations</h2>
+<h2>0.2 Why use visualizations</h2>
 <figure class="fragment" data-fragment-index="3" style="width:55%; float:right;">
 <img src="img/anscombe3.png" alt="Visualizations" />
 </figure>
@@ -69,13 +74,12 @@
 <aside class="notes">
 <p>Baina honek ez du esan nahi teknika estatistikoak alde batera utzi behar direnik; batak besteari lagundu behar diote (estatistika tradizionalak bisualizazioari eta alderantziz)</p>
 </aside>
-</section><section id="what-to-use-visualizations-for" class="slide level2">
-<h2>What to use visualizations for</h2>
+</section><section id="why-use-visualizations-1" class="slide level2">
+<h2>0.2 Why use visualizations</h2>
 <figure>
 <img data-src="img/munzner-3.1.png" alt="Munzner 2015, p.42" width="600" /><figcaption>Munzner 2015, p.42</figcaption>
 </figure>
 <aside class="notes">
-<<<<<<< Updated upstream
 <p>Honek erantzungo lioke “insights” parteari:</p>
 <ul>
 <li><em>Targets</em> lehenbizi (benetako insighten oinarriak)</li>
@@ -110,13 +114,10 @@
 <li>ze bariable dauden, gero hortik datu kalkulatuak ateratzeko, adibidez irabazitakoa / gastatutakoa oinarrizko KPI modura</li>
 </ul></li>
 </ul>
-=======
-<p>More notes</p>
->>>>>>> Stashed changes
 </aside>
 </section></section>
-<section><section id="graphics" class="title-slide slide level1"><h1>Graphics</h1></section><section id="reminder-variable-types" class="slide level2">
-<h2>Reminder: variable types</h2>
+<section><section id="graphics" class="title-slide slide level1"><h1>1. Graphics</h1></section><section id="reminder-variable-types" class="slide level2">
+<h2>1.1 Reminder: variable types</h2>
 <ul>
 <li>Quantitative
 <ul>
@@ -129,25 +130,22 @@
 <li>Nominal</li>
 </ul></li>
 </ul>
-<aside class="notes">
-<p>testing notes</p>
-</aside>
 </section><section id="reminder-variable-types-a-question-of-time" class="slide level2" data-transition="none">
-<h2>Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
+<h2>1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
 <p>Spatial and time/hour variables are special variable types. <strong>Time variables</strong> are specially complex:</p>
 <ul>
 <li>are there 365 days in every year? 30 days in every month? 24 hours in every day?</li>
 <li><em>timezones</em> make it even more complex to use hours or time of day</li>
 </ul>
 </section><section id="reminder-variable-types-a-question-of-time-1" class="slide level2" data-transition="none">
-<h2>Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
+<h2>1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
 <p>Time may be used as a continuous or as a qualitative variable.</p>
 <ul>
 <li>as a qualitative variable, it has a hierarchy: year &gt; month &gt; (week &gt;) day &gt; hour &gt; minute</li>
 <li>but different hierarchies may be necessary: bimonthly publications, multiple work shifts in a day…</li>
 </ul>
 </section><section id="mapping-variables-to-graphics" class="slide level2">
-<h2>Mapping variables to graphics</h2>
+<h2>1.2 Mapping variables to graphics</h2>
 <figure>
 <img data-src="img/6.57.EncodingsTable_preview.png" alt="Kirk, 2016 Encodings table (source)" width="650" /><figcaption>Kirk, 2016 Encodings table <a href="http://book.visualisingdata.com/chapter/chapter-6">(source)</a></figcaption>
 </figure>
@@ -155,7 +153,7 @@
 <p>Grafikoagoa egitea komeniko litzateke</p>
 </aside>
 </section><section id="graphs-typology" class="slide level2">
-<h2>Graphs typology</h2>
+<h2>1.3 Graphs typology</h2>
 <p>Variable types and insights (Munzner’s “targets”) as <em>ingredients</em></p>
 <p><a href="https://datavizcatalogue.com/search.html">The Data Visualisation Catalogue</a></p>
 <aside class="notes">
@@ -167,9 +165,8 @@
 <img data-src="img/tableau_mostrarme.gif" alt="Show me" width="700" /><figcaption>Show me</figcaption>
 </figure>
 </section></section>
-<section><section id="provide-easier-analysis" class="title-slide slide level1"><h1>Provide easier analysis</h1></section><section id="change-default-settings" class="slide level2" data-transition="none">
-<h2>Change default settings</h2>
-<<<<<<< Updated upstream
+<section><section id="provide-easier-analysis" class="title-slide slide level1"><h1>2. Provide easier analysis</h1></section><section id="change-default-settings" class="slide level2" data-transition="none">
+<h2>2.1 Change default settings</h2>
 <figure>
 <p><img data-src="img/easieranalysis1.png" /></p>
 <figcaption style="margin-top:0;">
@@ -179,20 +176,17 @@
 <aside class="notes">
 <p>Data: Berlin Marathon</p>
 </aside>
-=======
-<p><img data-src="img/easieranalysis1.png" /></p>
->>>>>>> Stashed changes
 </section><section id="change-default-settings-1" class="slide level2" data-transition="none">
-<h2>Change default settings</h2>
+<h2>2.1 Change default settings</h2>
 <p><img data-src="img/easieranalysis2.png" /></p>
 </section><section id="change-default-settings-2" class="slide level2" data-transition="none">
-<h2>Change default settings</h2>
+<h2>2.1 Change default settings</h2>
 <p><img data-src="img/easieranalysis3.png" /></p>
 </section><section id="change-default-settings-3" class="slide level2" data-transition="none">
-<h2>Change default settings</h2>
+<h2>2.1 Change default settings</h2>
 <p><img data-src="img/easieranalysis4.png" /></p>
 </section><section id="make-simpler-graphs" class="slide level2">
-<h2>Make simpler graphs</h2>
+<h2>2.2 Make simpler graphs</h2>
 <div style="height:100px;">
  
 </div>
@@ -200,7 +194,7 @@
 <p>Data-ink is the non-erasable core of the graphic, the non-redundant ink arranged in response to variation in the numbers represented. (Tufte 1983)</p>
 </blockquote>
 </section><section id="make-simpler-graphs-1" class="slide level2" data-transition="none">
-<h2>Make simpler graphs</h2>
+<h2>2.2 Make simpler graphs</h2>
 <p>A step-by-step example: <a href="http://www.darkhorseanalytics.com/blog/data-looks-better-naked">Data looks better naked</a></p>
 <div style="margin:auto; width: 70%; height: 0; position: relative; padding-bottom: 90%;">
 <iframe src="https://speakerdeck.com/player/87bb9f00ec1e01308020727faa1f9e72" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no">
@@ -210,7 +204,7 @@
 <p>Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arraroren bat egitea</p>
 </aside>
 </section><section id="make-simpler-graphs-2" class="slide level2" data-transition="none">
-<h2>Make simpler graphs</h2>
+<h2>2.2 Make simpler graphs</h2>
 <p>(denborakin ikusteko)</p>
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X79o46W5plI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
@@ -220,22 +214,18 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 </figcaption>
 </figure>
 </section><section id="highlight-observations" class="slide level2">
-<h2>Highlight observations</h2>
+<h2>2.3 Highlight observations</h2>
 <p><a href="https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization">Preattentive attributes</a></p>
 <figure>
-<<<<<<< Updated upstream
 <img data-src="img/nussbaumer-4.4.png" alt="Nussbaumber 2015, p.105" width="650" /><figcaption>Nussbaumber 2015, p.105</figcaption>
-=======
-<img data-src="img/nussbaumer-4.4.png" alt="Nussbaumber 2015, p.105" width="700" /><figcaption>Nussbaumber 2015, p.105</figcaption>
->>>>>>> Stashed changes
 </figure>
 </section><section id="highlight-observations-1" class="slide level2" data-transition="none">
-<h2>Highlight observations</h2>
+<h2>2.3 Highlight observations</h2>
 <figure>
 <img data-src="img/nussbaumer-contrast.png" alt="Nussbaumber, Do you see it? The importance of contrast when communicating with data [video]" width="700" /><figcaption>Nussbaumber, <a href="https://www.youtube.com/watch?v=60KiAXbkrl0">Do you see it? The importance of contrast when communicating with data [video]</a></figcaption>
 </figure>
 </section><section id="add-variables-as-context" class="slide level2">
-<h2>Add variables (as context)</h2>
+<h2>2.4 Add variables (as context)</h2>
 <ul>
 <li>Adding preexisting variables (con <strong>mesura</strong>)</li>
 <li>Creating conditional variables from preexisting variables
@@ -246,7 +236,7 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 </ul>
 <p><img data-src="img/addvariables.png" class="fragment" /></p>
 </section><section id="add-statistical-information" class="slide level2">
-<h2>Add statistical information</h2>
+<h2>2.5 Add statistical information</h2>
 <figure style="float:right;width:50%;" class="fragment">
 <p><img src="img/addstatinfo1.png" /></p>
 <figcaption>
@@ -308,8 +298,8 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <img data-src="img/tablea_sparkline_kpi_2_anadir_mas_kpi1080x768.gif" alt="Adding KPIs to timelines 2" width="700" /><figcaption>Adding KPIs to timelines 2</figcaption>
 </figure>
 </section></section>
-<section><section id="dashboards" class="title-slide slide level1"><h1>Dashboards</h1></section><section id="dashboards-for-situation-awareness" class="slide level2">
-<h2>Dashboards for <em>situation awareness</em></h2>
+<section><section id="dashboards" class="title-slide slide level1"><h1>3. Dashboards</h1></section><section id="dashboards-for-situation-awareness" class="slide level2">
+<h2>3.1 Dashboards for <em>situation awareness</em></h2>
 <p>Few (liburua, <a href="https://www.perceptualedge.com/articles/Whitepapers/Dashboard_Design.pdf">laburpena 2007</a>)</p>
 <blockquote>
 <p>The term “dashboard” refers to a single screen information display that is used to monitor what’s going on in some aspect of the business.</p>
@@ -320,7 +310,7 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <li>Projection of that understanding into the future</li>
 </ul>
 </section><section id="dos-principles-you-should-follow" class="slide level2">
-<h2>Do’s : Principles you should follow</h2>
+<h2>3.2 Do’s : Principles you should follow</h2>
 <ul>
 <li>Use flicker and sound to grab attention</li>
 <li>Encourage active thinking about the data, not just passive reaction to alarms</li>
@@ -331,7 +321,7 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <li>Match the mental model</li>
 </ul>
 </section><section id="and-donts-design-problems-you-should-avoid" class="slide level2">
-<h2>… and dont’s: Design problems you should avoid</h2>
+<h2>3.3 … and dont’s: Design problems you should avoid</h2>
 <ul>
 <li>Too much complexity</li>
 <li>Too many alert conditions</li>
@@ -344,7 +334,7 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <li>Not enough context</li>
 </ul>
 </section><section id="fews-few-examples" class="slide level2">
-<h2>Few’s few examples</h2>
+<h2>3.4 Few’s few examples</h2>
 <p><img data-src="img/few-basic-dashboard.png" /></p>
 </section><section id="dashboards-in-tableau" class="slide level2">
 <h2>Dashboards in Tableau</h2>
