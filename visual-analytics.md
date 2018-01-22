@@ -18,8 +18,21 @@ highlighting-css: .static .author span { display:none !important; }
 
 Tableau Desktop para prácticar
 
+## 0.2 Why use visualization
 
-## 0.2 What's the point?
+- Sight is our most developed sense
+- The visual system provides a very high-bandwidth channel to our brains
+- A significant amount of visual information processing occurs in parallel at the preconscious level
+- The human brain is _trained_ to identify visual patterns
+- Summary statistics have the intrinsic limitation of data loss
+
+::: notes 
+
+Implications of visual perception relevant to visualization design on next section
+
+:::
+
+## 0.2 Why use visualization
 
 <figure class="fragment"  data-fragment-index="3" style="width:55%; float:right;">
 <img src="img/anscombe3.png" alt="Visualizations" />
@@ -48,11 +61,13 @@ Traditional summary statistics can be misleading. These datasets share almost id
 
 **Bottom line**: summary statistics, although very sensitive to outliers, are important, but plotting the data (visualization) is also a necessary step during the first stages of the data analytics process, before making any assumptions. 
 
+Munzner 2014 p.8
+
 :::
 
-## 0.3 Why use visualizations
+## 0.3 What to use visualization for
 
-![Munzner 2015, p.42](img/munzner-3.1.png){width="600px"}
+![Munzner 2014, p.42](img/munzner-3.1.png){width="600px"}
 
 ::: notes
 
@@ -77,9 +92,9 @@ Honek erantzungo lioke "insights" parteari:
 
 :::
 
-## 0.3 Why use visualizations
+## 0.3 What to use visualization for
 
-![Munzner 2015, p.56](img/munzner-3.6-wide.png){width="725"}
+![Munzner 2014, p.56](img/munzner-3.6-wide.png){width="725"}
 
 ::: notes
 
@@ -92,9 +107,9 @@ The abstract task of understanding **trends, outliers, distributions and correla
 
 :::
 
-## 0.3 Why use visualizations
+## 0.3 What to use visualization for
 
-![Munzner 2015, p.46](img/munzner-3.2-wide.png)
+![Munzner 2014, p.46](img/munzner-3.2-wide.png)
 
 ::: notes
 
@@ -113,13 +128,13 @@ The abstract task of understanding **trends, outliers, distributions and correla
 
 :::
 
-## 0.3 Why use visualizations
+## 0.3 What to use visualization for
 
 <blockquote style="width:90% !important; font-size:.9em; margin-top:2em;">
   <p style="margin:0;">There is a **strong relationship** between the form of the data (the attribute/variable and dataset types) and what kinds of vis[ualization] idioms are effective at displaying it. (...) Don't just draw what you are given; decide what the right thing to show is, create it with a series of **transformations** from the original database, and draw that!</p>
 </blockquote>
 
-<figure><figcaption style="text-align:right;">Munzner 2015, p.50</figcaption></figure>
+<figure><figcaption style="text-align:right;">Munzner 2014, p.50</figcaption></figure>
 
 ::: notes
 
@@ -131,9 +146,9 @@ Transformation (=derive) may be required depending on the desired type of insigh
 
 :::
 
-## 0.3 Why use visualizations
+## 0.3 What to use visualization for
 
-![Derived attributes can be directly visually encoded. Munzner 2015, p.52](img/munzner-3.5.png)
+![Derived attributes can be directly visually encoded. Munzner 2014, p.52](img/munzner-3.5.png)
 
 ## Practice: meet our sample data
 
@@ -159,13 +174,13 @@ Takes for granted many things, such as validity/reasonability of goals, of spent
 
 <div class="right" style="width:75%; float:right;">
 
-![Tableau Software](img/tableau-getinsightsfast.gif){width=750}
+![Tableau Software](img/tableau/tableau-getinsightsfast.gif){width=750}
 
 </div>
 
 <div class="left" style="width:23%; float:left;">
 
-![](img/tableau-logo.png)
+![](img/tableau/tableau-logo.png)
 
 </div>
 
@@ -227,30 +242,80 @@ The source file (`data.xls`) is never modified
 
 # 1. Graphics
 
+---
+
+<figure class="fragment" style="float:right;width:600px;">
+  <img src="img/graph-ex-bars.png" />
+</figure>
+
+<figure class="fragment" style="float:right;width:500px;clear:right;">
+  <img src="img/graph-ex-map.png" />
+</figure>
+
+<figure class="fragment" style="float:right;width:500px;clear:right;">
+?
+</figure>
+
+![](img/graph-ex-data.png){width=200}
+
+::: notes
+
+Dataset showing town name and amount of subsidies (funds) received in a given year. How do you think we could visualize this?
+
+- visualization requires _mapping_ or _translation_ from _data_ to _visual language_ (idioms)
+- this can be done in many ways
+
+1. subsidy amount = bar height, color irrelevant
+2. to show in map **transformation is required** (not possible directly)
+  - color IS relevant (subsidy amount = color saturation)
+  - comparison is more difficult: not _ordered_ (althoug not impossible)
+  - allows for more direct insight (if context - knowledge of the area): Vitoria-Gasteiz not getting the higher amount
+3. anything else? (i.e. pie chart, treemap...)
+
+:::
+
 ## 1.1 Reminder: variable types
 
-- Quantitative
-    - Discrete
-    - Continuous
-- Qualitative
-    - Ordinal
-    - Nominal
+<div class="fragment" style="float:right;width:60%;font-family:'Frutiger LT Std', Montserrat, sans-serif;font-size:.5em;font-weight:200;">
 
-## 1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span>  {data-transition="none"}
+<b>A question of time</b>
 
 Spatial and time/hour variables are special variable types. **Time variables** are specially complex:
 
 - are there 365 days in every year? 30 days in every month? 24 hours in every day?
 - _timezones_ make it even more complex to use hours or time of day
 
-## 1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span>  {data-transition="none"}
-
 Time may be used as a continuous or as a qualitative variable.
 
 - as a qualitative variable, it has a hierarchy: year > month > (week >) day > hour > minute
 - but different hierarchies may be necessary: bimonthly publications, multiple work shifts in a day...
 
-## 1.2 Mapping variables to graphics
+</div>
+
+- Quantitative
+    - Continuous
+    - Discrete
+- Qualitative
+    - Categorical
+    - Ordinal
+- Special types
+  + time
+  + space
+  + ...
+
+::: notes
+
+- continuous variables can take on infinite/uncountable values (time, real numbers)
+- discrete variables can take a finite/countable number of values (periods of time, integers)
+
+- categorical/nominal: two or more categories, any order (gender, political party...). Cannot be quantified, do not allow arithmetic operations, cannot be assigned any order
+- ordinal: allows for rank order (1st, 2nd, 3rd...). Can be dichotomous (yes/no, right/wrong, sick/healthy...) or non-dichotomous (spectrum of values:  completely agree, mostly agree, mostly disagree, completely disagree)
+
+:::
+
+## 1.2 Mapping variables to graphs
+
+<!--
 
 ![Kirk, 2016 Encodings table [\(source\)](http://book.visualisingdata.com/chapter/chapter-6)](img/6.57.EncodingsTable_preview.png){width="650px"}
 
@@ -260,21 +325,189 @@ Grafikoagoa egitea komeniko litzateke
 
 :::
 
-## 1.3 Graphs typology
+-->
 
-Variable types and insights (Munzner's "targets") as *ingredients*
+<div style="height: 3em;"></div>
 
-[The Data Visualisation Catalogue](https://datavizcatalogue.com/search.html)
+Understanding **marks and channels** provides the building blocks for analyzing visual encodings (Munzner 2014, p.95)
+
+---
+
+### 1.2.1 Marks
+
+<div style="height: 1em;"></div>
+
+A **mark** is a basic graphical element in an image
+
+![Marks are geometric primitives (Munzner 2014, p.96)](img/munzner-5.2.png)
 
 ::: notes
 
-Si eso Kirken taula sartu, baina taula sortzeko kodea nahiko liosoa da
+- a zero-dimensional (0D) mark is a point
+- a one-dimensional (1D) mark is a line
+- a two-dimensional (2D) mark is an area
+- a three-dimensional (3D) mark is possible but not frequently used (will see why)
 
+:::
+
+---
+
+### 1.2.2 Channels
+
+A visual **channel** is a way to control the appearance of marks
+
+![Visual channels control the appearance of marks (Munzner 2014, p.96)](img/munzner-5.3.png){width=500}
+
+::: notes
+
+- spatial position (_where_)
+- color, with three distinct aspects: hue, saturation, luminance (more in the next slide)
+- size, one for each added dimension: length 1D, area 2D, volume 3D
+- angle/tilt/slope
+- others are shape, curvature
+
+:::
+
+---
+
+### 1.2.2 Channels
+
+<div style="height: 1em;"></div>
+
+**One and only one** attribute/variable should be used per channel.
+
+Multiple channels per attribute are possible (**redundant encoding**), but this approach has limitations.
+
+::: notes
+
+more channels are "used up", so less attributes can be encoded in total, 
+
+BUT the attributes that are shown will be very easily perceived (i.e. color of political party for bar charts)
+
+:::
+
+---
+
+### 1.2.2 Channels
+
+<div style="height: 1em;"></div>
+
+The **size** and **shape** channels cannot be used on all types of marks, but most combinations are still possible:
+
+- lines have two _size channels_: length + width
+- points refer to location but can be _size_ and _shape_ coded
+
+::: notes
+
+Area marks cannot typically be size or shape coded: state or country already has a certain size and shape
+
+- lines: if length is _taken_ by a variable, it can't be used for another one, but width can be used to size code. They can be made wider on an individual basis to encode an additional attribute, or an entire set of bars can simply be made wider in a uniform way to be more visible
+- points: intrinsically convey information only about position and are exactly the vehicle for conveying additional information through area and shape (and color!)
+
+:::
+
+---
+
+### 1.2.3 Channel types
+
+Two kinds of sensory modalities:
+
+1. **Identity**: what, where
+2. **Magnitude**: how much
+
+It does not make sense to ask magnitude questions for shape, color hue. We can ask about magnitudes with length, area or volume; color luminance or saturation; and angle/tilt/slope.
+
+::: notes
+
+>The human perceptual system has two fundamentally different kinds of sensory modalities. The **identity** channels tell us information about _what_ something is or _where_ it is. In contrast, the **magnitude** channels tell us _how much_ of something there is (Munzner 2014, p.99).
+
+:::
+
+---
+
+### 1.2.4 Using marks and channels
+
+<div style="height: 1em;"></div>
+
+All channels are not equal.
+
+The selection of marks and channels should be guided by the principles of **expressivenes** and **effectiveness**.
+
+Once the most important attributes/variables for the desired insight have been identified, the selection of marks and channels should ensure that they are **encoded with the highest ranked**.
+
+::: notes
+
+>the same data attribute encoded with two different visual channels will result in different information content in our heads after it has passed through the perceptual and cognitive processing pathways of the human visual system (Munzner 2014, p.100)
+
+- expresiveness: the visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that we perceive as ordered; unordered data SHOULD NOT be shown in a way that implies an ordering that does not exist.
+- effectiveness: the importance of the channel (task abstraction, targets and actions) should match its salience, how noticeable it is. The most important attributes/variables should be encoded with the most effective channels, and less important attributes can be matched with less effective channels.
+
+These can be combined to create a ranking of channels according to the type of data that is being visually encoded. 
+
+:::
+
+---
+
+### 1.2.4 Using marks and channels
+
+![Channels ranked by effectiveness according to data and channel type. Ordered data should be shown with the magnitude channels, and categorical data with the identity channels (Munzner 2014, p.102)](img/munzner-5.6.png){width=600}
+
+::: notes
+
+Channels related to spatial position are at the top of both lists, and they are the only ones appearing on both lists (none of the others are effective for both data types). This primacy applies only to 2D positions, 3D depth is a much lower-ranked channel
+
+:::
+
+---
+
+### 1.2.4 Using marks and channels
+
+<div style="height: 2em;"></div>
+
+The choice of **which attributes/variables to encode with position** is the most central choice in visual encoding.
+
+::: notes
+
+the attributes encoded with position will dominate the user's mental model --their internal mental representation used for thinking and reasoning-- compared with those encoded with any other visual channel. 
+
+:::
+
+---
+
+### 1.2.4 Using marks and channels
+
+![Error rates accross visual channels (Munzner 2014, p.105)](img/munzner-5.8.png){width=600}
+
+::: notes
+
+Perceptual accuracy of each channel type: how accurate is the interpretation made by users depending on the type of channel used to represent certain data
+
+:::
+
+## 1.3 So, which graph?
+
+![A. Abela (2006), [Choosing the right chart](http://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html). Interactive version: [Chart chooser](http://labs.juiceanalytics.com/chartchooser/index.html)](img/choosing-chart.png){width=600}
+
+::: notes
+
+Variable types and insights (Munzner's "targets") as *ingredients*, which *recipes* can be used to *cook* data visualization?
+
+There are many tools for this, represented only one. 
+
+<!--
+[The Data Visualisation Catalogue](https://datavizcatalogue.com/search.html)
+-->
 :::
 
 ## Tableau: Show me
 
-![Show me](img/tableau_mostrarme.gif){width=700}
+![Show me](img/tableau/tableau_mostrarme.gif){width=700}
+
+::: notes
+
+
+
+:::
 
 # 2. Provide easier analysis
 
@@ -471,7 +704,19 @@ Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepape
 
 ![Filter action](img/tablea_dashboard_5_accion_filtro1080x768.gif){width=700}
 
-# References
+# Epilogue
+
+---
+
+<h1>References</h1> 
+
+<div style="font-size:.5em;width:90%;margin:1em auto;">
+  Abela, Andrew (2006). [Choosing a good chart](http://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html).
+
+  Kirk, Andy (2016). _Data Visualisation: A Handbook for Data Driven Design_. SAGE: London [`316.763 K 63 a`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21137802850003351&context=L&vid=deusto&lang=es_ES&search_scope=default_scope&adaptor=Local%20Search%20Engine&tab=default_tab&query=any,contains,andy%20kirk&sortby=rank&offset=0)
+
+  Munzner, Tamara (2015). _Visualization Analysis and Design_. CRC Press: Boca Raton, FL [`316.763 M 92 t`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21159285450003351&context=L&vid=deusto&search_scope=default_scope&tab=default_tab&lang=es_ES)
+</div>
 
 ---
 
