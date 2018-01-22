@@ -19,7 +19,7 @@ highlighting-css: .static .author span { display:none !important; }
 Tableau Desktop para prácticar
 
 
-## 0.2 Why use visualizations
+## 0.2 What's the point?
 
 <figure class="fragment"  data-fragment-index="3" style="width:55%; float:right;">
 <img src="img/anscombe3.png" alt="Visualizations" />
@@ -39,16 +39,33 @@ Tableau Desktop para prácticar
 
 ::: notes
 
-Baina honek ez du esan nahi teknika estatistikoak alde batera utzi behar direnik; batak besteari lagundu behar diote (estatistika tradizionalak bisualizazioari eta alderantziz)
+Traditional summary statistics can be misleading. These datasets share almost identical mean, variance, correlation and linear regression lines.
+
+1. Shows _normal_ distribution
+2. There is correlation, but it's not linear
+3. There is correlation, it IS LINEAR, but different from what emerged from the data
+4. No relationship whatsoever. Outlier is enough for _apparent_ correlation
+
+**Bottom line**: summary statistics, although very sensitive to outliers, are important, but plotting the data (visualization) is also a necessary step during the first stages of the data analytics process, before making any assumptions. 
 
 :::
 
-## 0.2 Why use visualizations
+## 0.3 Why use visualizations
 
 ![Munzner 2015, p.42](img/munzner-3.1.png){width="600px"}
 
 ::: notes
 
+What are we using visualization for?
+
+Important to answer to this question in an **abstract form**, instead of domain-specific.
+
+We are going to divide into
+
+- _targets_ = nouns
+- _actions_ = verbs 
+
+<!--
 Honek erantzungo lioke "insights" parteari: 
 
 - *Targets* lehenbizi (benetako insighten oinarriak)
@@ -56,19 +73,151 @@ Honek erantzungo lioke "insights" parteari:
    - Search (ze target eta non)
    - Query (identifikatu target, baldin eta badago)
    - Azkenik analyze, komunikatu eta datu/modelo berriak sortu
+-->
 
 :::
 
+## 0.3 Why use visualizations
+
+![Munzner 2015, p.56](img/munzner-3.6-wide.png){width="725"}
+
+::: notes
+
+- Very broadly relevant for all kinds of data: trends, outliers, features
+- One attribute/variable: find an individual value, distribution of all values, find extremes
+- Many attributes: dependency, correlation, similarity
+- The rest (network/spatial) are specific to certain types of datasets
+
+The abstract task of understanding **trends, outliers, distributions and correlations** are extremely common reasons to use data visualization.
+
+:::
+
+## 0.3 Why use visualizations
+
+![Munzner 2015, p.46](img/munzner-3.2-wide.png)
+
+::: notes
+
+- Analyze data:
+  + consume (most common use case): discover, present (known info, i.e. insights), enjoy (for the fun of it)
+  + produce: annotate, record (capture steps), derive (produce new data elements)
+
+:::
+
+## 0.3 Why use visualizations
+
+<blockquote style="width:90% !important; font-size:.9em; margin-top:2em;">
+  <p style="margin:0;">There is a **strong relationship** between the form of the data (the attribute/variable and dataset types) and what kinds of vis[ualization] idioms are effective at displaying it. (...) Don't just draw what you are given; decide what the right thing to show is, create it with a series of **transformations** from the original database, and draw that!</p>
+</blockquote>
+
+<figure><figcaption style="text-align:right;">Munzner 2015, p.50</figcaption></figure>
+
+::: notes
+
+Transformation (=derive) may be required depending on the desired type of insight -- derived attributes/variables extend the original dataset
+
+- in some cases, the same data with a change of type (temperature _vs._ "hot" or "cold")
+- in other cases, access to additional info is required (geo: city name to lat/lon)
+- created through arithmetic, logaritmic or statistial operations (i.e. diff field)
+
+:::
+
+## 0.3 Why use visualizations
+
+![Derived attributes can be directly visually encoded. Munzner 2015, p.52](img/munzner-3.5.png)
+
+## 0.3 Why use visualizations
+
+![Munzner 2015, p.46](img/munzner-3.2-wide.png)
+
+::: notes
+
+- Search for an element of interest (based on knowledge of identity & location)
+  + lookup: humans in tree vis of species of mammals
+  + locate: where are rabbits? lagomorphs -- not rodents
+  + browse: when users don't know exactly what they're looking for but have an idea of characteristics
+  + explore: not sure of either one
+- Once a target or set of targets is identified, query those at one of 3 scopes (progression from one to many to all targets)
+  + identify (US election map example)
+  + compare, more difficult, requires more sophisticated idioms
+  + summarize = overview (extremely common)
+
+:::
+
+## Practice: meet our sample data
+
+<div class="right" style="width:45%; float:right;">
+
+![](img/data-excel.png)
+
+</div>
+
+<div class="left" style="width:45%; float:left;">
+Download and open `data.xls` from Google Drive: fake data for online marketing goals and tools 
+</div>
+
+::: notes
+
+Shows results of campaigns in three different sources, per quarters (trimester). Money spent in each source, number of visits got from that campaign, income generated, and goal income for each source.
+
+Takes for granted many things, such as validity/reasonability of goals, of spent money per goal...
+
+:::
+
+## Tableau Software
+
+<div class="right" style="width:75%; float:right;">
+
+![Tableau Software](img/tableau-getinsightsfast.gif){width=750}
+
+</div>
+
+<div class="left" style="width:23%; float:left;">
+
+![](img/tableau-logo.png)
+
+</div>
+
 ## Tableau
 
-(oinarrizko ezaugarriak)
-`data.xls`
+1. Load data
+2. Explore the `Data Source` tab
 
-Fake data for online marketing tools and Goals
+See the subtle blue/green colour of the variable type icon? Take notice, it is important:
 
-## Tableau 0.1
+<blockquote style="width:90%; font-size:.9em;">
+  <p style="margin:0 !important; line-height:1em;">Understanding the difference between the blue and green items in Tableau is (IMHO) the single most important piece of understanding necessary to make Tableau function well. </p>
+</blockquote>
 
+<figure>
+  <figcaption style="text-align:right;">
+Tom Brown, [Blue things and Green things](https://www.theinformationlab.co.uk/2011/09/23/blue-things-and-green-things/)
+  </figcaption>
+</figure>
+
+::: notes
+
+- Possible to _merge_ more sources (or **Connections**), only one for our practice -- might require to define `New Union` to determine how merge takes place
+- Shows the only sheet in the file, may be more
+- `Connection > Live/Extract`, first one allows to modify source file and update work accordingly
+
+Interprets the `source` field as `Abc`, rest as `#` (well done). Only, we would rather improve the `quarter` interpretation as `Date` instead of `Number`
+
+Green & blue: **blue fields** are discrete, **green fields** are continuous. We'll see implications of this later on. For now, it's all good
+
+Rename, hide... fields
+
+The Excel > Tableau convert is quite straightforward (does a good job), more complex sources may require more manipulation at this point
+
+This screen allows to preview how Tableau is interpreting our dataset: we are not allowed to change values, only variable interpretations
+
+The source file (`data.xls`) is never modified
+
+:::
+
+<!--
 ![Load data](img/tableau_load_data_1080x768.gif){width=700}
+
 
 ## Tableau 0.2
 
@@ -82,6 +231,8 @@ Fake data for online marketing tools and Goals
 	- ze bariable dauden, gero hortik datu kalkulatuak ateratzeko, adibidez irabazitakoa / gastatutakoa oinarrizko KPI modura
 
 :::
+
+-->
 
 # 1. Graphics
 

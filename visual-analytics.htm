@@ -9,7 +9,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
   <style type="text/css">
 .static .author span { display:none !important; }
   </style>
@@ -27,26 +32,36 @@
   <![endif]-->
 </head>
 <body>
+
   <div class="reveal">
     <div class="slides">
-
-<section>
+      
+      <div class="static">
+        <div class="bottomR"><img src="reveal.js/logo-deusto.png" alt="Universidad de Deusto" /></div>
+        <div class="bottomL">
+                      <div class="author"><span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &amp;</span> Miren Berasategi</div>
+                                <div class="title">Visual Analytics</div>
+                  </div>
+      </div>
+      
+<section id="title-slide">
   <h1 class="title">Visual Analytics</h1>
-  <h1 class="subtitle">Communicating data-driven insights<br />through data visualization techniques<br />and useful dashboards</h1>
-  <h2 class="author"><span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &amp;</span> Miren Berasategi</h2>
+  <p class="subtitle">Communicating data-driven insights<br />through data visualization techniques<br />and useful dashboards</p>
+  <p class="author"><span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &amp;</span> Miren Berasategi</p>
+  <p class="email">miren.berasategi@deusto.es</p>
 </section>
 
-<section><section id="introduction" class="titleslide slide level1"><h1>0. Introduction</h1></section><section id="key-points" class="slide level2">
-<h1>0.1 Key points</h1>
+<section><section id="introduction" class="title-slide slide level1"><h1>0. Introduction</h1></section><section id="key-points" class="slide level2">
+<h2>0.1 Key points</h2>
 <ul>
-<li><strong>Data driven</strong>: as seen in Onieva's and Lorenzo's lectures</li>
+<li><strong>Data driven</strong>: as seen in Onieva’s and Lorenzo’s lectures</li>
 <li><strong>Insights</strong>: que usen las características gráficas</li>
 <li><strong>Data visualization techniques</strong>: para obtener las los insights</li>
 <li><strong>Dashboards</strong>: as <em>situattion awareness</em> tools</li>
 </ul>
 <p>Tableau Desktop para prácticar</p>
-</section><section id="why-use-visualizations" class="slide level2">
-<h1>0.2 Why use visualizations</h1>
+</section><section id="whats-the-point" class="slide level2">
+<h2>0.2 What’s the point?</h2>
 <figure class="fragment" data-fragment-index="3" style="width:55%; float:right;">
 <img src="img/anscombe3.png" alt="Visualizations" />
 </figure>
@@ -57,53 +72,189 @@
 <img src="img/anscombe2.png" alt="Summary statistics"  style="margin:0;" />
 </figure>
 <p style="float:right;width:55%;text-align:center;">
-<a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe's Quartet</a>
+<a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe’s Quartet</a>
 </p>
-<p>::: notes</p>
-<p>Baina honek ez du esan nahi teknika estatistikoak alde batera utzi behar direnik; batak besteari lagundu behar diote (estatistika tradizionalak bisualizazioari eta alderantziz)</p>
-<p>:::</p>
-</section><section id="why-use-visualizations-1" class="slide level2">
-<h1>0.2 Why use visualizations</h1>
+<aside class="notes">
+<p>Traditional summary statistics can be misleading. These datasets share almost identical mean, variance, correlation and linear regression lines.</p>
+<ol type="1">
+<li>Shows <em>normal</em> distribution</li>
+<li>There is correlation, but it’s not linear</li>
+<li>There is correlation, it IS LINEAR, but different from what emerged from the data</li>
+<li>No relationship whatsoever. Outlier is enough for <em>apparent</em> correlation</li>
+</ol>
+<p><strong>Bottom line</strong>: summary statistics, although very sensitive to outliers, are important, but plotting the data (visualization) is also a necessary step during the first stages of the data analytics process, before making any assumptions.</p>
+</aside>
+</section><section id="why-use-visualizations" class="slide level2">
+<h2>0.3 Why use visualizations</h2>
 <figure>
-<img src="img/munzner-3.1.png" alt="Munzner 2015, p.42" width="600" /><figcaption>Munzner 2015, p.42</figcaption>
+<img data-src="img/munzner-3.1.png" alt="Munzner 2015, p.42" width="600" /><figcaption>Munzner 2015, p.42</figcaption>
 </figure>
-<p>::: notes</p>
-<p>Honek erantzungo lioke &quot;insights&quot; parteari:</p>
+<aside class="notes">
+<p>What are we using visualization for?</p>
+<p>Important to answer to this question in an <strong>abstract form</strong>, instead of domain-specific.</p>
+<p>We are going to divide into</p>
 <ul>
-<li><em>Targets</em> lehenbizi (benetako insighten oinarriak)</li>
-<li>Ondoren <em>actions</em></li>
-<li>Search (ze target eta non)</li>
-<li>Query (identifikatu target, baldin eta badago)</li>
-<li>Azkenik analyze, komunikatu eta datu/modelo berriak sortu</li>
+<li><em>targets</em> = nouns</li>
+<li><em>actions</em> = verbs</li>
 </ul>
-<p>:::</p>
-</section><section id="tableau" class="slide level2">
-<h1>Tableau</h1>
-<p>(oinarrizko ezaugarriak) <code>data.xls</code></p>
-<p>Fake data for online marketing tools and Goals</p>
-</section><section id="tableau-0.1" class="slide level2">
-<h1>Tableau 0.1</h1>
+<!--
+Honek erantzungo lioke "insights" parteari: 
+
+- *Targets* lehenbizi (benetako insighten oinarriak)
+- Ondoren *actions*
+   - Search (ze target eta non)
+   - Query (identifikatu target, baldin eta badago)
+   - Azkenik analyze, komunikatu eta datu/modelo berriak sortu
+-->
+</aside>
+</section><section id="why-use-visualizations-1" class="slide level2">
+<h2>0.3 Why use visualizations</h2>
 <figure>
-<img src="img/tableau_load_data_1080x768.gif" alt="Load data" width="700" /><figcaption>Load data</figcaption>
+<img data-src="img/munzner-3.6-wide.png" alt="Munzner 2015, p.56" width="725" /><figcaption>Munzner 2015, p.56</figcaption>
 </figure>
-</section><section id="tableau-0.2" class="slide level2">
-<h1>Tableau 0.2</h1>
+<aside class="notes">
+<ul>
+<li>Very broadly relevant for all kinds of data: trends, outliers, features</li>
+<li>One attribute/variable: find an individual value, distribution of all values, find extremes</li>
+<li>Many attributes: dependency, correlation, similarity</li>
+<li>The rest (network/spatial) are specific to certain types of datasets</li>
+</ul>
+<p>The abstract task of understanding <strong>trends, outliers, distributions and correlations</strong> are extremely common reasons to use data visualization.</p>
+</aside>
+</section><section id="why-use-visualizations-2" class="slide level2">
+<h2>0.3 Why use visualizations</h2>
 <figure>
-<img src="img/tableau_metadata.gif" alt="Metadata view" width="700" /><figcaption>Metadata view</figcaption>
+<img data-src="img/munzner-3.2-wide.png" alt="Munzner 2015, p.46" /><figcaption>Munzner 2015, p.46</figcaption>
 </figure>
-<p>::: notes</p>
+<aside class="notes">
 <ul>
-<li>datuak tableaura kargatu</li>
-<li>&quot;data&quot; bistan bariableak pixkat aztertu
+<li>Analyze data:
 <ul>
-<li>sinbolotxoa eta kolorea, tableauk datua nola interpretatu duen jakiteko</li>
-<li>ze bariable dauden, gero hortik datu kalkulatuak ateratzeko, adibidez irabazitakoa / gastatutakoa oinarrizko KPI modura</li>
+<li>consume (most common use case): discover, present (known info, i.e. insights), enjoy (for the fun of it)</li>
+<li>produce: annotate, record (capture steps), derive (produce new data elements)</li>
 </ul></li>
 </ul>
-<p>:::</p>
+</aside>
+</section><section id="why-use-visualizations-3" class="slide level2">
+<h2>0.3 Why use visualizations</h2>
+<blockquote style="width:90% !important; font-size:.9em; margin-top:2em;">
+<p style="margin:0;">
+There is a <strong>strong relationship</strong> between the form of the data (the attribute/variable and dataset types) and what kinds of vis[ualization] idioms are effective at displaying it. (…) Don’t just draw what you are given; decide what the right thing to show is, create it with a series of <strong>transformations</strong> from the original database, and draw that!
+</p>
+</blockquote>
+<figure>
+<figcaption style="text-align:right;">
+Munzner 2015, p.50
+</figcaption>
+</figure>
+<aside class="notes">
+<p>Transformation (=derive) may be required depending on the desired type of insight – derived attributes/variables extend the original dataset</p>
+<ul>
+<li>in some cases, the same data with a change of type (temperature <em>vs.</em> “hot” or “cold”)</li>
+<li>in other cases, access to additional info is required (geo: city name to lat/lon)</li>
+<li>created through arithmetic, logaritmic or statistial operations (i.e. diff field)</li>
+</ul>
+</aside>
+</section><section id="why-use-visualizations-4" class="slide level2">
+<h2>0.3 Why use visualizations</h2>
+<figure>
+<img data-src="img/munzner-3.5.png" alt="Derived attributes can be directly visually encoded. Munzner 2015, p.52" /><figcaption>Derived attributes can be directly visually encoded. Munzner 2015, p.52</figcaption>
+</figure>
+</section><section id="why-use-visualizations-5" class="slide level2">
+<h2>0.3 Why use visualizations</h2>
+<figure>
+<img data-src="img/munzner-3.2-wide.png" alt="Munzner 2015, p.46" /><figcaption>Munzner 2015, p.46</figcaption>
+</figure>
+<aside class="notes">
+<ul>
+<li>Search for an element of interest (based on knowledge of identity &amp; location)
+<ul>
+<li>lookup: humans in tree vis of species of mammals</li>
+<li>locate: where are rabbits? lagomorphs – not rodents</li>
+<li>browse: when users don’t know exactly what they’re looking for but have an idea of characteristics</li>
+<li>explore: not sure of either one</li>
+</ul></li>
+<li>Once a target or set of targets is identified, query those at one of 3 scopes (progression from one to many to all targets)
+<ul>
+<li>identify (US election map example)</li>
+<li>compare, more difficult, requires more sophisticated idioms</li>
+<li>summarize = overview (extremely common)</li>
+</ul></li>
+</ul>
+</aside>
+</section><section id="practice-meet-our-sample-data" class="slide level2">
+<h2>Practice: meet our sample data</h2>
+<div class="right" style="width:45%; float:right;">
+<p><img data-src="img/data-excel.png" /></p>
+</div>
+<div class="left" style="width:45%; float:left;">
+<p>Download and open <code>data.xls</code> from Google Drive: fake data for online marketing goals and tools</p>
+</div>
+<aside class="notes">
+<p>Shows results of campaigns in three different sources, per quarters (trimester). Money spent in each source, number of visits got from that campaign, income generated, and goal income for each source.</p>
+<p>Takes for granted many things, such as validity/reasonability of goals, of spent money per goal…</p>
+</aside>
+</section><section id="tableau-software" class="slide level2">
+<h2>Tableau Software</h2>
+<div class="right" style="width:75%; float:right;">
+<figure>
+<img data-src="img/tableau-getinsightsfast.gif" alt="Tableau Software" width="750" /><figcaption>Tableau Software</figcaption>
+</figure>
+</div>
+<div class="left" style="width:23%; float:left;">
+<p><img data-src="img/tableau-logo.png" /></p>
+</div>
+</section><section id="tableau" class="slide level2">
+<h2>Tableau</h2>
+<ol type="1">
+<li>Load data</li>
+<li>Explore the <code>Data Source</code> tab</li>
+</ol>
+<p>See the subtle blue/green colour of the variable type icon? Take notice, it is important:</p>
+<blockquote style="width:90%; font-size:.9em;">
+<p style="margin:0 !important; line-height:1em;">
+Understanding the difference between the blue and green items in Tableau is (IMHO) the single most important piece of understanding necessary to make Tableau function well.
+</p>
+</blockquote>
+<figure>
+<figcaption style="text-align:right;">
+Tom Brown, <a href="https://www.theinformationlab.co.uk/2011/09/23/blue-things-and-green-things/">Blue things and Green things</a>
+</figcaption>
+</figure>
+<aside class="notes">
+<ul>
+<li>Possible to <em>merge</em> more sources (or <strong>Connections</strong>), only one for our practice – might require to define <code>New Union</code> to determine how merge takes place</li>
+<li>Shows the only sheet in the file, may be more</li>
+<li><code>Connection &gt; Live/Extract</code>, first one allows to modify source file and update work accordingly</li>
+</ul>
+<p>Interprets the <code>source</code> field as <code>Abc</code>, rest as <code>#</code> (well done). Only, we would rather improve the <code>quarter</code> interpretation as <code>Date</code> instead of <code>Number</code></p>
+<p>Green &amp; blue: <strong>blue fields</strong> are discrete, <strong>green fields</strong> are continuous. We’ll see implications of this later on. For now, it’s all good</p>
+<p>Rename, hide… fields</p>
+<p>The Excel &gt; Tableau convert is quite straightforward (does a good job), more complex sources may require more manipulation at this point</p>
+<p>This screen allows to preview how Tableau is interpreting our dataset: we are not allowed to change values, only variable interpretations</p>
+<p>The source file (<code>data.xls</code>) is never modified</p>
+</aside>
+<!--
+![Load data](img/tableau_load_data_1080x768.gif){width=700}
+
+
+## Tableau 0.2
+
+![Metadata view](img/tableau_metadata.gif){width=700}
+
+::: notes
+
+- datuak tableaura kargatu
+- "data" bistan bariableak pixkat aztertu
+    - sinbolotxoa eta kolorea, tableauk datua nola interpretatu duen jakiteko
+    - ze bariable dauden, gero hortik datu kalkulatuak ateratzeko, adibidez irabazitakoa / gastatutakoa oinarrizko KPI modura
+
+:::
+
+-->
 </section></section>
-<section><section id="graphics" class="titleslide slide level1"><h1>1. Graphics</h1></section><section id="reminder-variable-types" class="slide level2">
-<h1>1.1 Reminder: variable types</h1>
+<section><section id="graphics" class="title-slide slide level1"><h1>1. Graphics</h1></section><section id="reminder-variable-types" class="slide level2">
+<h2>1.1 Reminder: variable types</h2>
 <ul>
 <li>Quantitative
 <ul>
@@ -117,70 +268,62 @@
 </ul></li>
 </ul>
 </section><section id="reminder-variable-types-a-question-of-time" class="slide level2" data-transition="none">
-<h1>1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h1>
+<h2>1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
 <p>Spatial and time/hour variables are special variable types. <strong>Time variables</strong> are specially complex:</p>
 <ul>
 <li>are there 365 days in every year? 30 days in every month? 24 hours in every day?</li>
 <li><em>timezones</em> make it even more complex to use hours or time of day</li>
 </ul>
 </section><section id="reminder-variable-types-a-question-of-time-1" class="slide level2" data-transition="none">
-<h1>1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h1>
+<h2>1.1 Reminder: variable types <span style="font-size:.8em;display:block">A question of time</span></h2>
 <p>Time may be used as a continuous or as a qualitative variable.</p>
 <ul>
 <li>as a qualitative variable, it has a hierarchy: year &gt; month &gt; (week &gt;) day &gt; hour &gt; minute</li>
-<li>but different hierarchies may be necessary: bimonthly publications, multiple work shifts in a day...</li>
+<li>but different hierarchies may be necessary: bimonthly publications, multiple work shifts in a day…</li>
 </ul>
 </section><section id="mapping-variables-to-graphics" class="slide level2">
-<h1>1.2 Mapping variables to graphics</h1>
+<h2>1.2 Mapping variables to graphics</h2>
 <figure>
-<img src="img/6.57.EncodingsTable_preview.png" alt="Kirk, 2016 Encodings table (source)" width="650" /><figcaption>Kirk, 2016 Encodings table <a href="http://book.visualisingdata.com/chapter/chapter-6">(source)</a></figcaption>
+<img data-src="img/6.57.EncodingsTable_preview.png" alt="Kirk, 2016 Encodings table (source)" width="650" /><figcaption>Kirk, 2016 Encodings table <a href="http://book.visualisingdata.com/chapter/chapter-6">(source)</a></figcaption>
 </figure>
-<p>::: notes</p>
+<aside class="notes">
 <p>Grafikoagoa egitea komeniko litzateke</p>
-<p>:::</p>
+</aside>
 </section><section id="graphs-typology" class="slide level2">
-<h1>1.3 Graphs typology</h1>
-<p>Variable types and insights (Munzner's &quot;targets&quot;) as <em>ingredients</em></p>
+<h2>1.3 Graphs typology</h2>
+<p>Variable types and insights (Munzner’s “targets”) as <em>ingredients</em></p>
 <p><a href="https://datavizcatalogue.com/search.html">The Data Visualisation Catalogue</a></p>
-<p>::: notes</p>
+<aside class="notes">
 <p>Si eso Kirken taula sartu, baina taula sortzeko kodea nahiko liosoa da</p>
-<p>:::</p>
+</aside>
 </section><section id="tableau-show-me" class="slide level2">
-<h1>Tableau: Show me</h1>
+<h2>Tableau: Show me</h2>
 <figure>
-<img src="img/tableau_mostrarme.gif" alt="Show me" width="700" /><figcaption>Show me</figcaption>
+<img data-src="img/tableau_mostrarme.gif" alt="Show me" width="700" /><figcaption>Show me</figcaption>
 </figure>
 </section></section>
-<section><section id="provide-easier-analysis" class="titleslide slide level1"><h1>2. Provide easier analysis</h1></section><section id="change-default-settings" class="slide level2" data-transition="none">
-<h1>2.1 Change default settings</h1>
+<section><section id="provide-easier-analysis" class="title-slide slide level1"><h1>2. Provide easier analysis</h1></section><section id="change-default-settings" class="slide level2" data-transition="none">
+<h2>2.1 Change default settings</h2>
 <figure>
-<figure>
-<img src="img/easieranalysis1.png" />
-</figure>
+<p><img data-src="img/easieranalysis1.png" /></p>
 <figcaption style="margin-top:0;">
 <a href="https://github.com/hmelberg/berlin-marathon">Data source: Berlin marathon times</a>
 </figcaption>
 </figure>
-<p>::: notes</p>
+<aside class="notes">
 <p>Data: Berlin Marathon</p>
-<p>:::</p>
+</aside>
 </section><section id="change-default-settings-1" class="slide level2" data-transition="none">
-<h1>2.1 Change default settings</h1>
-<figure>
-<img src="img/easieranalysis2.png" />
-</figure>
+<h2>2.1 Change default settings</h2>
+<p><img data-src="img/easieranalysis2.png" /></p>
 </section><section id="change-default-settings-2" class="slide level2" data-transition="none">
-<h1>2.1 Change default settings</h1>
-<figure>
-<img src="img/easieranalysis3.png" />
-</figure>
+<h2>2.1 Change default settings</h2>
+<p><img data-src="img/easieranalysis3.png" /></p>
 </section><section id="change-default-settings-3" class="slide level2" data-transition="none">
-<h1>2.1 Change default settings</h1>
-<figure>
-<img src="img/easieranalysis4.png" />
-</figure>
+<h2>2.1 Change default settings</h2>
+<p><img data-src="img/easieranalysis4.png" /></p>
 </section><section id="make-simpler-graphs" class="slide level2">
-<h1>2.2 Make simpler graphs</h1>
+<h2>2.2 Make simpler graphs</h2>
 <div style="height:100px;">
  
 </div>
@@ -188,17 +331,17 @@
 <p>Data-ink is the non-erasable core of the graphic, the non-redundant ink arranged in response to variation in the numbers represented. (Tufte 1983)</p>
 </blockquote>
 </section><section id="make-simpler-graphs-1" class="slide level2" data-transition="none">
-<h1>2.2 Make simpler graphs</h1>
+<h2>2.2 Make simpler graphs</h2>
 <p>A step-by-step example: <a href="http://www.darkhorseanalytics.com/blog/data-looks-better-naked">Data looks better naked</a></p>
 <div style="margin:auto; width: 70%; height: 0; position: relative; padding-bottom: 90%;">
 <iframe src="https://speakerdeck.com/player/87bb9f00ec1e01308020727faa1f9e72" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no">
 </iframe>
 </div>
-<p>::: notes</p>
+<aside class="notes">
 <p>Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arraroren bat egitea</p>
-<p>:::</p>
+</aside>
 </section><section id="make-simpler-graphs-2" class="slide level2" data-transition="none">
-<h1>2.2 Make simpler graphs</h1>
+<h2>2.2 Make simpler graphs</h2>
 <p>(denborakin ikusteko)</p>
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X79o46W5plI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
@@ -208,18 +351,18 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 </figcaption>
 </figure>
 </section><section id="highlight-observations" class="slide level2">
-<h1>2.3 Highlight observations</h1>
+<h2>2.3 Highlight observations</h2>
 <p><a href="https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization">Preattentive attributes</a></p>
 <figure>
-<img src="img/nussbaumer-4.4.png" alt="Nussbaumber 2015, p.105" width="650" /><figcaption>Nussbaumber 2015, p.105</figcaption>
+<img data-src="img/nussbaumer-4.4.png" alt="Nussbaumber 2015, p.105" width="650" /><figcaption>Nussbaumber 2015, p.105</figcaption>
 </figure>
 </section><section id="highlight-observations-1" class="slide level2" data-transition="none">
-<h1>2.3 Highlight observations</h1>
+<h2>2.3 Highlight observations</h2>
 <figure>
-<img src="img/nussbaumer-contrast.png" alt="Nussbaumber, Do you see it? The importance of contrast when communicating with data [video]" width="700" /><figcaption>Nussbaumber, <a href="https://www.youtube.com/watch?v=60KiAXbkrl0">Do you see it? The importance of contrast when communicating with data [video]</a></figcaption>
+<img data-src="img/nussbaumer-contrast.png" alt="Nussbaumber, Do you see it? The importance of contrast when communicating with data [video]" width="700" /><figcaption>Nussbaumber, <a href="https://www.youtube.com/watch?v=60KiAXbkrl0">Do you see it? The importance of contrast when communicating with data [video]</a></figcaption>
 </figure>
 </section><section id="add-variables-as-context" class="slide level2">
-<h1>2.4 Add variables (as context)</h1>
+<h2>2.4 Add variables (as context)</h2>
 <ul>
 <li>Adding preexisting variables (con <strong>mesura</strong>)</li>
 <li>Creating conditional variables from preexisting variables
@@ -228,11 +371,9 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <li><span style="font-size:.9em;">example of calculated field or variable: weekend date</span></li>
 </ul></li>
 </ul>
-<figure>
-<img src="img/addvariables.png" class="fragment" />
-</figure>
+<p><img data-src="img/addvariables.png" class="fragment" /></p>
 </section><section id="add-statistical-information" class="slide level2">
-<h1>2.5 Add statistical information</h1>
+<h2>2.5 Add statistical information</h2>
 <figure style="float:right;width:50%;" class="fragment">
 <p><img src="img/addstatinfo1.png" /></p>
 <figcaption>
@@ -244,69 +385,69 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <li>models</li>
 </ul>
 </section><section id="tableau-not-so-basic-graphs" class="slide level2">
-<h1>Tableau: (not so) basic graphs</h1>
+<h2>Tableau: (not so) basic graphs</h2>
 <ul>
-<li><a href="https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR">Sparklines (Tufte 2006)</a><br /><img src="img/sparkline_d3_angular.png" width="300" /></li>
-<li><a href="https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf">Bulletgraphs (Few 2007)</a><br /><img src="img/bulletgraph.png" width="300" /></li>
-<li><a href="https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf">Heatmaps (Few 2006)</a><br /><img src="img/heatmap.png" width="300" /></li>
+<li><a href="https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR">Sparklines (Tufte 2006)</a><br /><img data-src="img/sparkline_d3_angular.png" width="300" /></li>
+<li><a href="https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf">Bulletgraphs (Few 2007)</a><br /><img data-src="img/bulletgraph.png" width="300" /></li>
+<li><a href="https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf">Heatmaps (Few 2006)</a><br /><img data-src="img/heatmap.png" width="300" /></li>
 </ul>
-<p>::: notes</p>
+<aside class="notes">
 <p>Nahi badezu bat azaldu eta ondoren tableaun egin, ala hiruak azaldu ta gero hiruak tableaun egin</p>
-<p>:::</p>
+</aside>
 </section><section id="tableau-1.1-timelines" class="slide level2">
-<h1>Tableau 1.1: Timelines</h1>
+<h2>Tableau 1.1: Timelines</h2>
 <figure>
-<img src="img/tableau_timeline_1080x768.gif" alt="Timelines" width="700" /><figcaption>Timelines</figcaption>
+<img data-src="img/tableau_timeline_1080x768.gif" alt="Timelines" width="700" /><figcaption>Timelines</figcaption>
 </figure>
 </section><section id="tableau-1.2-bulletgraphs" class="slide level2">
-<h1>Tableau 1.2: Bulletgraphs</h1>
+<h2>Tableau 1.2: Bulletgraphs</h2>
 <figure>
-<img src="img/tablea_bulletgraph_1080x768.gif" alt="Bulletgraphs" width="700" /><figcaption>Bulletgraphs</figcaption>
+<img data-src="img/tablea_bulletgraph_1080x768.gif" alt="Bulletgraphs" width="700" /><figcaption>Bulletgraphs</figcaption>
 </figure>
 </section><section id="tableau-1.2-heatmaps" class="slide level2">
-<h1>Tableau 1.2: Heatmaps</h1>
+<h2>Tableau 1.2: Heatmaps</h2>
 <figure>
-<img src="img/tablea_heatmap_1080x768.gif" alt="Heatmaps" width="700" /><figcaption>Heatmaps</figcaption>
+<img data-src="img/tablea_heatmap_1080x768.gif" alt="Heatmaps" width="700" /><figcaption>Heatmaps</figcaption>
 </figure>
 </section><section id="tableau-2.1-automatic-aggregation" class="slide level2">
-<h1>Tableau 2.1: automatic aggregation</h1>
+<h2>Tableau 2.1: automatic aggregation</h2>
 <figure>
-<img src="img/tablea_campos_calculados_1_agregaciones_de_tableau1080x768.gif" alt="Automatic aggregation" width="700" /><figcaption>Automatic aggregation</figcaption>
+<img data-src="img/tablea_campos_calculados_1_agregaciones_de_tableau1080x768.gif" alt="Automatic aggregation" width="700" /><figcaption>Automatic aggregation</figcaption>
 </figure>
 </section><section id="tableau-2.2-calculated-fields" class="slide level2">
-<h1>Tableau 2.2: calculated fields</h1>
+<h2>Tableau 2.2: calculated fields</h2>
 <figure>
-<img src="img/tablea_campos_calculados_2_campo_calculado_nivel_linea1080x768.gif" alt="Calculated fields" width="700" /><figcaption>Calculated fields</figcaption>
+<img data-src="img/tablea_campos_calculados_2_campo_calculado_nivel_linea1080x768.gif" alt="Calculated fields" width="700" /><figcaption>Calculated fields</figcaption>
 </figure>
 </section><section id="tableau-2.3-aggregation-on-calculated-fields" class="slide level2">
-<h1>Tableau 2.3: aggregation on calculated fields</h1>
+<h2>Tableau 2.3: aggregation on calculated fields</h2>
 <figure>
-<img src="img/tablea_campos_calculados_3_agregaciones_sobre_campos_calculados1080x768.gif" alt="Aggregation on calculated fields" width="700" /><figcaption>Aggregation on calculated fields</figcaption>
+<img data-src="img/tablea_campos_calculados_3_agregaciones_sobre_campos_calculados1080x768.gif" alt="Aggregation on calculated fields" width="700" /><figcaption>Aggregation on calculated fields</figcaption>
 </figure>
 </section><section id="tableau-2.4-adding-kpis-to-timelines-1" class="slide level2">
-<h1>Tableau 2.4: adding KPIs to timelines 1</h1>
+<h2>Tableau 2.4: adding KPIs to timelines 1</h2>
 <figure>
-<img src="img/tablea_sparkline_kpi_1_anadir_kpi_basico1080x768.gif" alt="Adding KPIs to timelines 1" width="700" /><figcaption>Adding KPIs to timelines 1</figcaption>
+<img data-src="img/tablea_sparkline_kpi_1_anadir_kpi_basico1080x768.gif" alt="Adding KPIs to timelines 1" width="700" /><figcaption>Adding KPIs to timelines 1</figcaption>
 </figure>
 </section><section id="tableau-2.5-adding-kpis-to-timelines-2" class="slide level2">
-<h1>Tableau 2.5: adding KPIs to timelines 2</h1>
+<h2>Tableau 2.5: adding KPIs to timelines 2</h2>
 <figure>
-<img src="img/tablea_sparkline_kpi_2_anadir_mas_kpi1080x768.gif" alt="Adding KPIs to timelines 2" width="700" /><figcaption>Adding KPIs to timelines 2</figcaption>
+<img data-src="img/tablea_sparkline_kpi_2_anadir_mas_kpi1080x768.gif" alt="Adding KPIs to timelines 2" width="700" /><figcaption>Adding KPIs to timelines 2</figcaption>
 </figure>
 </section></section>
-<section><section id="dashboards" class="titleslide slide level1"><h1>3. Dashboards</h1></section><section id="dashboards-for-situation-awareness" class="slide level2">
-<h1>3.1 Dashboards for <em>situation awareness</em></h1>
+<section><section id="dashboards" class="title-slide slide level1"><h1>3. Dashboards</h1></section><section id="dashboards-for-situation-awareness" class="slide level2">
+<h2>3.1 Dashboards for <em>situation awareness</em></h2>
 <p>Few (liburua, <a href="https://www.perceptualedge.com/articles/Whitepapers/Dashboard_Design.pdf">laburpena 2007</a>)</p>
 <blockquote>
 <p>The term “dashboard” refers to a single screen information display that is used to monitor what’s going on in some aspect of the business.</p>
 </blockquote>
 <ul>
-<li>Perception of own's environment</li>
-<li>Comprehension of it's meaning</li>
+<li>Perception of own’s environment</li>
+<li>Comprehension of it’s meaning</li>
 <li>Projection of that understanding into the future</li>
 </ul>
 </section><section id="dos-principles-you-should-follow" class="slide level2">
-<h1>3.2 Do's : Principles you should follow</h1>
+<h2>3.2 Do’s : Principles you should follow</h2>
 <ul>
 <li>Use flicker and sound to grab attention</li>
 <li>Encourage active thinking about the data, not just passive reaction to alarms</li>
@@ -317,7 +458,7 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <li>Match the mental model</li>
 </ul>
 </section><section id="and-donts-design-problems-you-should-avoid" class="slide level2">
-<h1>3.3 ... and dont's: Design problems you should avoid</h1>
+<h2>3.3 … and dont’s: Design problems you should avoid</h2>
 <ul>
 <li>Too much complexity</li>
 <li>Too many alert conditions</li>
@@ -330,39 +471,37 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <li>Not enough context</li>
 </ul>
 </section><section id="fews-few-examples" class="slide level2">
-<h1>3.4 Few's few examples</h1>
-<figure>
-<img src="img/few-basic-dashboard.png" />
-</figure>
+<h2>3.4 Few’s few examples</h2>
+<p><img data-src="img/few-basic-dashboard.png" /></p>
 </section><section id="dashboards-in-tableau" class="slide level2">
-<h1>Dashboards in Tableau</h1>
+<h2>Dashboards in Tableau</h2>
 </section><section id="tableau-2.1-basic-dashboard" class="slide level2">
-<h1>Tableau 2.1: basic dashboard</h1>
+<h2>Tableau 2.1: basic dashboard</h2>
 <figure>
-<img src="img/tablea_dashboard_1_montar_dashboard1080x768.gif" alt="Basic dashboard" width="700" /><figcaption>Basic dashboard</figcaption>
+<img data-src="img/tablea_dashboard_1_montar_dashboard1080x768.gif" alt="Basic dashboard" width="700" /><figcaption>Basic dashboard</figcaption>
 </figure>
 </section><section id="tableau-2.2-basic-formating" class="slide level2">
-<h1>Tableau 2.2: basic formating</h1>
+<h2>Tableau 2.2: basic formating</h2>
 <figure>
-<img src="img/tablea_dashboard_2_formateo_basico1080x768.gif" alt="Basic formating" width="700" /><figcaption>Basic formating</figcaption>
+<img data-src="img/tablea_dashboard_2_formateo_basico1080x768.gif" alt="Basic formating" width="700" /><figcaption>Basic formating</figcaption>
 </figure>
 </section><section id="tableau-2.3-show-filters" class="slide level2">
-<h1>Tableau 2.3: show filters</h1>
+<h2>Tableau 2.3: show filters</h2>
 <figure>
-<img src="img/tablea_dashboard_3_mostrar_filtro1080x768.gif" alt="Show filters" width="700" /><figcaption>Show filters</figcaption>
+<img data-src="img/tablea_dashboard_3_mostrar_filtro1080x768.gif" alt="Show filters" width="700" /><figcaption>Show filters</figcaption>
 </figure>
 </section><section id="tableau-2.4-highlight-action" class="slide level2">
-<h1>Tableau 2.4: highlight action</h1>
+<h2>Tableau 2.4: highlight action</h2>
 <figure>
-<img src="img/tablea_dashboard_4_accion_highlight1080x768.gif" alt="Highlight action" width="700" /><figcaption>Highlight action</figcaption>
+<img data-src="img/tablea_dashboard_4_accion_highlight1080x768.gif" alt="Highlight action" width="700" /><figcaption>Highlight action</figcaption>
 </figure>
 </section><section id="tableau-2.5-filter-action" class="slide level2">
-<h1>Tableau 2.5: filter action</h1>
+<h2>Tableau 2.5: filter action</h2>
 <figure>
-<img src="img/tablea_dashboard_5_accion_filtro1080x768.gif" alt="Filter action" width="700" /><figcaption>Filter action</figcaption>
+<img data-src="img/tablea_dashboard_5_accion_filtro1080x768.gif" alt="Filter action" width="700" /><figcaption>Filter action</figcaption>
 </figure>
 </section></section>
-<section><section id="references" class="titleslide slide level1"><h1>References</h1></section><section class="slide level2">
+<section><section id="references" class="title-slide slide level1"><h1>References</h1></section><section class="slide level2">
 
 <div style="text-align:center;">
 <h1>
@@ -376,7 +515,7 @@ Thank you!
 License
 </h1>
 <div style="text-align:center;margin-top:2em;">
-<p><img src="img/cc/cc.logo.png" style="display:inline-block;margin-right:2em;" height="50" /> <img src="img/cc/by.png" style="display:inline-block;" height="50" /> <img src="img/cc/sa.png" style="display:inline-block;" height="50" /></p>
+<p><img data-src="img/cc/cc.logo.png" style="display:inline-block;margin-right:2em;" height="50" /> <img data-src="img/cc/by.png" style="display:inline-block;" height="50" /> <img data-src="img/cc/sa.png" style="display:inline-block;" height="50" /></p>
 </div>
 <p style="font-family:'Frutiger LT Std', Montserrat, Helvetica, Arial, sans-serif; font-size:.4em;font-weight:200;">
 Copyright © 2018 University of Deusto<br /> This work (except for the quoted images, whose rights are reserved to their owners) is licensed under the Creative Commons “Attribution-ShareAlike” License. To view a copy of this license, visit <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="uri">http://creativecommons.org/licenses/by-sa/3.0/</a>
@@ -395,6 +534,7 @@ Copyright © 2018 University of Deusto<br /> This work (except for the quoted im
       Reveal.initialize({
         // Push each slide change to the browser history
         history: true,
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
