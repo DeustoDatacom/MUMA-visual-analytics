@@ -98,6 +98,15 @@ The abstract task of understanding **trends, outliers, distributions and correla
 
 ::: notes
 
+- Search for an element of interest (based on knowledge of identity & location)
+  + lookup: humans in tree vis of species of mammals
+  + locate: where are rabbits? lagomorphs -- not rodents
+  + browse: when users don't know exactly what they're looking for but have an idea of characteristics
+  + explore: not sure of either one
+- Once a target or set of targets is identified, query those at one of 3 scopes (progression from one to many to all targets)
+  + identify (US election map example)
+  + compare, more difficult, requires more sophisticated idioms
+  + summarize = overview (extremely common)
 - Analyze data:
   + consume (most common use case): discover, present (known info, i.e. insights), enjoy (for the fun of it)
   + produce: annotate, record (capture steps), derive (produce new data elements)
@@ -125,24 +134,6 @@ Transformation (=derive) may be required depending on the desired type of insigh
 ## 0.3 Why use visualizations
 
 ![Derived attributes can be directly visually encoded. Munzner 2015, p.52](img/munzner-3.5.png)
-
-## 0.3 Why use visualizations
-
-![Munzner 2015, p.46](img/munzner-3.2-wide.png)
-
-::: notes
-
-- Search for an element of interest (based on knowledge of identity & location)
-  + lookup: humans in tree vis of species of mammals
-  + locate: where are rabbits? lagomorphs -- not rodents
-  + browse: when users don't know exactly what they're looking for but have an idea of characteristics
-  + explore: not sure of either one
-- Once a target or set of targets is identified, query those at one of 3 scopes (progression from one to many to all targets)
-  + identify (US election map example)
-  + compare, more difficult, requires more sophisticated idioms
-  + summarize = overview (extremely common)
-
-:::
 
 ## Practice: meet our sample data
 
