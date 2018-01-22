@@ -545,54 +545,106 @@ Options in `Show me` are different from the `Marks` box. Show me only allows gra
 
 # 2. Provide easier analysis
 
+---
+
+## Section outline
+
+How can we enable easier insight through data visualization?
+
+1. Change default settings
+2. Make simpler graphs
+3. Highlight observations
+4. Add attributes as context
+5. Add statistical information
+
 ## 2.1 Change default settings {data-transition="none"}
 
 <figure>
 
-![](img/easieranalysis1.png)
+![Data source: [Berlin marathon times](https://github.com/hmelberg/berlin-marathon)](img/easieranalysis1.png)
 
-<figcaption style="margin-top:0;">[Data source: Berlin marathon times](https://github.com/hmelberg/berlin-marathon)</figcaption>
+<figcaption style="margin-top:0;"></figcaption>
 </figure>
 
 ::: notes
 
-Data: Berlin Marathon
+Official results form the Berlin marathons. The default aggregation from the tool used to create this visualization presents an almost perfect normal distribution.
 
 :::
 
 ## 2.1 Change default settings {data-transition="none"}
 
-![](img/easieranalysis2.png)
+![Data source: [Berlin marathon times](https://github.com/hmelberg/berlin-marathon)](img/easieranalysis2.png)
+
+::: notes
+
+More detail (less aggregation) allows to see some highlighted bars
+
+:::
 
 ## 2.1 Change default settings {data-transition="none"}
 
-![](img/easieranalysis3.png)
+![Data source: [Berlin marathon times](https://github.com/hmelberg/berlin-marathon)](img/easieranalysis3.png)
+
+::: notes
+
+Even more detail (less aggregation) makes those bars stand out more and new ones appear: what is happening here?
+
+:::
 
 ## 2.1 Change default settings {data-transition="none"}
 
-![](img/easieranalysis4.png)
+![Data source: [Berlin marathon times](https://github.com/hmelberg/berlin-marathon)](img/easieranalysis4.png)
+
+::: notes
+
+vertical dashed lines show hour marks in red (3h, 4h, 5h, main goal times for marathon runners), half-hour marks in grey. People try to fit into their closest _rounded time_...
+
+:::
 
 ## 2.2 Make simpler graphs
 
 <div style="height:100px;">&nbsp;</div>
 
->Data-ink is the non-erasable core of the graphic, the non-redundant ink arranged in response to variation in the numbers represented. (Tufte 1983)
+>Data-ink is the non-erasable core of the graphic, the non-redundant ink arranged in response to variation in the numbers represented. 
 
-## 2.2 Make simpler graphs {data-transition="none"}
-
-A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.com/blog/data-looks-better-naked)
-
-<div style="margin:auto; width: 70%; height: 0; position: relative; padding-bottom: 90%;"><iframe src="https://speakerdeck.com/player/87bb9f00ec1e01308020727faa1f9e72" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no"></iframe></div>
+<figure style="text-align:right;">
+  <figcaption>
+Tufte 1983
+</figcaption>
+</figure>
 
 ::: notes
 
-Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arraroren bat egitea
+we should remove all non-data-ink and redundant data-ink, within reason, to increase the data-ink-ratio and create a sound graphical design. 
+
+some redundancy is often more effective, however, most graphics don't struggle with understatement. In fact, most contain a stunning amount of excess ink (or pixels). Rather than dressing our data up we should be stripping it down.
 
 :::
 
-## 2.2 Make simpler graphs {data-transition="none"}
+## 2.2 Make simpler graphs
 
-(denborakin ikusteko)
+<div style="margin:auto; width: 520px; height: 450px; position: relative;">
+  <iframe src="https://speakerdeck.com/player/87bb9f00ec1e01308020727faa1f9e72" style="border: 0; top: 0; left: 0; width: 520px; height: 450px; position: absolute;" allowfullscreen scrolling="no"></iframe>
+</div>
+
+<figure>
+  <figcaption>
+  A step-by-step example: [Data looks better naked](http://www.darkhorseanalytics.com/blog/data-looks-better-naked)
+</figcaption>
+</figure>
+
+::: notes
+
+In it we start with a chart, similar to what we've seen in many presentations, and vastly improve it with progressive deletions and no additions.
+
+The next time you are trying to improve a chart, consider what you can take away rather than what you can add.
+
+:::
+
+## 2.2 Make simpler graphs 
+
+More on decluttering:
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X79o46W5plI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -602,22 +654,82 @@ Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arrarore
 
 ## 2.3 Highlight observations
 
-[Preattentive attributes](https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization)
+Through [preattentive attributes](https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization):
+
+- they are processed in spatial memory without our conscious action
+- make it easier to understand what is represented through a design: saves from consciously processing data
+
+::: notes
+
+A preattentive visual property is one which is processed in spatial memory without our conscious action. In essence it takes less than 500 milliseconds for the eye and the brain to process a preattentive property of any image.  These properties can be harnessed to make it easier for a user to understand what is presented through the design and save them from consciously processing all the data presented in short-term memory which requires more effort.
+
+:::
+
+## 2.3 Highlight observations
+
+![Nussbaumer 2015, p.103](img/nussbaumer-4.2.png)
+
+::: notes
+
+There are 6. No visual cues to help count. It makes this a challenging exercise, you have to hunt through the lines of text, looking for the number 3.
+
+What happens when we make a single change to the block of numbers. Repeat the exercise of counting the number 3s.
+
+:::
+
+## 2.3 Highlight observations
+
+![Nussbaumer 2015, p.104](img/nussbaumer-4.3.png)
+
+::: notes
+
+Note how much easier and faster the same exercise is. There is no time to blink, no time to think, no NEED to think. The preattentive attribute of intensity of color in this case, makes the number 3s stand out from the rest. Our brain is quick to pick them up without having to dedicate any conscious thought to it.
+
+:::
+
+## 2.3 Highlight observations
 
 ![Nussbaumber 2015, p.105](img/nussbaumer-4.4.png){width=650}
 
-## 2.3 Highlight observations {data-transition="none"}
+::: notes
+
+your eye is drawn to the one element within each group that is different from the rest, you don't have to look for it. Our brain is hardwired to quickly pick up differences we see in the environment.
+
+NOTE that people tend to associate quantitative values to some of the preattentive attributes (length, width, size; not colour). This tells us which of the attributes can be used to code quantitative information  (line
+length, spatial position, or to a more limited extent, line width, size,
+and intensity can be used to reflect relative value), and which should
+be used as categorical differentiators.
+
+
+:::
+
+## 2.3 Highlight observations 
 
 ![Nussbaumber, [Do you see it? The importance of contrast when communicating with data [video]](https://www.youtube.com/watch?v=60KiAXbkrl0)](img/nussbaumer-contrast.png){width="700px"}
 
+::: notes
+
+After decluttering, more _channels_ are available for highlight. This allows to
+
+1. draw your audience’s attention quickly to where you want them to look, and 
+2. create a visual hierarchy of information
+
+:::
+
 ## 2.4 Add variables (as context)
 
-- Adding preexisting variables (con **mesura**)
+- Adding preexisting variables (in moderation)
 - Creating conditional variables from preexisting variables
     - binaries or with few levels are best
     - <span style="font-size:.9em;">example of calculated field or variable: weekend date</span>
 
 ![](img/addvariables.png){.fragment}
+
+::: notes
+
+useful only if addition conveys meaning / enables insight. In the graph, the colour coding is explanatory to the left, but it is not to the right. 
+
+:::
 
 ## 2.5 Add statistical information
 
@@ -625,72 +737,87 @@ Embedeatzea zaila izan da eta diapoak pasatzerakoan izan daiteke efekto arrarore
 <img src="img/addstatinfo1.png" />
 
 <figcaption>
-
 [source](https://stackoverflow.com/questions/13254441/add-a-horizontal-line-to-plot-and-legend-in-ggplot2)
-
 </figcaption>
 </figure>
 
-- statistical summaries
+<div style="height:2em;"></div>
+
+- statistical summaries <br /> (mean, variance)
 - models
 
 ## Tableau: (not so) basic graphs
 
-- [Sparklines (Tufte 2006)](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR)<br />![](img/sparkline_d3_angular.png){width=300}
-- [Bulletgraphs (Few 2007)](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf)<br />![](img/bulletgraph.png){width=300}
-- [Heatmaps (Few 2006)](https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf)<br />![](img/heatmap.png){width=300}
+![[Sparklines (Tufte 2006)](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR)](img/sparkline_d3_angular.png)
 
-::: notes
+## Tableau: (not so) basic graphs
 
-Nahi badezu bat azaldu eta ondoren tableaun egin, ala hiruak azaldu ta gero hiruak tableaun egin
+![[Bulletgraphs (Few 2007)](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf)](img/bulletgraph-plain.png)
 
-:::
+## Tableau: (not so) basic graphs {data-transition="none"}
 
-## Tableau 1.1: Timelines
+![[Bulletgraphs (Few 2007)](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf)](img/bulletgraph-annotated.png)
+
+## Tableau: (not so) basic graphs
+
+![[Heatmaps (Few 2006)](https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf)](img/heatmap.png)
+
+<!--
+Timelines
 
 ![Timelines](img/tableau_timeline_1080x768.gif){width=700}
 
-## Tableau 1.2: Bulletgraphs
+Bulletgraphs
 
 ![Bulletgraphs](img/tablea_bulletgraph_1080x768.gif){width=700}
 
-## Tableau 1.2: Heatmaps
+Heatmaps
 
 ![Heatmaps](img/tablea_heatmap_1080x768.gif){width=700}
 
-## Tableau 2.1: automatic aggregation
+Automatic aggregation
 
 ![Automatic aggregation](img/tablea_campos_calculados_1_agregaciones_de_tableau1080x768.gif){width=700}
 
-## Tableau 2.2: calculated fields
+Calculated fields
 
 ![Calculated fields](img/tablea_campos_calculados_2_campo_calculado_nivel_linea1080x768.gif){width=700}
 
-## Tableau 2.3: aggregation on calculated fields
+Aggregation on calculated fields
 
 ![Aggregation on calculated fields](img/tablea_campos_calculados_3_agregaciones_sobre_campos_calculados1080x768.gif){width=700}
 
-## Tableau 2.4: adding KPIs to timelines 1
+Adding KPIs to timelines 1
 
 ![Adding KPIs to timelines 1](img/tablea_sparkline_kpi_1_anadir_kpi_basico1080x768.gif){width=700}
 
-## Tableau 2.5: adding KPIs to timelines 2
+Adding KPIs to timelines 2
 
 ![Adding KPIs to timelines 2](img/tablea_sparkline_kpi_2_anadir_mas_kpi1080x768.gif){width=700}
+
+-->
 
 # 3. Dashboards
 
 ## 3.1 Dashboards for *situation awareness*
 
-Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepapers/Dashboard_Design.pdf))
+<div style="height:1em;"></div>
 
 > The term “dashboard” refers to a single screen information display that is used to monitor what’s going on in some aspect of the business. 
+
+<figure style="text-align:right;">
+<figcaption>Few (2007), [Dashboard Design](https://www.perceptualedge.com/articles/Whitepapers/Dashboard_Design.pdf)
+</figcaption></figure>
+
+## 3.1 Dashboards for *situation awareness*
+
+<div style="height:1em;"></div>
 
 - Perception of own's environment
 - Comprehension of it's meaning
 - Projection of that understanding into the future
 
-## 3.2 Do's : Principles you should follow
+## 3.2 Dos: Principles you should follow
 
 - Use flicker and sound to grab attention
 - Encourage active thinking about the data, not just passive reaction to alarms
@@ -700,7 +827,7 @@ Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepape
 - Support projections for proactive responses
 - Match the mental model
 
-## 3.3 ... and dont's: Design problems you should avoid
+## 3.3 ...and Don'ts: Design problems you should avoid
 
 - Too much complexity
 - Too many alert conditions
@@ -714,29 +841,29 @@ Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepape
 
 ## 3.4 Few's few examples
 
-![](img/few-basic-dashboard.png)
+![Few 2007](img/few-basic-dashboard.png)
 
 ## Dashboards in Tableau
 
 ## Tableau 2.1: basic dashboard
 
-![Basic dashboard](img/tablea_dashboard_1_montar_dashboard1080x768.gif){width=700}
+![Basic dashboard](img/tableau/tablea_dashboard_1_montar_dashboard1080x768.gif){width=700}
 
 ## Tableau 2.2: basic formating
 
-![Basic formating](img/tablea_dashboard_2_formateo_basico1080x768.gif){width=700}
+![Basic formating](img/tableau/tablea_dashboard_2_formateo_basico1080x768.gif){width=700}
 
 ## Tableau 2.3: show filters
 
-![Show filters](img/tablea_dashboard_3_mostrar_filtro1080x768.gif){width=700}
+![Show filters](img/tableau/tablea_dashboard_3_mostrar_filtro1080x768.gif){width=700}
 
 ## Tableau 2.4: highlight action
 
-![Highlight action](img/tablea_dashboard_4_accion_highlight1080x768.gif){width=700}
+![Highlight action](img/tableau/tablea_dashboard_4_accion_highlight1080x768.gif){width=700}
 
 ## Tableau 2.5: filter action
 
-![Filter action](img/tablea_dashboard_5_accion_filtro1080x768.gif){width=700}
+![Filter action](img/tableau/tablea_dashboard_5_accion_filtro1080x768.gif){width=700}
 
 # Epilogue
 
@@ -749,7 +876,9 @@ Few (liburua, [laburpena 2007](https://www.perceptualedge.com/articles/Whitepape
 
   Kirk, Andy (2016). _Data Visualisation: A Handbook for Data Driven Design_. SAGE: London [`316.763 K 63 a`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21137802850003351&context=L&vid=deusto&lang=es_ES&search_scope=default_scope&adaptor=Local%20Search%20Engine&tab=default_tab&query=any,contains,andy%20kirk&sortby=rank&offset=0)
 
-  Munzner, Tamara (2015). _Visualization Analysis and Design_. CRC Press: Boca Raton, FL [`316.763 M 92 t`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21159285450003351&context=L&vid=deusto&search_scope=default_scope&tab=default_tab&lang=es_ES)
+  Munzner, Tamara (2015). _Visualization Analysis and Design_. CRC Press: Boca Raton, Florida [`316.763 M 92 t`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21159285450003351&context=L&vid=deusto&search_scope=default_scope&tab=default_tab&lang=es_ES)
+
+  Tufte, Edward R. (1983). _The Visual Display of Quantitative Information_. Graphics Press: California [`316.763 T 87 e`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21132751690003351&context=L&vid=deusto&search_scope=default_scope&isFrbr=true&tab=default_tab&lang=es_ES)
 </div>
 
 ---
