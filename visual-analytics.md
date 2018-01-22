@@ -5,7 +5,6 @@ author: <span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madin
 email: miren.berasategi@deusto.es
 theme: deusto
 highlighting-css: .static .author span { display:none !important; }
-showNotes: true
 ...
 
 # 0. Introduction 
