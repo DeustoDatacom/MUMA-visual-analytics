@@ -471,8 +471,8 @@ Grafikoagoa egitea komeniko litzateke
 <aside class="notes">
 <p>Perceptual accuracy of each channel type: how accurate is the interpretation made by users depending on the type of channel used to represent certain data</p>
 </aside>
-</section><section id="so-which-chart" class="slide level2">
-<h2>1.3 So, which chart?</h2>
+</section><section id="so-which-graph" class="slide level2">
+<h2>1.3 So, which graph?</h2>
 <figure>
 <img data-src="img/choosing-chart.png" alt="A. Abela (2006), Choosing the right chart. Interactive version: Chart chooser" width="600" /><figcaption>A. Abela (2006), <a href="http://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html">Choosing the right chart</a>. Interactive version: <a href="http://labs.juiceanalytics.com/chartchooser/index.html">Chart chooser</a></figcaption>
 </figure>
@@ -483,11 +483,40 @@ Grafikoagoa egitea komeniko litzateke
 [The Data Visualisation Catalogue](https://datavizcatalogue.com/search.html)
 -->
 </aside>
-</section><section id="tableau-show-me" class="slide level2">
-<h2>Tableau: Show me</h2>
-<figure>
-<img data-src="img/tableau/tableau_mostrarme.gif" alt="Show me" width="700" /><figcaption>Show me</figcaption>
-</figure>
+</section><section id="tableau-lets-explore" class="slide level2">
+<h2>Tableau: let’s explore</h2>
+<!-- ![Show me](img/tableau/tableau_mostrarme.gif){width=700} -->
+<div style="height: 2em;">
+
+</div>
+<ul>
+<li>Dimensions and measures (remember also blue <em>vs.</em> green)</li>
+<li>Encode = drag</li>
+<li><code>Show me</code> tab</li>
+</ul>
+<aside class="notes">
+<p>Left column, <code>Data</code> tab:</p>
+<ul>
+<li>dimensions contain qualitative values</li>
+<li>measures contain numeric, quantitative values (you can apply calculations to them and aggregate them)</li>
+</ul>
+<p>Reminder (blue <em>vs.</em> green, <a href="http://onlinehelp.tableau.com/current/pro/desktop/en-us/help.html#datafields_typesandroles.html?Highlight=dimensions%20measures">learn more</a>):</p>
+<ul>
+<li>green = continuous. Its values are treated as an infinite range. Generally, continuous fields add axes to the view.</li>
+<li>blue = discrete. Its values are treated as finite. Generally, discrete fields add headers to the view.</li>
+</ul>
+<p>Mapping variables to graphs is done, in Tableau, by dragging items from the left column to either: <code>Columns</code>/<code>Rows</code>, or <code>Marks</code>.</p>
+<p><code>Show me</code> tab displays the most common graphs and the minimum requirement of data for each graph. If graphs = recipes, lets us know which ingredients are required to cook a certain recipe.</p>
+<p>Also works the other way round: if I select my ingredients from the left bar, the <code>Show me</code> tab highlights the recipes available for those ingredients.</p>
+<p>(test some graphs) - Source only &gt; table - add spent &gt; table, pie chart etc</p>
+<!-- The # of marks in the status bar represents the number of items in the graph. Determined by the combination of dimensions:
+
+- if no dimensions (only income), sum of everything (maximum aggregation)
+- if 1 dimension (i.e. source), 1 mark for each unique value
+- if +1 dimension (i.e. + quarter), cross table of no. of unique values in each dimension -->
+<p>Fields can be used more than once (redundant coding) for easier identification, by dragging to more than one place. barchart income (rows) + source (columns), source to colour</p>
+<p>Options in <code>Show me</code> are different from the <code>Marks</code> box. Show me only allows graphs that <em>make sense</em>, very basic and tested graphs. Marks allows to <em>force</em> graphs in case we need more complex displays. USE WITH CAUTION, possible to create graphs that make no sense or are misleading (change to “line” in Marks box)</p>
+</aside>
 </section></section>
 <section><section id="provide-easier-analysis" class="title-slide slide level1"><h1>2. Provide easier analysis</h1></section><section id="change-default-settings" class="slide level2" data-transition="none">
 <h2>2.1 Change default settings</h2>

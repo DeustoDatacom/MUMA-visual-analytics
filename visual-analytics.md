@@ -499,13 +499,47 @@ There are many tools for this, represented only one.
 -->
 :::
 
-## Tableau: Show me
+## Tableau: let's explore
 
-![Show me](img/tableau/tableau_mostrarme.gif){width=700}
+<!-- ![Show me](img/tableau/tableau_mostrarme.gif){width=700} -->
+
+<div style="height: 2em;"></div>
+
+- Dimensions and measures (remember also blue _vs._ green)
+- Encode = drag
+- `Show me` tab
 
 ::: notes
 
+Left column, `Data` tab: 
 
+- dimensions contain qualitative values
+- measures contain numeric, quantitative values (you can apply calculations to them and aggregate them)
+
+Reminder (blue _vs._ green, [learn more](http://onlinehelp.tableau.com/current/pro/desktop/en-us/help.html#datafields_typesandroles.html?Highlight=dimensions%20measures)):
+
+- green = continuous. Its values are treated as an infinite range. Generally, continuous fields add axes to the view.
+- blue = discrete. Its values are treated as finite. Generally, discrete fields add headers to the view. 
+
+Mapping variables to graphs is done, in Tableau, by dragging items from the left column to either: `Columns`/`Rows`, or `Marks`.
+
+`Show me` tab displays the most common graphs and the minimum requirement of data for each graph. If graphs = recipes, lets us know which ingredients are required to cook a certain recipe.
+
+Also works the other way round: if I select my ingredients from the left bar, the `Show me` tab highlights the recipes available for those ingredients.
+
+(test some graphs)
+- Source only > table
+- add spent > table, pie chart etc
+
+<!-- The # of marks in the status bar represents the number of items in the graph. Determined by the combination of dimensions:
+
+- if no dimensions (only income), sum of everything (maximum aggregation)
+- if 1 dimension (i.e. source), 1 mark for each unique value
+- if +1 dimension (i.e. + quarter), cross table of no. of unique values in each dimension -->
+
+Fields can be used more than once (redundant coding) for easier identification, by dragging to more than one place. barchart income (rows) + source (columns), source to colour
+
+Options in `Show me` are different from the `Marks` box. Show me only allows graphs that _make sense_, very basic and tested graphs. Marks allows to _force_ graphs in case we need more complex displays. USE WITH CAUTION, possible to create graphs that make no sense or are misleading (change to "line" in Marks box)
 
 :::
 
