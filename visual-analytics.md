@@ -11,12 +11,23 @@ highlighting-css: .static .author span { display:none !important; }
 
 ## 0.1 Key points
 
-- **Data driven**: as seen in Onieva's and Lorenzo's lectures
-- **Insights**: que usen las características gráficas
-- **Data visualization techniques**: para obtener las los insights
-- **Dashboards**: as *situattion awareness* tools
+- **Data driven**: as seen in previous sessions with Professors Onieva and Lorenzo
+- **Insights**: the capacity to gain an accurate and deep understanding of something _through_
+- **Data visualization techniques**: to take the user from data to insight
+- **Dashboards**: as *situation awareness* tools
 
-Tableau Desktop para prácticar
+Tableau Desktop to practice
+
+## Section outline
+
+0. Introduction: the _why_ and the _what for_ of visualization 
+1. Graphs: some reminders, idioms to map variables to graphs
+2. Promote insight: by adding meaningful modifications to graphs
+3. Dashboards: situation awareness, dos and don'ts
+4. Epilogue
+
+Practice: build a simple dashboard with online marketing campaign data
+
 
 ## 0.2 Why use visualization
 
@@ -240,7 +251,20 @@ The source file (`data.xls`) is never modified
 
 -->
 
-# 1. Graphics
+# 1. Graphs
+
+---
+
+## Section outline
+
+1. Reminder: variable types
+2. Mapping variables to graphs
+  - Marks
+  - Channels, channel types
+  - Using marks and channels
+3. So, which graph?
+
+Practice: explore dimensions, measures and graph types in Tableau
 
 ---
 
@@ -543,7 +567,7 @@ Options in `Show me` are different from the `Marks` box. Show me only allows gra
 
 :::
 
-# 2. Provide easier analysis
+# 2. Promote insight
 
 ---
 
@@ -556,6 +580,8 @@ How can we enable easier insight through data visualization?
 3. Highlight observations
 4. Add attributes as context
 5. Add statistical information
+
+Practice: build (not so) basic graphs
 
 ## 2.1 Change default settings {data-transition="none"}
 
@@ -771,9 +797,13 @@ Rename sheet to `Sparkline`, Save.
 
 ## Tableau: (not so) basic graphs
 
+<div style="height:2em;"></div>
+
 ![Bulletgraphs ([Few 2007](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf))](img/bulletgraph-plain.png)
 
 ## Tableau: (not so) basic graphs {data-transition="none"}
+
+<div style="height:2em;"></div>
 
 ![[Bulletgraphs (Few 2007)](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf)](img/bulletgraph-annotated.png)
 
@@ -810,6 +840,8 @@ Rename sheet to bullet graph, save.
 :::
 
 ## Tableau: (not so) basic graphs
+
+<div style="height:2em;"></div>
 
 ![[Heatmaps (Few 2006)](https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf)](img/heatmap.png)
 
@@ -863,6 +895,17 @@ Adding KPIs to timelines 2
 
 # 3. Dashboards
 
+---
+
+## Section outline
+
+1. Dashboards for _situation awareness_
+2. Dos: Principles to follow
+3. Don'ts: Design problems to avoid
+4. Few's few examples
+
+Practice: layout and format graphs into a dashboard
+
 ## 3.1 Dashboards for *situation awareness*
 
 <div style="height:1em;"></div>
@@ -881,7 +924,7 @@ Adding KPIs to timelines 2
 - Comprehension of it's meaning
 - Projection of that understanding into the future
 
-## 3.2 Dos: Principles you should follow
+## 3.2 Dos: Principles to follow
 
 - Use flicker and sound to grab attention
 - Encourage active thinking about the data, not just passive reaction to alarms
@@ -891,7 +934,7 @@ Adding KPIs to timelines 2
 - Support projections for proactive responses
 - Match the mental model
 
-## 3.3 ...and Don'ts: Design problems you should avoid
+## 3.3 ...and Don'ts: Design problems to avoid
 
 - Too much complexity
 - Too many alert conditions
@@ -904,6 +947,8 @@ Adding KPIs to timelines 2
 - Not enough context
 
 ## 3.4 Few's few examples
+
+<div style="height:2em;"></div>
 
 ![Few 2007](img/few-basic-dashboard.png)
 
