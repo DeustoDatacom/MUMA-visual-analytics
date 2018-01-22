@@ -748,19 +748,83 @@ useful only if addition conveys meaning / enables insight. In the graph, the col
 
 ## Tableau: (not so) basic graphs
 
-![[Sparklines (Tufte 2006)](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR)](img/sparkline_d3_angular.png)
+<div style="height:3em;"></div>
+
+![Sparklines ([Tufte 2006](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR))](img/sparkline_d3_angular.png){width=400}
+
+::: notes
+
+Select Quarter and Income, line graph from Show me.
+
+Quarter: will default to higher level of aggregation (YEAR). Possible to select different aggregations (when and if attribute is correctly interpreted): year > q > month...
+
+When selecting aggregate levels with dates (by clicking on arrow):
+
+- top half considers date as discrete (will change to blue if selected). Useful to compare the same period of time in different years.
+- bottom half considers date as continuous.
+
+Source to rows will draw one graph per source. 
+
+Rename sheet to `Sparkline`, Save.
+
+:::
 
 ## Tableau: (not so) basic graphs
 
-![[Bulletgraphs (Few 2007)](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf)](img/bulletgraph-plain.png)
+![Bulletgraphs ([Few 2007](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf))](img/bulletgraph-plain.png)
 
 ## Tableau: (not so) basic graphs {data-transition="none"}
 
 ![[Bulletgraphs (Few 2007)](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf)](img/bulletgraph-annotated.png)
 
+::: notes
+
+Source to rows, income to columns > draws bars.
+
+Where is goal? Drag to columns > two different graphs (not what we want).
+
+Select source + income + goal > bullet graph from Show me.
+
+Shows totals, may not be what we want. Anyway, what did this do? Now manually:
+
+1. source to rows, income to columns
+2. now we want goal as black bar (reference line), goal valorations as background (distribution band)
+3. Double click on ref. line, adds a line of average income
+  - scope: default `per pane`: avg per each _combination_. `per table`, whole table (same as per pane when there is only one dimension). `per cell` avg. per each mark.
+  - line: only shows income for now. How to add goal? Drag to Marks > detail, not going to display but is available to use. Now line: sum(goal), label (none).
+  - formatting: bolder, black
+4. Double click on distribution band.
+  - scope: per cell
+  - computation: value: 60%/80%, percent of sum(goal) instead of income. label: none
+  - formatting: check fill below (used normally in bullet graphs because _below_ is usually bad)
+  
+Style:
+
+- Marks > size, make thinner bars to make background more visible
+- Format > lines:
+  + rows: grid lines, solid white 
+  + columns: none
+
+Rename sheet to bullet graph, save.
+
+:::
+
 ## Tableau: (not so) basic graphs
 
 ![[Heatmaps (Few 2006)](https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf)](img/heatmap.png)
+
+::: notes
+
+Source + quarter + income > Show me, heatmap. Columns YEAR, click on + (adds column Q)
+
+In Marks, sum(income) is redundant as label and color. If remove label, pure heatmap
+
+Interpretation: 
+
+- both years sho low levels for FB on Q3, why?
+- both years are _hotter_ on Q2, why?
+
+:::
 
 <!--
 Timelines
@@ -845,25 +909,80 @@ Adding KPIs to timelines 2
 
 ## Dashboards in Tableau
 
-## Tableau 2.1: basic dashboard
-
+<!--
 ![Basic dashboard](img/tableau/tablea_dashboard_1_montar_dashboard1080x768.gif){width=700}
+-->
 
-## Tableau 2.2: basic formating
+<div style="height:2em;"></div>
 
-![Basic formating](img/tableau/tablea_dashboard_2_formateo_basico1080x768.gif){width=700}
+Dashboards in Tableau are containers of _sheets_ of graphs.
 
+Allow for quite basic but functional formatting.
+
+<!--
+  ![Basic formating](img/tableau/tablea_dashboard_2_formateo_basico1080x768.gif){width=700}
+-->
+
+::: notes
+
+New dashboard. Dashboards in Tableau are container of _sheets_ of graphs. Dashboard size is selected depending on destination format (screen or paper, size...). Choose small, 640x420
+
+- Sheets area shows graphs we have created.
+- Objects displays additional layout elements that could be used
+
+Drag elements to window: Sparklines top-left, bullet graphs top-right, heatmap bottom
+
+Hide headers 
+
+:::
+
+<!--
 ## Tableau 2.3: show filters
 
 ![Show filters](img/tableau/tablea_dashboard_3_mostrar_filtro1080x768.gif){width=700}
+-->
 
-## Tableau 2.4: highlight action
+## Tableau: Actions
 
+<div style="height:2em;"></div>
+
+Some degree of interactivity with `Actions`: highlight and filter
+
+<!--
 ![Highlight action](img/tableau/tablea_dashboard_4_accion_highlight1080x768.gif){width=700}
 
-## Tableau 2.5: filter action
-
 ![Filter action](img/tableau/tablea_dashboard_5_accion_filtro1080x768.gif){width=700}
+-->
+
+::: notes
+
+We can add a minimum level of interactivity
+
+Dashboard > Actions, Highlight.
+
+- source: sparkline
+- target: all
+
+Dashboard > Actions, Filter.
+
+- source: sparkline, run on select
+- target: all
+
+:::
+
+## Tableau: What else?
+
+<div style="height:2em;"></div>
+
+Calculated fields
+
+...
+
+::: notes
+
+spent/income ratio, spent/visits ratio, income/visits ratio...
+
+:::
 
 # Epilogue
 

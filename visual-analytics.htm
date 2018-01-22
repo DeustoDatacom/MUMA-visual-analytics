@@ -32,23 +32,13 @@
   <![endif]-->
 </head>
 <body>
-
   <div class="reveal">
     <div class="slides">
-      
-      <div class="static">
-        <div class="bottomR"><img src="reveal.js/logo-deusto.png" alt="Universidad de Deusto" /></div>
-        <div class="bottomL">
-                      <div class="author"><span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &amp;</span> Miren Berasategi</div>
-                                <div class="title">Visual Analytics</div>
-                  </div>
-      </div>
-      
+
 <section id="title-slide">
   <h1 class="title">Visual Analytics</h1>
   <p class="subtitle">Communicating data-driven insights<br />through data visualization techniques<br />and useful dashboards</p>
   <p class="author"><span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &amp;</span> Miren Berasategi</p>
-  <p class="email">miren.berasategi@deusto.es</p>
 </section>
 
 <section><section id="introduction" class="title-slide slide level1"><h1>0. Introduction</h1></section><section id="key-points" class="slide level2">
@@ -684,24 +674,81 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 </ul>
 </section><section id="tableau-not-so-basic-graphs" class="slide level2">
 <h2>Tableau: (not so) basic graphs</h2>
+<div style="height:3em;">
+
+</div>
 <figure>
-<img data-src="img/sparkline_d3_angular.png" alt="Sparklines (Tufte 2006)" /><figcaption><a href="https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR">Sparklines (Tufte 2006)</a></figcaption>
+<img data-src="img/sparkline_d3_angular.png" alt="Sparklines (Tufte 2006)" width="400" /><figcaption>Sparklines (<a href="https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR">Tufte 2006</a>)</figcaption>
 </figure>
+<aside class="notes">
+<p>Select Quarter and Income, line graph from Show me.</p>
+<p>Quarter: will default to higher level of aggregation (YEAR). Possible to select different aggregations (when and if attribute is correctly interpreted): year &gt; q &gt; month…</p>
+<p>When selecting aggregate levels with dates (by clicking on arrow):</p>
+<ul>
+<li>top half considers date as discrete (will change to blue if selected). Useful to compare the same period of time in different years.</li>
+<li>bottom half considers date as continuous.</li>
+</ul>
+<p>Source to rows will draw one graph per source.</p>
+<p>Rename sheet to <code>Sparkline</code>, Save.</p>
+</aside>
 </section><section id="tableau-not-so-basic-graphs-1" class="slide level2">
 <h2>Tableau: (not so) basic graphs</h2>
 <figure>
-<img data-src="img/bulletgraph-plain.png" alt="Bulletgraphs (Few 2007)" /><figcaption><a href="https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf">Bulletgraphs (Few 2007)</a></figcaption>
+<img data-src="img/bulletgraph-plain.png" alt="Bulletgraphs (Few 2007)" /><figcaption>Bulletgraphs (<a href="https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf">Few 2007</a>)</figcaption>
 </figure>
 </section><section id="tableau-not-so-basic-graphs-2" class="slide level2" data-transition="none">
 <h2>Tableau: (not so) basic graphs</h2>
 <figure>
 <img data-src="img/bulletgraph-annotated.png" alt="Bulletgraphs (Few 2007)" /><figcaption><a href="https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf">Bulletgraphs (Few 2007)</a></figcaption>
 </figure>
+<aside class="notes">
+<p>Source to rows, income to columns &gt; draws bars.</p>
+<p>Where is goal? Drag to columns &gt; two different graphs (not what we want).</p>
+<p>Select source + income + goal &gt; bullet graph from Show me.</p>
+<p>Shows totals, may not be what we want. Anyway, what did this do? Now manually:</p>
+<ol type="1">
+<li>source to rows, income to columns</li>
+<li>now we want goal as black bar (reference line), goal valorations as background (distribution band)</li>
+<li>Double click on ref. line, adds a line of average income</li>
+</ol>
+<ul>
+<li>scope: default <code>per pane</code>: avg per each <em>combination</em>. <code>per table</code>, whole table (same as per pane when there is only one dimension). <code>per cell</code> avg. per each mark.</li>
+<li>line: only shows income for now. How to add goal? Drag to Marks &gt; detail, not going to display but is available to use. Now line: sum(goal), label (none).</li>
+<li>formatting: bolder, black</li>
+</ul>
+<ol start="4" type="1">
+<li>Double click on distribution band.</li>
+</ol>
+<ul>
+<li>scope: per cell</li>
+<li>computation: value: 60%/80%, percent of sum(goal) instead of income. label: none</li>
+<li>formatting: check fill below (used normally in bullet graphs because <em>below</em> is usually bad)</li>
+</ul>
+<p>Style:</p>
+<ul>
+<li>Marks &gt; size, make thinner bars to make background more visible</li>
+<li>Format &gt; lines:
+<ul>
+<li>rows: grid lines, solid white</li>
+<li>columns: none</li>
+</ul></li>
+</ul>
+<p>Rename sheet to bullet graph, save.</p>
+</aside>
 </section><section id="tableau-not-so-basic-graphs-3" class="slide level2">
 <h2>Tableau: (not so) basic graphs</h2>
 <figure>
 <img data-src="img/heatmap.png" alt="Heatmaps (Few 2006)" /><figcaption><a href="https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf">Heatmaps (Few 2006)</a></figcaption>
 </figure>
+<aside class="notes">
+<p>Source + quarter + income &gt; Show me, heatmap. Columns YEAR, click on + (adds column Q)</p>
+<p>In Marks, sum(income) is redundant as label and color. If remove label, pure heatmap</p>
+<p>Interpretation:</p>
+<ul>
+<li>both years sho low levels for FB on Q3, why?</li>
+<li>both years are <em>hotter</em> on Q2, why?</li>
+</ul>
+</aside>
 <!--
 Timelines
 
@@ -791,31 +838,65 @@ Few (2007), <a href="https://www.perceptualedge.com/articles/Whitepapers/Dashboa
 </figure>
 </section><section id="dashboards-in-tableau" class="slide level2">
 <h2>Dashboards in Tableau</h2>
-</section><section id="tableau-2.1-basic-dashboard" class="slide level2">
-<h2>Tableau 2.1: basic dashboard</h2>
-<figure>
-<img data-src="img/tableau/tablea_dashboard_1_montar_dashboard1080x768.gif" alt="Basic dashboard" width="700" /><figcaption>Basic dashboard</figcaption>
-</figure>
-</section><section id="tableau-2.2-basic-formating" class="slide level2">
-<h2>Tableau 2.2: basic formating</h2>
-<figure>
-<img data-src="img/tableau/tablea_dashboard_2_formateo_basico1080x768.gif" alt="Basic formating" width="700" /><figcaption>Basic formating</figcaption>
-</figure>
-</section><section id="tableau-2.3-show-filters" class="slide level2">
-<h2>Tableau 2.3: show filters</h2>
-<figure>
-<img data-src="img/tableau/tablea_dashboard_3_mostrar_filtro1080x768.gif" alt="Show filters" width="700" /><figcaption>Show filters</figcaption>
-</figure>
-</section><section id="tableau-2.4-highlight-action" class="slide level2">
-<h2>Tableau 2.4: highlight action</h2>
-<figure>
-<img data-src="img/tableau/tablea_dashboard_4_accion_highlight1080x768.gif" alt="Highlight action" width="700" /><figcaption>Highlight action</figcaption>
-</figure>
-</section><section id="tableau-2.5-filter-action" class="slide level2">
-<h2>Tableau 2.5: filter action</h2>
-<figure>
-<img data-src="img/tableau/tablea_dashboard_5_accion_filtro1080x768.gif" alt="Filter action" width="700" /><figcaption>Filter action</figcaption>
-</figure>
+<!--
+![Basic dashboard](img/tableau/tablea_dashboard_1_montar_dashboard1080x768.gif){width=700}
+-->
+<div style="height:2em;">
+
+</div>
+<p>Dashboards in Tableau are containers of <em>sheets</em> of graphs.</p>
+<p>Allow for quite basic but functional formatting.</p>
+<!--
+  ![Basic formating](img/tableau/tablea_dashboard_2_formateo_basico1080x768.gif){width=700}
+-->
+<aside class="notes">
+<p>New dashboard. Dashboards in Tableau are container of <em>sheets</em> of graphs. Dashboard size is selected depending on destination format (screen or paper, size…). Choose small, 640x420</p>
+<ul>
+<li>Sheets area shows graphs we have created.</li>
+<li>Objects displays additional layout elements that could be used</li>
+</ul>
+<p>Drag elements to window: Sparklines top-left, bullet graphs top-right, heatmap bottom</p>
+<p>Hide headers</p>
+</aside>
+<!--
+## Tableau 2.3: show filters
+
+![Show filters](img/tableau/tablea_dashboard_3_mostrar_filtro1080x768.gif){width=700}
+-->
+</section><section id="tableau-actions" class="slide level2">
+<h2>Tableau: Actions</h2>
+<div style="height:2em;">
+
+</div>
+<p>Some degree of interactivity with <code>Actions</code>: highlight and filter</p>
+<!--
+![Highlight action](img/tableau/tablea_dashboard_4_accion_highlight1080x768.gif){width=700}
+
+![Filter action](img/tableau/tablea_dashboard_5_accion_filtro1080x768.gif){width=700}
+-->
+<aside class="notes">
+<p>We can add a minimum level of interactivity</p>
+<p>Dashboard &gt; Actions, Highlight.</p>
+<ul>
+<li>source: sparkline</li>
+<li>target: all</li>
+</ul>
+<p>Dashboard &gt; Actions, Filter.</p>
+<ul>
+<li>source: sparkline, run on select</li>
+<li>target: all</li>
+</ul>
+</aside>
+</section><section id="tableau-what-else" class="slide level2">
+<h2>Tableau: What else?</h2>
+<div style="height:2em;">
+
+</div>
+<p>Calculated fields</p>
+<p>…</p>
+<aside class="notes">
+<p>spent/income ratio, spent/visits ratio, income/visits ratio…</p>
+</aside>
 </section></section>
 <section><section id="epilogue" class="title-slide slide level1"><h1>Epilogue</h1></section><section class="slide level2">
 
