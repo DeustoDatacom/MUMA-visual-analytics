@@ -845,9 +845,7 @@ Rename sheet to bullet graph, save.
 
 ## Tableau: (not so) basic graphs
 
-<div style="height:2em;"></div>
-
-![[Heatmaps (Few 2006)](https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf)](img/heatmap.png)
+![[Heatmaps (Few 2006)](https://www.perceptualedge.com/articles/b-eye/heatmaps.pdf)](img/heatmap1.png){width=600}
 
 ::: notes
 
@@ -1163,6 +1161,14 @@ spent/income ratio, spent/visits ratio, income/visits ratio...
 :::
 
 # Epilogue
+
+## What? I want more!
+
+- Tableau, [Free Training Videos](https://www.tableau.com/learn/training)
+  - Tableau, [Análisis visual: como aprovechar las características cognitivas humanas para comprender tus datos](https://www.tableau.com/es-es/learn/webinars/visual-analytics)
+- Coursera, [Visual Analytics with Tableau](https://es.coursera.org/learn/dataviz-visual-analytics)
+- Udemy, [(Ranked) Data Visualization Courses](https://www.udemy.com/topic/data-visualization/)
+
 
 ---
 
