@@ -49,11 +49,11 @@ Implications of visual perception relevant to visualization design on next secti
 <img src="img/anscombe3.png" alt="Visualizations" />
 </figure>
 
-<figure class="fragment"  data-fragment-index="1" style="width:30%; float:left;">
+<figure class="fragment"  data-fragment-index="2" style="width:30%; float:left;">
 <img src="img/anscombe1.png" alt="Data" style="margin:0 50px;" />
 </figure>
 
-<figure class="fragment"  data-fragment-index="2" style="width:40%; float:left;">
+<figure class="fragment"  data-fragment-index="1" style="width:40%; float:left;">
 <img src="img/anscombe2.png" alt="Summary statistics"  style="margin:0;" />
 </figure>
 
@@ -170,7 +170,11 @@ Transformation (=derive) may be required depending on the desired type of insigh
 </div>
 
 <div class="left" style="width:45%; float:left;">
-Download and open `data.xls` from Google Drive: fake data for online marketing goals and tools 
+Download and open `data.xls`: fake data for online marketing goals and tools
+
+<span style="font-size:.8em;">
+from Google Drive or [`http://mrn.bz/MUMA2018data`](http://mrn.bz/MUMA2018data)
+</span>
 </div>
 
 ::: notes
@@ -899,13 +903,131 @@ Adding KPIs to timelines 2
 
 ## Section outline
 
-1. Dashboards for _situation awareness_
-2. Dos: Principles to follow
-3. Don'ts: Design problems to avoid
-4. Few's few examples
+1. What is a dashboard?
+2. Common design mistakes
+3. Key goals in the visual design process
+4. Example
 
 Practice: layout and format graphs into a dashboard
 
+## 3.1 What is a dashboard?
+
+<blockquote style="margin-top:2em;">
+  <p style="margin:0 !important;">
+Visual display of the most information needed to achieve one or more objectives
+which fits entirely on a single computer screen so it can be monitored at a glance.
+</p>
+</blockquote>
+
+<figure style="text-align:right !important;">
+  <figcaption>Few 2013</figcaption>
+</figure>
+
+::: notes
+
+When they work, they provide a powerful means to tame the beast of data overload. Most dashboard live however to a fraction of their potential, not because of poor technology, but because of poor design.
+
+They must grab your attention when it's needed, make it easy to spot what's most important in a screen full of data, and give you the means to understand what's happening (_insight_) and respond without delay.
+
+Not designed to wow people upon first sight, but to inform people with precisely what they need in the way they need it day in and day out. 
+
+:::
+
+## 3.1 What is a dashboard?
+
+>- **Visual display**: _I see_  =  _I understand_  &rarr;  _insight_
+ **to achieve specific objectives**: may require gathering information that is otherwise unrelated or disperse
+>- **fits in a single computer screen**: it must all be seen at once (short-term memory effect)
+>- **monitored at a glance**: doesn't need to provide all the details, but if it doesn't, it should make it as easy and seamless as possible to get to that information
+
+
+::: notes
+
+- combine text and graphs, with emphasis on graphics. There is such an intimate connection between what we see and how we think, we actually use the expression "I see" as a substitute for "I understand". when we make sense of something, we refer to what we've learned as "insight". the more you can rely on images to tell the story, the faster it can be perceived. We perceive images in a parallel manner, which is **much faster than the serial/sequential perception of language**.  We have very limited short-term memory: dashboards address this issue in two ways:
+  + making the content in each slot more "information rich"  (only 4-5 slots; numbers/graphs?)
+  + reducing the need to rely on it, everything relevant is available simultaneously. External form of memory.
+
+Must the information be constantly refreshed in real time? Only if the objectives that it serves require real‐time information. If you are monitoring air traffic using a dashboard, you must immediately be informed when something is wrong. On the other hand, if you are making strategic decisions about how to boost sales, a snapshot of information as of last night, or perhaps even the end of last month, should work fine.
+
+:::
+
+## 3.2 Common design mistakes
+
+>- Exceeding the boundaries of a single screen
+>- Supplying inadequate context for the data
+>- Displaying excessive detail or precision
+>- Choosing a deficient measure
+>- Choosing inappropriate display media
+>- Introducing meaningless variety
+>- Using poorly designed display media
+
+<div style="text-align:right;font-size:.7em;">_continues..._</div>
+
+::: notes
+
+- more than one srceen (or scrolling) requires to rely on short-term memory, far more processing effort from the mind.
+- values compared to what? good or bad? how good or bad? are we on track?
+- too much detail slow users down without any benefit, makes her filter out what is important
+- spent & income instead of benefit, two values instead of ratios for example
+- choosing the right graph (previous section)
+- 
+- channels without attribute/reference variable, specially colour
+
+:::
+
+## 3.2 Common design mistakes
+
+<div style="font-size:.7em;">_...continued_</div>
+
+>- Encoding quantitative data inaccurately
+>- Arranging the data poorly
+>- Highlighting important data ineffectively or not at all 
+>- Cluttering the display with useless decoration 
+>- Misusing or overusing color 
+>- Designing an unattractive visual display 
+
+::: notes
+
+- non-zero (vertical) axis for example
+- top-left is most prominent, bottom-right the less prominent area. use accordingly
+- should draw eyes to most relevant information regardless of location. too much highlight means no highlight at all = if everything is prominent, nothing is prominent
+- blank space is always bettern than meaningless decoration. If logos must be used, make them small and visually subtle, and place them out of the way
+- REMEMBER colour is a channel that should almost always refer to an attribute/variable
+- not excessively decorated does not mean unattractive. no need to add touches to make the dashboard pretty, but rather attractively display the data itself
+
+:::
+
+## 3.3 Key goals in the visual design process
+
+<div style="height:2em;"></div>
+From previous section:
+
+- make simpler graphs (declutter)
+- highlight observations
+- add attributes/variables as context or statistical information
+
+## 3.3 Key goals in the visual design process
+
+In other words:
+
+1. Reduce non-data pixels
+  - eliminate all unnecessary non-data pixels
+  - de-emphasize and regularize the non-data pixels that remain
+2. Enhance data pixels
+  - eliminate all unnecessary data pixels
+  - highlight the most important data-pixels that remain
+
+::: notes
+
+1. reduce
+  - decoration graphics, variations in color without meaning, borders or background colours as separation instead of whitespace, gradients instead of solid colour, grid lines (graphs or tables), fill colours for alternating rows, unjustified additional dimensions (specially 3D)...  (channels without attribute)
+  - ocassionally useful non-data pixels to de-emphasize: axis lines,  borders or backgrounds as separation, grid lines, legends
+2. enhance
+  - show only what is really needed: eliminate unnecessary data, condensate and summarize, level of detail should not exceed what's necessary
+  - depends on desired type of insight. Some are always important (static means of emphasis), some are only important when certain conditions are met (alerts, require dynamic means of emphasis)
+
+:::
+<!--
 ## 3.1 Dashboards for *situation awareness*
 
 <div style="height:1em;"></div>
@@ -945,12 +1067,23 @@ Practice: layout and format graphs into a dashboard
 - Mismatch between information and its visual representation
 - Indirect expression of measures
 - Not enough context
+-->
 
-## 3.4 Few's few examples
+## 3.4 Example
 
-<div style="height:2em;"></div>
+![Few 2013](img/sfew_capture.gif){width=650}
 
-![Few 2007](img/few-basic-dashboard.png)
+::: notes
+
+- colour is used sparingly. headings separate sections, the only other colour different from gray is on red alerts. colours do not compete with each other for attention
+- the prime real estate on the screen has been used for the most important data: upper-left corner of the screen
+- small, concise display media have been used to support the display of a dense set of data in a small amount of space. sparklines and bullent graphs convey a lot of information without looking cluttered
+- legends are unobtrusive
+- white space alone has been used to delineate and group data (no borders, grid lines, background fills)
+- not cluttered with instructions and descriptions that are only occasionally needed (those in "Help")
+- 
+
+:::
 
 ## Dashboards in Tableau
 
@@ -1038,6 +1171,10 @@ spent/income ratio, spent/visits ratio, income/visits ratio...
 <div style="font-size:.5em;width:90%;margin:1em auto;">
   Abela, Andrew (2006). [Choosing a good chart](http://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html).
 
+  Few, Stephen (2009). [Dashboard Design for Real-Time Situation Awareness](https://www.perceptualedge.com/articles/Whitepapers/Dashboard_Design.pdf) [White Paper]
+
+  &mdash; (2013). _Information Dashboard Design_. Analytics Press: [`316.763 F 44 s`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21135421430003351&context=L&vid=deusto&search_scope=default_scope&tab=default_tab&lang=es_ES)
+
   Kirk, Andy (2016). _Data Visualisation: A Handbook for Data Driven Design_. SAGE: London [`316.763 K 63 a`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21137802850003351&context=L&vid=deusto&lang=es_ES&search_scope=default_scope&adaptor=Local%20Search%20Engine&tab=default_tab&query=any,contains,andy%20kirk&sortby=rank&offset=0)
 
   Munzner, Tamara (2015). _Visualization Analysis and Design_. CRC Press: Boca Raton, Florida [`316.763 M 92 t`](https://oceano.biblioteca.deusto.es/primo-explore/fulldisplay?docid=DEUSTO_Alma21159285450003351&context=L&vid=deusto&search_scope=default_scope&tab=default_tab&lang=es_ES)
@@ -1050,6 +1187,8 @@ spent/income ratio, spent/visits ratio, income/visits ratio...
 <div style="text-align:center;">
 
 <h1>Thank you!</h1>
+
+This presentation is available at <br />[`http://mrn.bz/MUMA2018`](http://mrn.bz/MUMA2018)
 
 Miren Berasategi<br />
 miren.berasategi@deusto.es
