@@ -53,14 +53,14 @@
 </section>
 
 <section><section id="introduction" class="title-slide slide level1"><h1>0. Introduction</h1></section><section id="key-points" class="slide level2">
-<h2>0.1 Key points</h2>
+<h2>Key points</h2>
 <ul>
-<li><strong>Data driven</strong>: as seen in previous sessions with Professors Onieva and Lorenzo</li>
+<li><strong>Data driven</strong>: as seen in previous sessions with Professors Onieva, Gutiérrez and Lorenzo</li>
 <li><strong>Insights</strong>: the capacity to gain an accurate and deep understanding of something <em>through</em></li>
-<li><strong>Data visualization techniques</strong>: to take the user from data to insight</li>
+<li><strong>Data visualization techniques</strong>: that take the user from data to insight</li>
 <li><strong>Dashboards</strong>: as <em>situation awareness</em> tools</li>
 </ul>
-<p>Tableau Desktop to practice</p>
+<p>+ Tableau Desktop to practice</p>
 </section><section id="section-outline" class="slide level2">
 <h2>Section outline</h2>
 <ol start="0" type="1">
@@ -72,7 +72,7 @@
 </ol>
 <p>Practice: build a simple dashboard with online marketing campaign data</p>
 </section><section id="why-use-visualization" class="slide level2">
-<h2>0.2 Why use visualization</h2>
+<h2>Why use visualization</h2>
 <ul>
 <li>Sight is our most developed sense</li>
 <li>The visual system provides a very high-bandwidth channel to our brains</li>
@@ -84,11 +84,11 @@
 <p>Implications of visual perception relevant to visualization design on next section</p>
 </aside>
 </section><section id="why-use-visualization-1" class="slide level2">
-<h2>0.2 Why use visualization</h2>
-<figure class="fragment" data-fragment-index="3" style="width:55%; float:right;">
+<h2>Why use visualization</h2>
+<figure class="fragment" data-fragment-index="2" style="width:55%; float:right;">
 <img src="img/anscombe3.png" alt="Visualizations" />
 </figure>
-<figure class="fragment" data-fragment-index="2" style="width:30%; float:left;">
+<figure class="fragment" data-fragment-index="1" style="width:30%; float:left;">
 <img src="img/anscombe1.png" alt="Data" style="margin:0 50px;" />
 </figure>
 <figure class="fragment" data-fragment-index="1" style="width:40%; float:left;">
@@ -109,7 +109,7 @@
 <p>Munzner 2014 p.8</p>
 </aside>
 </section><section id="what-to-use-visualization-for" class="slide level2">
-<h2>0.3 What to use visualization for</h2>
+<h2>What to use visualization for</h2>
 <figure>
 <img data-src="img/munzner-3.1.png" alt="Munzner 2014, p.42" width="600" /><figcaption>Munzner 2014, p.42</figcaption>
 </figure>
@@ -121,37 +121,54 @@
 <li><em>targets</em> = nouns</li>
 <li><em>actions</em> = verbs</li>
 </ul>
-<!--
-Honek erantzungo lioke "insights" parteari: 
-
-- *Targets* lehenbizi (benetako insighten oinarriak)
-- Ondoren *actions*
-   - Search (ze target eta non)
-   - Query (identifikatu target, baldin eta badago)
-   - Azkenik analyze, komunikatu eta datu/modelo berriak sortu
--->
 </aside>
 </section><section id="what-to-use-visualization-for-1" class="slide level2">
-<h2>0.3 What to use visualization for</h2>
+<h2>What to use visualization for</h2>
 <figure>
 <img data-src="img/munzner-3.6-wide.png" alt="Munzner 2014, p.56" width="725" /><figcaption>Munzner 2014, p.56</figcaption>
 </figure>
 <aside class="notes">
+<p>What is going to be the OBJECT of visualization</p>
 <ul>
-<li>Very broadly relevant for all kinds of data: trends, outliers, features</li>
-<li>One attribute/variable: find an individual value, distribution of all values, find extremes</li>
-<li>Many attributes: dependency, correlation, similarity</li>
+<li>Very broadly relevant for all kinds of data:
+<ul>
+<li>trends: patterns. Increase, decrease, peaks, troughs, plateaus</li>
+<li>outliers: some data just doesnt’t fit well with the backdrop / the rest</li>
+<li>features: any particular structures of interest</li>
+</ul></li>
+<li>One attribute/variable. Frequent targets of interest:
+<ul>
+<li>find an individual value, distribution of all values, extremes</li>
+</ul></li>
+<li>Many attributes:
+<ul>
+<li>dependency: values for one attribute directly depend on those of a second</li>
+<li>correlation: there is a tendency for the values of a second to be tied to those of the first</li>
+<li>similarity</li>
+</ul></li>
 <li>The rest (network/spatial) are specific to certain types of datasets</li>
 </ul>
 <p>The abstract task of understanding <strong>trends, outliers, distributions and correlations</strong> are extremely common reasons to use data visualization.</p>
 </aside>
 </section><section id="what-to-use-visualization-for-2" class="slide level2">
-<h2>0.3 What to use visualization for</h2>
+<h2>What to use visualization for</h2>
 <figure>
 <img data-src="img/munzner-3.2-wide.png" alt="Munzner 2014, p.46" /><figcaption>Munzner 2014, p.46</figcaption>
 </figure>
 <aside class="notes">
+<div style="font-size:.9em;">
+<p>WHAT is done to that object</p>
 <ul>
+<li>Analyze data:
+<ul>
+<li>consume (most common use case):
+<ul>
+<li>discover: find new knowledge that was not previously known (<strong>generate</strong> a new hypothesys or <strong>verify</strong> an existing one)</li>
+<li>present: known info, i.e. insights, a story… communicate something specific and already understood to an audience</li>
+<li>enjoy: for the fun of it</li>
+</ul></li>
+<li>produce: annotate (add graphical or textual notes associated with one or more visualization element), record (capture steps), derive (produce new data elements)</li>
+</ul></li>
 <li>Search for an element of interest (based on knowledge of identity &amp; location)
 <ul>
 <li>lookup: humans in tree vis of species of mammals</li>
@@ -162,18 +179,14 @@ Honek erantzungo lioke "insights" parteari:
 <li>Once a target or set of targets is identified, query those at one of 3 scopes (progression from one to many to all targets)
 <ul>
 <li>identify (US election map example)</li>
-<li>compare, more difficult, requires more sophisticated idioms</li>
+<li>compare: more difficult, requires more sophisticated idioms</li>
 <li>summarize = overview (extremely common)</li>
 </ul></li>
-<li>Analyze data:
-<ul>
-<li>consume (most common use case): discover, present (known info, i.e. insights), enjoy (for the fun of it)</li>
-<li>produce: annotate, record (capture steps), derive (produce new data elements)</li>
-</ul></li>
 </ul>
+</div>
 </aside>
 </section><section id="what-to-use-visualization-for-3" class="slide level2">
-<h2>0.3 What to use visualization for</h2>
+<h2>What to use visualization for</h2>
 <blockquote style="width:90% !important; font-size:.9em; margin-top:2em;">
 <p style="margin:0;">
 There is a <strong>strong relationship</strong> between the form of the data (the attribute/variable and dataset types) and what kinds of vis[ualization] idioms are effective at displaying it. (…) Don’t just draw what you are given; decide what the right thing to show is, create it with a series of <strong>transformations</strong> from the original database, and draw that!
@@ -186,17 +199,20 @@ Munzner 2014, p.50
 </figure>
 <aside class="notes">
 <p>Transformation (=derive) may be required depending on the desired type of insight – derived attributes/variables extend the original dataset</p>
-<ul>
-<li>in some cases, the same data with a change of type (temperature <em>vs.</em> “hot” or “cold”)</li>
-<li>in other cases, access to additional info is required (geo: city name to lat/lon)</li>
-<li>created through arithmetic, logaritmic or statistial operations (i.e. diff field)</li>
-</ul>
 </aside>
 </section><section id="what-to-use-visualization-for-4" class="slide level2">
-<h2>0.3 What to use visualization for</h2>
+<h2>What to use visualization for</h2>
 <figure>
 <img data-src="img/munzner-3.5.png" alt="Derived attributes can be directly visually encoded. Munzner 2014, p.52" /><figcaption>Derived attributes can be directly visually encoded. Munzner 2014, p.52</figcaption>
 </figure>
+<aside class="notes">
+<p>A dataset often needs to be transformed beyond its original state in order to create a visual encoding that can solve the desired problem. <strong>Derived attributes</strong> extend the dataset beyond the original set of attributes.</p>
+<ul>
+<li>in some cases, the same data with a change of type (temperature <em>vs.</em> “hot” or “cold”)</li>
+<li>in other cases, access to additional info is required (geo: city name to lat/lon)</li>
+<li>created through arithmetic, logaritmic or statistial operations (i.e. diff field) <strong>which can then be directly visually encoded</strong></li>
+</ul>
+</aside>
 </section><section id="practice-meet-our-sample-data" class="slide level2">
 <h2>Practice: meet our sample data</h2>
 <div class="right" style="width:45%; float:right;">
@@ -204,14 +220,14 @@ Munzner 2014, p.50
 </div>
 <div class="left" style="width:45%; float:left;">
 <p>Download and open <code>data.xls</code>: fake data for online marketing goals and tools</p>
-<p><span style="font-size:.8em;"> from Google Drive or <a href="http://mrn.bz/MUMA2018data"><code>http://mrn.bz/MUMA2018data</code></a> </span></p>
+<p><span style="font-size:.8em;"> from ALUD or <a href="http://mrn.bz/MUMA2019data"><code>http://mrn.bz/MUMA2019data</code></a> </span></p>
 </div>
 <aside class="notes">
 <p>Shows results of campaigns in three different sources, per quarters (trimester). Money spent in each source, number of visits got from that campaign, income generated, and goal income for each source.</p>
 <p>Takes for granted many things, such as validity/reasonability of goals, of spent money per goal…</p>
 </aside>
-</section><section id="tableau-software" class="slide level2">
-<h2>Tableau Software</h2>
+</section><section id="tableau-desktop" class="slide level2">
+<h2>Tableau Desktop</h2>
 <div class="right" style="width:75%; float:right;">
 <figure>
 <img data-src="img/tableau/tableau-getinsightsfast.gif" alt="Tableau Software" width="750" /><figcaption>Tableau Software</figcaption>
@@ -220,8 +236,8 @@ Munzner 2014, p.50
 <div class="left" style="width:23%; float:left;">
 <p><img data-src="img/tableau/tableau-logo.png" /></p>
 </div>
-</section><section id="tableau" class="slide level2">
-<h2>Tableau</h2>
+</section><section id="tableau-desktop-1" class="slide level2">
+<h2>Tableau Desktop</h2>
 <ol type="1">
 <li>Load data</li>
 <li>Explore the <code>Data Source</code> tab</li>
@@ -273,14 +289,13 @@ Tom Brown, <a href="https://www.theinformationlab.co.uk/2011/09/23/blue-things-a
 <h2>Section outline</h2>
 <ol type="1">
 <li>Reminder: variable types</li>
-<li>Mapping variables to graphs</li>
-</ol>
+<li>Mapping variables to graphs (≈ <em>translating</em>)
 <ul>
 <li>Marks</li>
 <li>Channels, channel types</li>
-<li>Using marks and channels</li>
-</ul>
-<ol start="3" type="1">
+<li>Using marks and channels<br />
+</li>
+</ul></li>
 <li>So, which graph?</li>
 </ol>
 <p>Practice: explore dimensions, measures and graph types in Tableau</p>
@@ -627,12 +642,15 @@ A step-by-step example: <a href="http://www.darkhorseanalytics.com/blog/data-loo
 <h2>2.2 Make simpler graphs</h2>
 <p>More on decluttering:</p>
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/X79o46W5plI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=X79o46W5plI&amp;feature=youtu.be&amp;t=1371" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 <figcaption style="margin-top:0;">
-Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your Data Visualizations</a>
+Nussbaumer, <a href="https://www.youtube.com/watch?v=X79o46W5plI&amp;feature=youtu.be&amp;t=1371">Declutter Your Data Visualizations</a>
 </figcaption>
 </figure>
+<aside class="notes">
+<p>6min duration video, example</p>
+</aside>
 </section><section id="highlight-observations" class="slide level2">
 <h2>2.3 Highlight observations</h2>
 <p>Through <a href="https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization">preattentive attributes</a>:</p>
@@ -643,7 +661,7 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <aside class="notes">
 <p>A preattentive visual property is one which is processed in spatial memory without our conscious action. In essence it takes less than 500 milliseconds for the eye and the brain to process a preattentive property of any image. These properties can be harnessed to make it easier for a user to understand what is presented through the design and save them from consciously processing all the data presented in short-term memory which requires more effort.</p>
 </aside>
-</section><section id="highlight-observations-1" class="slide level2">
+</section><section id="highlight-observations-1" class="slide level2" data-transition="slide-in fade-out">
 <h2>2.3 Highlight observations</h2>
 <figure>
 <img data-src="img/nussbaumer-4.2.png" alt="Nussbaumer 2015, p.103" /><figcaption>Nussbaumer 2015, p.103</figcaption>
@@ -652,7 +670,7 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <p>There are 6. No visual cues to help count. It makes this a challenging exercise, you have to hunt through the lines of text, looking for the number 3.</p>
 <p>What happens when we make a single change to the block of numbers. Repeat the exercise of counting the number 3s.</p>
 </aside>
-</section><section id="highlight-observations-2" class="slide level2">
+</section><section id="highlight-observations-2" class="slide level2" data-transition="fade-in slide-out">
 <h2>2.3 Highlight observations</h2>
 <figure>
 <img data-src="img/nussbaumer-4.3.png" alt="Nussbaumer 2015, p.104" /><figcaption>Nussbaumer 2015, p.104</figcaption>
@@ -728,6 +746,15 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 </ul>
 <p>Source to rows will draw one graph per source.</p>
 <p>Rename sheet to <code>Sparkline</code>, Save.</p>
+<p>TWEAK MORE:</p>
+<ul>
+<li>Remove axis data: right click &gt; uncheck “Show header”</li>
+<li>Remove grid lines: right click &gt; Format… Select borders, everything in Rows/Columns to “None”. Select lines, “Grid lines” to “None”</li>
+<li>Add label to line itself: drag Source to Detail (in Marks)</li>
+<li>Label to lighter gray: right click on source in Marks &gt; Format… Pane, select color</li>
+<li>Color code lines by source: drag source to Color in Marks. Change defaults: down arrow &gt; Edit colors (Tableau Classic 20)</li>
+</ul>
+<p>What is the problem with this? No reference to bottom line, they may all be in the same axes. We need Row dividers.</p>
 </aside>
 </section><section id="tableau-not-so-basic-graphs-1" class="slide level2">
 <h2>Tableau: (not so) basic graphs</h2>
@@ -768,16 +795,18 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 <li>computation: value: 60%/80%, percent of sum(goal) instead of income. label: none</li>
 <li>formatting: check fill below (used normally in bullet graphs because <em>below</em> is usually bad)</li>
 </ul>
-<p>Style:</p>
+<ol start="5" type="1">
+<li>Style:</li>
+</ol>
 <ul>
 <li>Marks &gt; size, make thinner bars to make background more visible</li>
-<li>Format &gt; lines:
-<ul>
-<li>rows: grid lines, solid white</li>
-<li>columns: none</li>
-</ul></li>
+<li>Format &gt; lines: rows: grid lines, solid white / columns: none</li>
 </ul>
 <p>Rename sheet to bullet graph, save.</p>
+<ul>
+<li>Drag source to color (will take colors from previous selection)</li>
+<li>Hide headers</li>
+</ul>
 </aside>
 </section><section id="tableau-not-so-basic-graphs-3" class="slide level2">
 <h2>Tableau: (not so) basic graphs</h2>
@@ -786,7 +815,8 @@ Nussbaumer, <a href="https://www.youtube.com/embed/X79o46W5plI">Declutter Your D
 </figure>
 <aside class="notes">
 <p>Source + quarter + income &gt; Show me, heatmap. Columns YEAR, click on + (adds column Q)</p>
-<p>In Marks, sum(income) is redundant as label and color. If remove label, pure heatmap</p>
+<p>In Marks, sum(income) is redundant as label and color. If remove label, pure heatmap.</p>
+<p>Change palette to Grey warm.</p>
 <p>Interpretation:</p>
 <ul>
 <li>both years sho low levels for FB on Q3, why?</li>
@@ -871,6 +901,136 @@ Few 2013
 </ul>
 <p>Must the information be constantly refreshed in real time? Only if the objectives that it serves require real‐time information. If you are monitoring air traffic using a dashboard, you must immediately be informed when something is wrong. On the other hand, if you are making strategic decisions about how to boost sales, a snapshot of information as of last night, or perhaps even the end of last month, should work fine.</p>
 </aside>
+</section><section id="section" class="slide level2" data-transition="slide-in none-out">
+<h2></h2>
+<figure>
+<img data-src="img/visual/gradient.png" alt="What colour is the bar in the middle?" /><figcaption>What colour is the bar in the middle?</figcaption>
+</figure>
+</section><section id="section-1" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/gradient.gif" alt="What colour is the bar in the middle?" /><figcaption>What colour is the bar in the middle?</figcaption>
+</figure>
+<aside class="notes">
+<p>In this example, the bar appears to go from light gray on the left to dark gray on the right, but the bar is exactly the same color. The background is gradient, going from dark to light and this affects the way that we perceive the color of the bar. Once I remove the background color you can see that the bar is exactly the same color across.</p>
+</aside>
+</section><section id="section-2" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/greyboxes.png" alt="Are these two boxes the same colour?" /><figcaption>Are these two boxes the same colour?</figcaption>
+</figure>
+</section><section id="section-3" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/greyboxes.gif" alt="Are these two boxes the same colour?" /><figcaption>Are these two boxes the same colour?</figcaption>
+</figure>
+<aside class="notes">
+<p>this is an object that appears gray on the top and white on the bottom. This is exactly the same color. You will prove it to them with the slide animation. As Dr. Lotto explains, we live in a world of a single light source from above. The perceive the top portion of this object to be a well-lite gray surface and the bottom part of the image to be a poor-lite white surface in shadow. There is no shadow in this image.</p>
+</aside>
+</section><section id="section-4" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/crater.png" alt="This is a picture of a crater" style="width:75%;" /><figcaption>This is a picture of a crater</figcaption>
+</figure>
+</section><section id="section-5" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/crater.gif" alt="This is a picture of a crater" style="width:75%;" /><figcaption>This is a picture of a crater</figcaption>
+</figure>
+<aside class="notes">
+<p>Watch what happens when we rotate this slide. Now we have to climb the hill.</p>
+<p>Our minds expect light coming from above, putting the top of the buttons in light and bottom parts in shadow.</p>
+</aside>
+</section><section id="section-6" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/dots.png" alt="Dots with shadows" style="width:65%;" /><figcaption>Dots with shadows</figcaption>
+</figure>
+</section><section id="section-7" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/dots.gif" alt="Dots with shadows" style="width:65%;" /><figcaption>Dots with shadows</figcaption>
+</figure>
+<aside class="notes">
+<p>This is another example of shadow. We see some of these buttons (the letter H) as stuck out and the other two pressed in. The ones pressed in are the opposite. Slide animation will rotate this slide to show the opposite effect.</p>
+</aside>
+</section><section id="section-8" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/moire1.png" alt="The Moiré effect" style="width:65%;" /><figcaption>The Moiré effect</figcaption>
+</figure>
+</section><section id="section-9" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/moire2.png" alt="The Moiré effect" style="width:65%;" /><figcaption>The Moiré effect</figcaption>
+</figure>
+<aside class="notes">
+<p>This is called the Moire Effect. Notice the ‘shimmer’ that occurs when you stare at this image. There is no animation here.</p>
+<p>This ‘shimmering effect’ is even worse when one grid is one top of another.</p>
+</aside>
+</section><section id="section-10" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/gridlines1.png" alt="The Moiré effect in a timeline" style="width:75%;" /><figcaption>The Moiré effect in a timeline</figcaption>
+</figure>
+<aside class="notes">
+<p>We can see this in data visualization with gridlines and bar charts. In this example, the gridlines are dark and narrowly spaced in increments of 50. Notice that the gridlines get in the way of visualizing the trend in the lines.</p>
+</aside>
+</section><section id="section-11" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/gridlines2.png" alt="The Moiré effect in a timeline" style="width:75%;" /><figcaption>The Moiré effect in a timeline</figcaption>
+</figure>
+<aside class="notes">
+<p>On the bottom, the gridlines are gray spaced wider in increments of 200. No strange effect</p>
+</aside>
+</section><section id="section-12" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/barchart.png" alt="The Moiré effect in a barchart" style="width:50%;" /><figcaption>The Moiré effect in a barchart</figcaption>
+</figure>
+<aside class="notes">
+<p>Here is an example where the Moiré effect occurs when there are so many bar charts.</p>
+</aside>
+</section><section id="section-13" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/grid.png" alt="The Hermann effect" style="width:75%;" /><figcaption>The Hermann effect</figcaption>
+</figure>
+<aside class="notes">
+<p>The Hermann effect, also known as the scintillating grid, shows dark dots in between the squares. This distracting effect is visible as an after effect when our eyes move around the grid.</p>
+</aside>
+</section><section id="section-14" class="slide level2" data-transition="none">
+<h2></h2>
+<figure>
+<img data-src="img/visual/grid2.png" alt="The Hermann effect in a unit chart" style="width:60%;" /><figcaption>The Hermann effect in a unit chart</figcaption>
+</figure>
+<aside class="notes">
+<p>This can sometimes be seen in unit charts or waffle charts.</p>
+</aside>
+</section><section id="section-15" class="slide level2" data-transition="none" data-background-image="img/visual/fakecolor1.jpg">
+<h2></h2>
+<aside class="notes">
+<p>[Ask the students to stare at the black dot for about 20 seconds. Then change to the next slide. During the 20 seconds you can explain what is going to happen.]</p>
+<p>Stare at the black dot for about 15 to 20 seconds. The brain is processing this information, but after a short period of time the image is embedded in our brains. The brain operates on a very small amount of energy and so it has to work efficiently. It basically says, ‘I got it. No need to keep processing the same information.’</p>
+</aside>
+</section><section id="section-16" class="slide level2" data-transition="none" data-background-image="img/visual/fakecolor2.jpg">
+<h2></h2>
+<aside class="notes">
+<p>This is a black and white image that will appear in color at first, because the brain has the previous slide in memory with the color.</p>
+</aside>
+</section><section id="section-17" class="slide level2" data-transition="none" data-background-image="img/visual/ghost.jpg" data-background-size="auto">
+<h2></h2>
+<aside class="notes">
+<p>[Ask the students to stare at the red dot on the woman’s nose for about 20 seconds.]</p>
+<p>Let’s do another one. Stare at the red dot on the woman’s nose for about 15 to 20 seconds. This time I’m not going to show you any picture, just a blank screen.”</p>
+</aside>
+</section><section id="section-18" class="slide level2" data-transition="none" data-background-image="img/visual/ghostbg.png">
+<h2></h2>
+<aside class="notes">
+<p>[The image of the woman will project on the blank screen]</p>
+<p>Now you can tell everyone that you saw a ghost in the data visualization class.</p>
+</aside>
 </section><section id="common-design-mistakes" class="slide level2">
 <h2>3.2 Common design mistakes</h2>
 <ul>
@@ -919,9 +1079,38 @@ Few 2013
 <li>not excessively decorated does not mean unattractive. no need to add touches to make the dashboard pretty, but rather attractively display the data itself</li>
 </ul>
 </aside>
-</section><section id="key-goals-in-the-visual-design-process" class="slide level2">
+</section><section id="key-goals-in-the-visual-design-process" class="slide level2" data-transition="fade-out">
 <h2>3.3 Key goals in the visual design process</h2>
-<div style="height:2em;">
+<div style="height:.5em;">
+
+</div>
+<p>From previous section:</p>
+<ul>
+<li>make simpler graphs (declutter)</li>
+</ul>
+</section><section id="key-goals-in-the-visual-design-process-1" class="slide level2" data-transition="fade">
+<h2>3.3 Key goals in the visual design process</h2>
+<div style="height:.5em;">
+
+</div>
+<p>From previous section:</p>
+<ul>
+<li>make simpler graphs (declutter)</li>
+</ul>
+<div style="height:.5em;">
+
+</div>
+<blockquote>
+<p>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.</p>
+</blockquote>
+<figure style="text-align:right;">
+<figcaption>
+Antoine de Saint-Exupery
+</figcaption>
+</figure>
+</section><section id="key-goals-in-the-visual-design-process-2" class="slide level2" data-transition="fade-in">
+<h2>3.3 Key goals in the visual design process</h2>
+<div style="height:.5em;">
 
 </div>
 <p>From previous section:</p>
@@ -930,7 +1119,7 @@ Few 2013
 <li>highlight observations</li>
 <li>add attributes/variables as context or statistical information</li>
 </ul>
-</section><section id="key-goals-in-the-visual-design-process-1" class="slide level2">
+</section><section id="key-goals-in-the-visual-design-process-3" class="slide level2">
 <h2>3.3 Key goals in the visual design process</h2>
 <p>In other words:</p>
 <ol type="1">
@@ -1017,7 +1206,6 @@ Few 2013
 <li>legends are unobtrusive</li>
 <li>white space alone has been used to delineate and group data (no borders, grid lines, background fills)</li>
 <li>not cluttered with instructions and descriptions that are only occasionally needed (those in “Help”)</li>
-<li></li>
 </ul>
 </aside>
 </section><section id="dashboards-in-tableau" class="slide level2">
@@ -1079,7 +1267,26 @@ Few 2013
 <p>Calculated fields</p>
 <p>…</p>
 <aside class="notes">
+<p>Add a ROI column:</p>
+<p>Right click &gt; Create Calculated Field. Name ROI, [Income]/[Spent]</p>
+<p>What can we do with this?</p>
+<ul>
+<li>Replace the heatmap (different insight)</li>
+<li>Trend area chart:
+<ul>
+<li>Select Quarter, Source, ROI, click Area chart from “Show me”. Click on Quarter ‘+’ sign.</li>
+</ul></li>
+</ul>
+<p>What would you like to see in this dashboard?</p>
 <p>spent/income ratio, spent/visits ratio, income/visits ratio…</p>
+</aside>
+</section><section id="tableau-final-styling" class="slide level2">
+<h2>Tableau: Final styling</h2>
+<figure>
+<img data-src="img/final-dashboard.png" alt="Final look of our dashboard" /><figcaption>Final look of our dashboard</figcaption>
+</figure>
+<aside class="notes">
+<p>Title: Marketing campaigns result Last 2 years White space Tooltips! “<SOURCE> brought <INCOME> during <QUARTER>”</p>
 </aside>
 </section></section>
 <section><section id="epilogue" class="title-slide slide level1"><h1>Epilogue</h1></section><section id="what-i-want-more" class="slide level2">
@@ -1090,7 +1297,7 @@ Few 2013
 <li>Tableau, <a href="https://www.tableau.com/es-es/learn/webinars/visual-analytics">Análisis visual: como aprovechar las características cognitivas humanas para comprender tus datos</a></li>
 </ul></li>
 <li>Coursera, <a href="https://es.coursera.org/learn/dataviz-visual-analytics">Visual Analytics with Tableau</a></li>
-<li>Udemy, <a href="https://www.udemy.com/topic/data-visualization/">(Ranked) Data Visualization Courses</a></li>
+<li>Udemy, (Ranked) <a href="https://www.udemy.com/topic/data-visualization/">Data Visualization Courses</a> or <a href="https://www.udemy.com/topic/tableau/">Tableau Courses</a></li>
 </ul>
 </section><section class="slide level2">
 

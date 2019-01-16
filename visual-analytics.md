@@ -16,14 +16,14 @@ highlighting-css:
 
 # 0. Introduction 
 
-## 0.1 Key points
+## Key points
 
-- **Data driven**: as seen in previous sessions with Professors Onieva and Lorenzo
+- **Data driven**: as seen in previous sessions with Professors Onieva, Gutiérrez and Lorenzo
 - **Insights**: the capacity to gain an accurate and deep understanding of something _through_
-- **Data visualization techniques**: to take the user from data to insight
+- **Data visualization techniques**: that take the user from data to insight
 - **Dashboards**: as *situation awareness* tools
 
-Tableau Desktop to practice
+\+ Tableau Desktop to practice
 
 ## Section outline
 
@@ -36,7 +36,7 @@ Tableau Desktop to practice
 Practice: build a simple dashboard with online marketing campaign data
 
 
-## 0.2 Why use visualization
+## Why use visualization
 
 - Sight is our most developed sense
 - The visual system provides a very high-bandwidth channel to our brains
@@ -50,13 +50,13 @@ Implications of visual perception relevant to visualization design on next secti
 
 :::
 
-## 0.2 Why use visualization
+## Why use visualization
 
-<figure class="fragment"  data-fragment-index="3" style="width:55%; float:right;">
+<figure class="fragment"  data-fragment-index="2" style="width:55%; float:right;">
 <img src="img/anscombe3.png" alt="Visualizations" />
 </figure>
 
-<figure class="fragment"  data-fragment-index="2" style="width:30%; float:left;">
+<figure class="fragment"  data-fragment-index="1" style="width:30%; float:left;">
 <img src="img/anscombe1.png" alt="Data" style="margin:0 50px;" />
 </figure>
 
@@ -83,7 +83,7 @@ Munzner 2014 p.8
 
 :::
 
-## 0.3 What to use visualization for
+## What to use visualization for
 
 ![Munzner 2014, p.42](img/munzner-3.1.png){width="600px"}
 
@@ -98,39 +98,48 @@ We are going to divide into
 - _targets_ = nouns
 - _actions_ = verbs 
 
-<!--
-Honek erantzungo lioke "insights" parteari: 
-
-- *Targets* lehenbizi (benetako insighten oinarriak)
-- Ondoren *actions*
-   - Search (ze target eta non)
-   - Query (identifikatu target, baldin eta badago)
-   - Azkenik analyze, komunikatu eta datu/modelo berriak sortu
--->
-
 :::
 
-## 0.3 What to use visualization for
+## What to use visualization for
 
 ![Munzner 2014, p.56](img/munzner-3.6-wide.png){width="725"}
 
 ::: notes
 
-- Very broadly relevant for all kinds of data: trends, outliers, features
-- One attribute/variable: find an individual value, distribution of all values, find extremes
-- Many attributes: dependency, correlation, similarity
+What is going to be the OBJECT of visualization
+
+- Very broadly relevant for all kinds of data: 
+  - trends: patterns. Increase, decrease, peaks, troughs, plateaus
+  - outliers: some data just doesnt't fit well with the backdrop / the rest
+  - features: any particular structures of interest
+- One attribute/variable. Frequent targets of interest:
+  - find an individual value, distribution of all values, extremes
+- Many attributes: 
+  - dependency: values for one attribute directly depend on those of a second
+  - correlation: there is a tendency for the values of a second to be tied to those of the first
+  - similarity
 - The rest (network/spatial) are specific to certain types of datasets
 
 The abstract task of understanding **trends, outliers, distributions and correlations** are extremely common reasons to use data visualization.
 
 :::
 
-## 0.3 What to use visualization for
+## What to use visualization for
 
 ![Munzner 2014, p.46](img/munzner-3.2-wide.png)
 
 ::: notes
 
+<div style="font-size:.9em;">
+
+WHAT is done to that object
+
+- Analyze data:
+  + consume (most common use case): 
+    + discover: find new knowledge that was not previously known (**generate** a new hypothesys or **verify** an existing one)
+    + present: known info, i.e. insights, a story... communicate something specific and already understood to an audience
+    + enjoy: for the fun of it
+  + produce: annotate (add graphical or textual notes associated with one or more visualization element), record (capture steps), derive (produce new data elements)
 - Search for an element of interest (based on knowledge of identity & location)
   + lookup: humans in tree vis of species of mammals
   + locate: where are rabbits? lagomorphs -- not rodents
@@ -138,15 +147,14 @@ The abstract task of understanding **trends, outliers, distributions and correla
   + explore: not sure of either one
 - Once a target or set of targets is identified, query those at one of 3 scopes (progression from one to many to all targets)
   + identify (US election map example)
-  + compare, more difficult, requires more sophisticated idioms
+  + compare: more difficult, requires more sophisticated idioms
   + summarize = overview (extremely common)
-- Analyze data:
-  + consume (most common use case): discover, present (known info, i.e. insights), enjoy (for the fun of it)
-  + produce: annotate, record (capture steps), derive (produce new data elements)
+
+</div>
 
 :::
 
-## 0.3 What to use visualization for
+## What to use visualization for
 
 <blockquote style="width:90% !important; font-size:.9em; margin-top:2em;">
   <p style="margin:0;">There is a **strong relationship** between the form of the data (the attribute/variable and dataset types) and what kinds of vis[ualization] idioms are effective at displaying it. (...) Don't just draw what you are given; decide what the right thing to show is, create it with a series of **transformations** from the original database, and draw that!</p>
@@ -158,15 +166,21 @@ The abstract task of understanding **trends, outliers, distributions and correla
 
 Transformation (=derive) may be required depending on the desired type of insight -- derived attributes/variables extend the original dataset
 
-- in some cases, the same data with a change of type (temperature _vs._ "hot" or "cold")
-- in other cases, access to additional info is required (geo: city name to lat/lon)
-- created through arithmetic, logaritmic or statistial operations (i.e. diff field)
-
 :::
 
-## 0.3 What to use visualization for
+## What to use visualization for
 
 ![Derived attributes can be directly visually encoded. Munzner 2014, p.52](img/munzner-3.5.png)
+
+::: notes
+
+A dataset often needs to be transformed beyond its original state in order to create a visual encoding that can solve the desired problem. **Derived attributes** extend the dataset beyond the original set of attributes. 
+
+- in some cases, the same data with a change of type (temperature _vs._ "hot" or "cold")
+- in other cases, access to additional info is required (geo: city name to lat/lon)
+- created through arithmetic, logaritmic or statistial operations (i.e. diff field) **which can then be directly visually encoded**
+
+:::
 
 ## Practice: meet our sample data
 
@@ -180,7 +194,7 @@ Transformation (=derive) may be required depending on the desired type of insigh
 Download and open `data.xls`: fake data for online marketing goals and tools
 
 <span style="font-size:.8em;">
-from Google Drive or [`http://mrn.bz/MUMA2018data`](http://mrn.bz/MUMA2018data)
+from ALUD or [`http://mrn.bz/MUMA2019data`](http://mrn.bz/MUMA2019data)
 </span>
 </div>
 
@@ -192,7 +206,7 @@ Takes for granted many things, such as validity/reasonability of goals, of spent
 
 :::
 
-## Tableau Software
+## Tableau Desktop
 
 <div class="right" style="width:75%; float:right;">
 
@@ -206,7 +220,7 @@ Takes for granted many things, such as validity/reasonability of goals, of spent
 
 </div>
 
-## Tableau
+## Tableau Desktop
 
 1. Load data
 2. Explore the `Data Source` tab
@@ -269,10 +283,10 @@ The source file (`data.xls`) is never modified
 ## Section outline
 
 1. Reminder: variable types
-2. Mapping variables to graphs
-  - Marks
-  - Channels, channel types
-  - Using marks and channels
+2. Mapping variables to graphs (&asymp; _translating_)
+   - Marks
+   - Channels, channel types
+   - Using marks and channels  
 3. So, which graph?
 
 Practice: explore dimensions, measures and graph types in Tableau
@@ -684,10 +698,16 @@ The next time you are trying to improve a chart, consider what you can take away
 More on decluttering:
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/X79o46W5plI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=X79o46W5plI&feature=youtu.be&t=1371" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-<figcaption style="margin-top:0;">Nussbaumer, [Declutter Your Data Visualizations](https://www.youtube.com/embed/X79o46W5plI)</figcaption>
+<figcaption style="margin-top:0;">Nussbaumer, [Declutter Your Data Visualizations](https://www.youtube.com/watch?v=X79o46W5plI&feature=youtu.be&t=1371)</figcaption>
 </figure>
+
+::: notes
+
+6min duration video, example
+
+:::
 
 ## 2.3 Highlight observations
 
@@ -702,7 +722,7 @@ A preattentive visual property is one which is processed in spatial memory witho
 
 :::
 
-## 2.3 Highlight observations
+## 2.3 Highlight observations {data-transition="slide-in fade-out"}
 
 ![Nussbaumer 2015, p.103](img/nussbaumer-4.2.png)
 
@@ -714,7 +734,7 @@ What happens when we make a single change to the block of numbers. Repeat the ex
 
 :::
 
-## 2.3 Highlight observations
+## 2.3 Highlight observations {data-transition="fade-in slide-out"}
 
 ![Nussbaumer 2015, p.104](img/nussbaumer-4.3.png)
 
@@ -804,6 +824,16 @@ Source to rows will draw one graph per source.
 
 Rename sheet to `Sparkline`, Save.
 
+TWEAK MORE:
+
+- Remove axis data: right click > uncheck "Show header"
+- Remove grid lines: right click > Format... Select borders, everything in Rows/Columns to "None". Select lines, "Grid lines" to "None"
+- Add label to line itself: drag Source to Detail (in Marks)
+- Label to lighter gray: right click on source in Marks > Format... Pane, select color
+- Color code lines by source: drag source to Color in Marks. Change defaults: down arrow > Edit colors (Tableau Classic 20)
+
+What is the problem with this? No reference to bottom line, they may all be in the same axes. We need Row dividers.
+
 :::
 
 ## Tableau: (not so) basic graphs
@@ -838,15 +868,14 @@ Shows totals, may not be what we want. Anyway, what did this do? Now manually:
   - scope: per cell
   - computation: value: 60%/80%, percent of sum(goal) instead of income. label: none
   - formatting: check fill below (used normally in bullet graphs because _below_ is usually bad)
-  
-Style:
-
-- Marks > size, make thinner bars to make background more visible
-- Format > lines:
-  + rows: grid lines, solid white 
-  + columns: none
+5. Style:
+  - Marks > size, make thinner bars to make background more visible
+  - Format > lines: rows: grid lines, solid white  /  columns: none
 
 Rename sheet to bullet graph, save.
+
+- Drag source to color (will take colors from previous selection)
+- Hide headers
 
 :::
 
@@ -858,7 +887,9 @@ Rename sheet to bullet graph, save.
 
 Source + quarter + income > Show me, heatmap. Columns YEAR, click on + (adds column Q)
 
-In Marks, sum(income) is redundant as label and color. If remove label, pure heatmap
+In Marks, sum(income) is redundant as label and color. If remove label, pure heatmap.
+
+Change palette to Grey warm.
 
 Interpretation: 
 
@@ -956,6 +987,168 @@ Must the information be constantly refreshed in real time? Only if the objective
 
 :::
 
+##   {data-transition="slide-in none-out"}
+
+![What colour is the bar in the middle?](img/visual/gradient.png)
+
+##  {data-transition="none"}
+
+![What colour is the bar in the middle?](img/visual/gradient.gif)
+
+::: notes
+
+In this example, the bar appears to go from light gray on the left to dark gray on the right, but the bar is exactly the same color. The background is gradient, going from dark to light and this affects the way that we perceive the color of the bar. Once I remove the background color you can see that the bar is exactly the same color across.
+
+:::
+
+##    {data-transition="none"}
+
+![Are these two boxes the same colour?](img/visual/greyboxes.png)
+
+##  {data-transition="none"}
+
+![Are these two boxes the same colour?](img/visual/greyboxes.gif)
+
+::: notes
+
+this is an object that appears gray on the top and white on the bottom. This is exactly the same color. You will prove it to them with the slide animation. As Dr. Lotto explains, we live in a world of a single light source from above. The perceive the top portion of this object to be a well-lite gray surface and the bottom part of the image to be a poor-lite white surface in shadow. There is no shadow in this image. 
+
+:::
+
+##  {data-transition="none"}
+
+![This is a picture of a crater](img/visual/crater.png){style="width:75%;"}
+
+##  {data-transition="none"}
+
+![This is a picture of a crater](img/visual/crater.gif){style="width:75%;"}
+
+::: notes
+
+Watch what happens when we rotate this slide. Now we have to climb the hill.
+
+Our minds expect light coming from above, putting the top of the buttons in light and bottom parts in shadow. 
+
+:::
+
+##  {data-transition="none"}
+
+![Dots with shadows](img/visual/dots.png){style="width:65%;"}
+
+##  {data-transition="none"}
+
+![Dots with shadows](img/visual/dots.gif){style="width:65%;"}
+
+::: notes
+
+This is another example of shadow. We see some of these buttons (the letter H) as stuck out and the other two pressed in. The ones pressed in are the opposite. Slide animation will rotate this slide to show the opposite effect.
+
+:::
+
+##  {data-transition="none"}
+
+![The Moiré effect](img/visual/moire1.png){style="width:65%;"}
+
+##  {data-transition="none"}
+
+![The Moiré effect](img/visual/moire2.png){style="width:65%;"}
+
+::: notes
+
+This is called the Moire Effect. Notice the ‘shimmer’ that occurs when you stare at this image. There is no animation here.
+
+This ‘shimmering effect’ is even worse when one grid is one top of another.
+
+:::
+
+##  {data-transition="none"}
+
+![The Moiré effect in a timeline](img/visual/gridlines1.png){style="width:75%;"}
+
+::: notes
+
+We can see this in data visualization with gridlines and bar charts. In this example, the gridlines are dark and narrowly spaced in increments of 50. Notice that the gridlines get in the way of visualizing the trend in the lines. 
+
+:::
+
+##  {data-transition="none"}
+
+![The Moiré effect in a timeline](img/visual/gridlines2.png){style="width:75%;"}
+
+::: notes
+
+On the bottom, the gridlines are gray spaced wider in increments of 200. No strange effect
+
+:::
+
+##  {data-transition="none"}
+
+![The Moiré effect in a barchart](img/visual/barchart.png){style="width:50%;"}
+
+::: notes
+
+Here is an example where the Moiré effect occurs when there are so many bar charts.
+
+:::
+
+##  {data-transition="none"}
+
+![The Hermann effect](img/visual/grid.png){style="width:75%;"}
+
+::: notes
+
+The Hermann effect, also known as the scintillating grid, shows dark dots in between the squares. This distracting effect is visible as an after effect when our eyes move around the grid.
+
+:::
+
+##  {data-transition="none"}
+
+![The Hermann effect in a unit chart](img/visual/grid2.png){style="width:60%;"}
+
+::: notes
+
+This can sometimes be seen in unit charts or waffle charts.
+
+:::
+
+##  {data-transition="none" data-background-image="img/visual/fakecolor1.jpg"}
+
+::: notes
+
+[Ask the students to stare at the black dot for about 20 seconds. Then change to the next slide. During the 20 seconds you can explain what is going to happen.]
+
+Stare at the black dot for about 15 to 20 seconds. The brain is processing this information, but after a short period of time the image is embedded in our brains. The brain operates on a very small amount of energy and so it has to work efficiently. It basically says, ‘I got it. No need to keep processing the same information.’
+
+:::
+
+##  {data-transition="none" data-background-image="img/visual/fakecolor2.jpg"}
+
+::: notes
+
+This is a black and white image that will appear in color at first, because the brain has the previous slide in memory with the color.
+
+:::
+
+##  {data-transition="none" data-background-image="img/visual/ghost.jpg" data-background-size="auto"}
+
+::: notes
+
+[Ask the students to stare at the red dot on the woman’s nose for about 20 seconds.]
+
+Let’s do another one. Stare at the red dot on the woman’s nose for about 15 to 20 seconds. This time I’m not going to show you any picture, just a blank screen.”
+
+:::
+
+##  {data-transition="none" data-background-image="img/visual/ghostbg.png"}
+
+::: notes
+
+[The image of the woman will project on the blank screen]
+
+Now you can tell everyone that you saw a ghost in the data visualization class.
+
+:::
+
 ## 3.2 Common design mistakes
 
 >- Exceeding the boundaries of a single screen
@@ -1002,9 +1195,33 @@ Must the information be constantly refreshed in real time? Only if the objective
 
 :::
 
-## 3.3 Key goals in the visual design process
+## 3.3 Key goals in the visual design process {data-transition="fade-out"}
 
-<div style="height:2em;"></div>
+<div style="height:.5em;"></div>
+From previous section:
+
+- make simpler graphs (declutter)
+
+## 3.3 Key goals in the visual design process {data-transition="fade"}
+
+<div style="height:.5em;"></div>
+From previous section:
+
+- make simpler graphs (declutter)
+
+<div style="height:.5em;"></div>
+
+>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. 
+
+<figure style="text-align:right;">
+  <figcaption>
+Antoine de Saint-Exupery
+</figcaption>
+</figure>
+
+## 3.3 Key goals in the visual design process {data-transition="fade-in"}
+
+<div style="height:.5em;"></div>
 From previous section:
 
 - make simpler graphs (declutter)
@@ -1086,7 +1303,6 @@ In other words:
 - legends are unobtrusive
 - white space alone has been used to delineate and group data (no borders, grid lines, background fills)
 - not cluttered with instructions and descriptions that are only occasionally needed (those in "Help")
-- 
 
 :::
 
@@ -1163,7 +1379,31 @@ Calculated fields
 
 ::: notes
 
+Add a ROI column:
+
+Right click > Create Calculated Field. Name ROI, [Income]/[Spent]
+
+What can we do with this? 
+
+- Replace the heatmap (different insight)
+- Trend area chart:
+  + Select Quarter, Source, ROI, click Area chart from "Show me". Click on Quarter '+' sign.
+
+What would you like to see in this dashboard?
+
 spent/income ratio, spent/visits ratio, income/visits ratio...
+
+:::
+
+## Tableau: Final styling
+
+![Final look of our dashboard](img/final-dashboard.png)
+
+::: notes
+
+Title: Marketing campaigns result Last 2 years
+White space
+Tooltips! "<SOURCE> brought <INCOME> during <QUARTER>"
 
 :::
 
@@ -1174,7 +1414,7 @@ spent/income ratio, spent/visits ratio, income/visits ratio...
 - Tableau, [Free Training Videos](https://www.tableau.com/learn/training)
   - Tableau, [Análisis visual: como aprovechar las características cognitivas humanas para comprender tus datos](https://www.tableau.com/es-es/learn/webinars/visual-analytics)
 - Coursera, [Visual Analytics with Tableau](https://es.coursera.org/learn/dataviz-visual-analytics)
-- Udemy, [(Ranked) Data Visualization Courses](https://www.udemy.com/topic/data-visualization/)
+- Udemy, (Ranked) [Data Visualization Courses](https://www.udemy.com/topic/data-visualization/) or [Tableau Courses](https://www.udemy.com/topic/tableau/)
 
 
 ---
