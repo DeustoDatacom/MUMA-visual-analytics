@@ -1420,7 +1420,7 @@ Tooltips! "<SOURCE> brought <INCOME> during <QUARTER>"
 
 ---
 
-<h1>References</h1> 
+<h1 style="padding-top:1em;">References</h1> 
 
 <div style="font-size:.5em;width:90%;margin:1em auto;">
   Abela, Andrew (2006). [Choosing a good chart](http://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html).
