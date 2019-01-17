@@ -6,6 +6,7 @@ email: <span style="font-family:Fira Mono;font-size:.6em;">miren.berasategi@deus
 department: <span class="dept" style="font-size:.6em; display:block;">Data Communication</span>
 theme: deusto
 deusto: TRUE
+revealjs-url: ../reveal.js
 highlighting-css: 
   .static .author span, .static .author img { display:none !important; }
   .reveal h1.title { padding-top:1.5em !important; }
