@@ -4,6 +4,8 @@ subtitle: Communicating data-driven insights<br />through data visualization tec
 author: <span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &</span> Miren Berasategi
 email: miren.berasategi@deusto.es
 theme: deusto
+deusto: TRUE
+revealjs-url: ../reveal.js
 highlighting-css: .static .author span { display:none !important; }
 ...
 

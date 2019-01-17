@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -18,17 +18,17 @@
   <style type="text/css">
 .static .author span { display:none !important; }
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/deusto.css" id="theme">
+  <link rel="stylesheet" href="../reveal.js/css/theme/deusto.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <script src="../reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -36,14 +36,14 @@
   <div class="reveal">
     <div class="slides">
       
-      <div class="static">
-        <div class="bottomR"><img src="reveal.js/logo-deusto.png" alt="Universidad de Deusto" /></div>
+            <div class="static">
+        <div class="bottomR"><img src="../reveal.js/logo-deusto.png" alt="Universidad de Deusto" /></div>
         <div class="bottomL">
                       <div class="author"><span style="display:block;font-size:.5em;line-height:.7em;">Mikel Madina &amp;</span> Miren Berasategi</div>
                                 <div class="title">Visual Analytics</div>
                   </div>
       </div>
-      
+            
 <section id="title-slide">
   <h1 class="title">Visual Analytics</h1>
   <p class="subtitle">Communicating data-driven insights<br />through data visualization techniques<br />and useful dashboards</p>
@@ -399,7 +399,7 @@ Grafikoagoa egitea komeniko litzateke
 </figure>
 <aside class="notes">
 <ul>
-<li>spatial position (<em>where</em>)</li>
+<li>spatial position (_where_)</li>
 <li>color, with three distinct aspects: hue, saturation, luminance (more in the next slide)</li>
 <li>size, one for each added dimension: length 1D, area 2D, volume 3D</li>
 <li>angle/tilt/slope</li>
@@ -850,7 +850,7 @@ Few 2013
 </figure>
 <aside class="notes">
 <p>When they work, they provide a powerful means to tame the beast of data overload. Most dashboard live however to a fraction of their potential, not because of poor technology, but because of poor design.</p>
-<p>They must grab your attention when it’s needed, make it easy to spot what’s most important in a screen full of data, and give you the means to understand what’s happening (<em>insight</em>) and respond without delay.</p>
+<p>They must grab your attention when it’s needed, make it easy to spot what’s most important in a screen full of data, and give you the means to understand what’s happening (_insight_) and respond without delay.</p>
 <p>Not designed to wow people upon first sight, but to inform people with precisely what they need in the way they need it day in and day out.</p>
 </aside>
 </section><section id="what-is-a-dashboard-1" class="slide level2">
@@ -1121,15 +1121,15 @@ License
 <div style="text-align:center;margin-top:2em;">
 <p><img data-src="img/cc/cc.logo.png" style="display:inline-block;margin-right:2em;" height="50" /> <img data-src="img/cc/by.png" style="display:inline-block;" height="50" /> <img data-src="img/cc/sa.png" style="display:inline-block;" height="50" /></p>
 </div>
-<p style="font-family:'Frutiger LT Std', Montserrat, Helvetica, Arial, sans-serif; font-size:.4em;font-weight:200;">
-Copyright © 2018 University of Deusto<br /> This work (except for the quoted images, whose rights are reserved to their owners) is licensed under the Creative Commons “Attribution-ShareAlike” License. To view a copy of this license, visit <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="uri">http://creativecommons.org/licenses/by-sa/3.0/</a>
+<p style="font-family:&#39;Frutiger LT Std&#39;, Montserrat, Helvetica, Arial, sans-serif; font-size:.4em;font-weight:200;">
+Copyright © 2018 University of Deusto<br /> This work (except for the quoted images, whose rights are reserved to their owners) is licensed under the Creative Commons “Attribution-ShareAlike” License. To view a copy of this license, visit <a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>
 </p>
 </section></section>
     </div>
   </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
 
   <script>
 
@@ -1141,9 +1141,9 @@ Copyright © 2018 University of Deusto<br /> This work (except for the quoted im
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
