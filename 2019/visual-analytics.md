@@ -699,7 +699,7 @@ The next time you are trying to improve a chart, consider what you can take away
 More on decluttering:
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=X79o46W5plI&feature=youtu.be&t=1371" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/X79o46W5plI?start=1371" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <figcaption style="margin-top:0;">Nussbaumer, [Declutter Your Data Visualizations](https://www.youtube.com/watch?v=X79o46W5plI&feature=youtu.be&t=1371)</figcaption>
 </figure>
